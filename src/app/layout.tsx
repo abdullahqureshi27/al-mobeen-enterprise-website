@@ -101,7 +101,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="min-h-screen flex flex-col bg-base text-ink transition-colors duration-300 relative">
       <Script
-          src="http://localhost:3000/widget.js"
+          src="https://resolvdesk.vercel.app/widget.js"
           data-widget-key="rd_live_frRwD7a6Avc9PrUJVaH8OSXc18pprshaSBP3QI4kOlc"
           strategy="afterInteractive"
         />
