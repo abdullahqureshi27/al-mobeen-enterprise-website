@@ -220,8 +220,19 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-border text-center text-ink opacity-70 text-xs font-semibold">
-          {t("footer.rights")}
+        <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-ink opacity-80 text-xs font-semibold">
+          <div>{t("footer.rights")}</div>
+          <div>
+            Designed &amp; Built by{" "}
+            <a
+              href="https://abdullah-qureshi.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline font-bold transition-colors"
+            >
+              Abdullah Qureshi
+            </a>
+          </div>
         </div>
       </div>
     </footer>
