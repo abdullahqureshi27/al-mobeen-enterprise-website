@@ -58,10 +58,10 @@ export default function ProductCategoriesGrid() {
                       </span>
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl font-extrabold text-ink tracking-tight mb-2 group-hover:text-accent transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-ink tracking-tight mb-2 min-h-[56px] sm:min-h-[64px] flex items-center group-hover:text-accent transition-colors">
                       {cat.name}
                     </h3>
-                    <p className="text-xs sm:text-sm text-ink-muted leading-relaxed mb-4">
+                    <p className="text-xs sm:text-sm text-ink-muted leading-relaxed mb-4 min-h-[48px] line-clamp-2">
                       {cat.description}
                     </p>
                   </div>

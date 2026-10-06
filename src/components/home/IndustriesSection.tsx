@@ -76,22 +76,23 @@ export default function IndustriesSection() {
           </p>
         </div>
 
-        {/* Nested Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+        {/* Nested Cards Grid - Equal 4x2 Symmetrical Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {industries.map((ind) => (
-            <div
+            <Link
               key={ind.slug}
-              className="bg-surface-muted p-2.5 sm:p-3 rounded-[24px] sm:rounded-[28px] flex flex-col justify-between border border-border-subtle hover:border-border hover:shadow-lg transition-all duration-300 group"
+              href={`/industries/${ind.slug}`}
+              className="bg-surface-muted p-2.5 sm:p-3 rounded-[24px] sm:rounded-[28px] flex flex-col justify-between border border-border-subtle hover:border-border hover:shadow-lg transition-all duration-300 group cursor-pointer"
             >
-              <div className="bg-surface rounded-[20px] sm:rounded-[24px] p-5 sm:p-6 min-h-[220px] flex flex-col justify-between border border-border shadow-xs">
+              <div className="bg-surface rounded-[20px] sm:rounded-[24px] p-5 sm:p-6 h-full min-h-[250px] flex flex-col justify-between border border-border shadow-xs">
                 <div>
                   <div className="w-11 h-11 rounded-2xl bg-accent text-white flex items-center justify-center mb-4 group-hover:bg-accent-hover group-hover:scale-105 transition-all duration-300 shadow-xs">
                     {industryIcons[ind.slug] || industryIcons["general-industrial"]}
                   </div>
-                  <h3 className="text-base sm:text-lg font-extrabold text-ink tracking-tight mb-1.5 group-hover:text-accent transition-colors">
+                  <h3 className="text-base sm:text-lg font-extrabold text-ink tracking-tight mb-2 min-h-[50px] sm:min-h-[54px] flex items-center group-hover:text-accent transition-colors">
                     {ind.name}
                   </h3>
-                  <p className="text-xs text-ink-muted leading-relaxed line-clamp-3">
+                  <p className="text-xs text-ink-muted leading-relaxed line-clamp-3 min-h-[52px]">
                     {ind.description}
                   </p>
                 </div>
@@ -103,16 +104,39 @@ export default function IndustriesSection() {
                   </span>
                 </div>
               </div>
-
-              <Link
-                href={`/industries/${ind.slug}`}
-                className="sr-only"
-                aria-label={`View raw materials for ${ind.name}`}
-              >
-                {ind.name}
-              </Link>
-            </div>
+            </Link>
           ))}
+
+          {/* 8th Slot: Custom Formulation & Other Sectors */}
+          <Link
+            href="/contact"
+            className="bg-surface-muted p-2.5 sm:p-3 rounded-[24px] sm:rounded-[28px] flex flex-col justify-between border border-border-subtle hover:border-accent hover:shadow-lg transition-all duration-300 group cursor-pointer"
+          >
+            <div className="bg-surface rounded-[20px] sm:rounded-[24px] p-5 sm:p-6 h-full min-h-[250px] flex flex-col justify-between border border-border shadow-xs">
+              <div>
+                <div className="w-11 h-11 rounded-2xl bg-surface-muted text-accent flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-xs">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 8v8" />
+                    <path d="M8 12h8" />
+                  </svg>
+                </div>
+                <h3 className="text-base sm:text-lg font-extrabold text-ink tracking-tight mb-2 min-h-[50px] sm:min-h-[54px] flex items-center group-hover:text-accent transition-colors">
+                  Custom Industry Sourcing
+                </h3>
+                <p className="text-xs text-ink-muted leading-relaxed line-clamp-3 min-h-[52px]">
+                  Looking for bulk raw materials for other specialized sectors? Inquire with our Jodia Bazar desk for tailored sourcing.
+                </p>
+              </div>
+
+              <div className="pt-3 border-t border-border flex items-center justify-between text-[11px] font-bold text-accent">
+                <span>Request Custom Supply</span>
+                <span className="w-5 h-5 rounded-full bg-accent text-white flex items-center justify-center text-xs group-hover:translate-x-1 group-hover:bg-accent-hover transition-all shadow-xs">
+                  →
+                </span>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
     </section>
