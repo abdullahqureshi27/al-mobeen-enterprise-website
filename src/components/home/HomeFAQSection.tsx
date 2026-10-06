@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqs = [
   {
     q: "Why is Al Mobeen Enterprise considered the premier bulk chemical dealer in Karachi?",
-    a: "Operating from Jodia Bazar since 1995, Al Mobeen Enterprise has built a 30-year legacy of transparent dealing, direct wholesale pricing, and uninterrupted bulk chemical supply. We maintain direct partnerships with tier-1 international importers, ensuring certified purity, original manufacturer COAs, and rapid dispatch across Karachi and Pakistan.",
+    a: "Operating from Jodia Bazar since 1995, Al Mobeen Enterprise has built a 30-year legacy of transparent dealing, direct wholesale pricing, and uninterrupted bulk chemical supply. We maintain extensive ready warehouse stock, ensuring certified purity, original manufacturer COAs, and rapid dispatch across Karachi and Pakistan.",
   },
   {
     q: "Where is your main office located in Jodia Bazar, Karachi?",

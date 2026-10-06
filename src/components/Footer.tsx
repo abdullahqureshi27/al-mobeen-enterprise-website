@@ -104,7 +104,7 @@ export default function Footer() {
               </p>
               <p>Mon - Sat: 9:00 AM - 6:00 PM PKT</p>
               <p className="text-accent font-bold">
-                NTN / Wholesale Registered
+                B2B Bulk Chemical Stockist
               </p>
             </div>
           </div>

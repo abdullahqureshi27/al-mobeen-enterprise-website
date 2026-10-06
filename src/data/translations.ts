@@ -19,9 +19,9 @@ export const translations: Record<string, TranslationRecord> = {
 
   // ─── Hero ───
   "hero.badge": {
-    en: "Sole Proprietorship • Est. 1995 • Jodia Bazar, Karachi",
-    romanUrdu: "Sole Proprietorship • Qaim 1995 • Jodia Bazar, Karachi",
-    urdu: "سول پروپرائٹر شپ • قائم 1995 • جوڈیا بازار، کراچی",
+    en: "Bulk Wholesale Stockist • Est. 1995 • Jodia Bazar, Karachi",
+    romanUrdu: "Bulk Wholesale Stockist • Qaim 1995 • Jodia Bazar, Karachi",
+    urdu: "بلک ہول سیل اسٹاکسٹ • قائم 1995 • جوڈیا بازار، کراچی",
   },
   "hero.headline": {
     en: "Bulk Chemical Supply from Pakistan's Trading Hub",
@@ -29,9 +29,9 @@ export const translations: Record<string, TranslationRecord> = {
     urdu: "پاکستان کے ٹریڈنگ ہب سے بلک کیمیکل سپلائی",
   },
   "hero.subtitleText": {
-    en: "Al Mobeen Enterprise sources high-grade industrial solvents, plasticizers, pigments, resins, and acids directly from established importers and tier-1 dealers across Pakistan.",
-    romanUrdu: "Al Mobeen Enterprise aala miyaar ke industrial solvents, plasticizers, pigments, resins, aur acids Pakistan ke importers aur dealers se direct source karta hai.",
-    urdu: "المبین انٹرپرائز اعلیٰ معیار کے صنعتی سالوینٹس، پلاسٹائزر، پگمنٹس، ریزنز اور ایسڈز براہ راست پاکستان کے امپورٹرز اور ڈیلرز سے سورس کرتا ہے۔",
+    en: "Al Mobeen Enterprise is a dedicated wholesale stockist supplying high-grade bulk industrial chemicals, raw materials, and processing compounds to manufacturing industries across Pakistan.",
+    romanUrdu: "Al Mobeen Enterprise aala miyaar ke bulk industrial chemicals aur raw materials Pakistan ki manufacturing industries ko supply karta hai.",
+    urdu: "المبین انٹرپرائز اعلیٰ معیار کے صنعتی کیمیکلز اور خام مال براہ راست پاکستان کی مینوفیکچرنگ صنعتوں کو فراہم کرتا ہے۔",
   },
   "hero.cta.catalog": {
     en: "Browse 80+ Chemical Catalog",
@@ -73,9 +73,9 @@ export const translations: Record<string, TranslationRecord> = {
     urdu: "تین دہائیوں سے بھروسہ مند کیمیکل سپلائی",
   },
   "about.snippet.text": {
-    en: "Al Mobeen Enterprise has been a trusted name in Jodia Bazar, Karachi for over 30 years. We source and supply industrial chemicals in bulk from Pakistan's most established importers and large dealers — fulfilling orders according to our customers' exact requirements, across all major industries.",
-    romanUrdu: "Al Mobeen Enterprise 30 saal se zyada arsa se Jodia Bazar, Karachi mein ek bharosemand naam hai. Hum Pakistan ke sabse established importers aur bade dealers se bulk industrial chemicals source aur supply karte hain — apne customers ki zaroorat ke mutabiq.",
-    urdu: "المبین انٹرپرائز 30 سال سے زیادہ عرصے سے جوڈیا بازار، کراچی میں ایک بھروسہ مند نام ہے۔ ہم پاکستان کے سب سے قائم شدہ امپورٹرز اور بڑے ڈیلرز سے بلک صنعتی کیمیکلز سورس اور سپلائی کرتے ہیں۔",
+    en: "Al Mobeen Enterprise has been a trusted name in Jodia Bazar, Karachi for over 30 years. We supply high-grade industrial chemicals in bulk with ready warehouse inventory — fulfilling orders according to our customers' exact specifications, across all major manufacturing industries.",
+    romanUrdu: "Al Mobeen Enterprise 30 saal se zyada arsa se Jodia Bazar, Karachi mein ek bharosemand naam hai. Hum ready warehouse stock ke saath bulk industrial chemicals supply karte hain — apne customers ki exact zaroorat ke mutabiq.",
+    urdu: "المبین انٹرپرائز 30 سال سے زیادہ عرصے سے جوڈیا بازار، کراچی میں ایک بھروسہ مند نام ہے۔ ہم ریڈی ویئر ہاؤس اسٹاک کے ساتھ بلک صنعتی کیمیکلز سپلائی کرتے ہیں — اپنے کسٹمرز کی درست ضرورت کے مطابق۔",
   },
 
   // ─── Product Categories ───
@@ -117,11 +117,11 @@ export const translations: Record<string, TranslationRecord> = {
     romanUrdu: "Jodia Bazar se teen dashak ki bharosemand chemical distribution.",
     urdu: "جوڈیا بازار سے تین دہائیوں کی بھروسہ مند کیمیکل ڈسٹری بیوشن۔",
   },
-  "why.sourcing.title": { en: "Reliable Sourcing Network", romanUrdu: "Bharosemand Sourcing Network", urdu: "بھروسہ مند سورسنگ نیٹ ورک" },
+  "why.sourcing.title": { en: "Extensive Ready Inventory", romanUrdu: "Bada Ready Stock Network", urdu: "وسیع ریڈی اسٹاک نیٹ ورک" },
   "why.sourcing.text": {
-    en: "Connected to Pakistan's top importers and dealers for consistent, quality supply.",
-    romanUrdu: "Pakistan ke top importers aur dealers se judey — musalsal aur quality supply ke liye.",
-    urdu: "پاکستان کے ٹاپ امپورٹرز اور ڈیلرز سے جڑے — مسلسل اور کوالٹی سپلائی کے لیے۔",
+    en: "Consistent bulk availability of high-grade raw materials for uninterrupted factory production runs.",
+    romanUrdu: "Baghair kisi rukawat factory production ke liye aala miyaar ke chemicals ka mustaqil stock.",
+    urdu: "بغیر کسی رکاوٹ کے فیکٹری پروڈکشن کے لیے اعلیٰ معیار کے کیمیکلز کا مسلسل اسٹاک۔",
   },
   "why.bulk.title": { en: "Bulk Supply Nationwide", romanUrdu: "Bulk Supply Mulk Bhar Mein", urdu: "بلک سپلائی ملک بھر میں" },
   "why.bulk.text": {
@@ -200,9 +200,9 @@ export const translations: Record<string, TranslationRecord> = {
   "about.title": { en: "About Al Mobeen Enterprise", romanUrdu: "Al Mobeen Enterprise Ke Baare Mein", urdu: "المبین انٹرپرائز کے بارے میں" },
   "about.story.title": { en: "Our Story", romanUrdu: "Hamari Kahani", urdu: "ہماری کہانی" },
   "about.story.text": {
-    en: "For over three decades, Al Mobeen Enterprise has been a trusted chemical distributor operating from the heart of Jodia Bazar in Karachi — Pakistan's largest and most established chemical trading market. As a sole proprietorship, we've built our reputation on one principle: reliable sourcing and honest dealing.\n\nWe do not import or manufacture. Instead, we work closely with Pakistan's leading importers and large dealers, sourcing chemicals according to our customers' exact specifications. This focused model lets us offer competitive pricing and consistent availability across a wide product range — from solvents and plasticizers to pigments, resins, and specialty chemicals.\n\nOur customers span seven major industries — Paints & Coatings, Printing Inks, Plastics/PVC, Textile & Dyeing, Leather, Detergents, and General Industrial Manufacturing — and we serve them across all of Pakistan with a primary focus on Karachi.",
-    romanUrdu: "Teen dashak se zyada arsa se, Al Mobeen Enterprise Jodia Bazar, Karachi — Pakistan ki sabse badi aur qaim shuda chemical trading market — ke dil mein ek bharosemand chemical distributor raha hai. Ek sole proprietorship ke taur par, humne apni shohrat ek usool par banai hai: bharosemand sourcing aur eimandari se muamla.\n\nHum import ya manufacture nahi karte. Iske bajaaye, hum Pakistan ke leading importers aur bade dealers ke saath mil kar kaam karte hain, apne customers ki exact zaroorat ke mutabiq chemicals source karte hain.",
-    urdu: "تین دہائیوں سے زیادہ عرصے سے، المبین انٹرپرائز جوڈیا بازار، کراچی — پاکستان کی سب سے بڑی اور قائم شدہ کیمیکل ٹریڈنگ مارکیٹ — کے دل میں ایک بھروسہ مند کیمیکل ڈسٹری بیوٹر رہا ہے۔ ایک سول پروپرائٹر شپ کے طور پر، ہم نے اپنی شہرت ایک اصول پر بنائی ہے: بھروسہ مند سورسنگ اور ایمانداری سے معاملہ۔",
+    en: "For over three decades, Al Mobeen Enterprise has been a trusted chemical stockist and wholesale distributor operating from the heart of Jodia Bazar in Karachi — Pakistan's largest and most established chemical trading market. We've built our reputation on one principle: reliable supply, consistent purity, and honest commercial dealing.\n\nWe maintain extensive ready warehouse inventory and disciplined supply lines, providing chemicals according to our customers' exact technical specifications and batch volume requirements. This focused model delivers competitive wholesale pricing, verified manufacturer COAs, and rapid dispatch across all major manufacturing sectors.\n\nOur customers span seven major industries — Paints & Coatings, Printing Inks, Plastics/PVC, Textile & Dyeing, Leather, Detergents, and General Industrial Manufacturing — and we serve them across all of Pakistan with a primary focus on Karachi.",
+    romanUrdu: "Teen dashak se zyada arsa se, Al Mobeen Enterprise Jodia Bazar, Karachi — Pakistan ki sabse badi chemical trading market — ke dil mein ek bharosemand chemical stockist aur distributor raha hai. Humne apni shohrat ek usool par banai hai: bharosemand supply, consistent purity aur eimandari se muamla.\n\nHum extensive ready warehouse stock aur mazboot supply lines maintain karte hain, apne customers ki exact zaroorat aur volume ke mutabiq chemicals deliver karte hain.",
+    urdu: "تین دہائیوں سے زیادہ عرصے سے، المبین انٹرپرائز جوڈیا بازار، کراچی — پاکستان کی سب سے بڑی اور قائم شدہ کیمیکل ٹریڈنگ مارکیٹ — کے دل میں ایک بھروسہ مند کیمیکل اسٹاکسٹ اور ڈسٹری بیوٹر رہا ہے۔ ہم نے اپنی شہرت ایک اصول پر بنائی ہے: بھروسہ مند سپلائی، معیار اور ایمانداری سے معاملہ۔",
   },
   "about.timeline.founded": { en: "Founded", romanUrdu: "Qaim Hua", urdu: "قائم ہوا" },
   "about.timeline.growth": { en: "30 Years of Growth", romanUrdu: "30 Saal Ki Tarakki", urdu: "30 سال کی ترقی" },

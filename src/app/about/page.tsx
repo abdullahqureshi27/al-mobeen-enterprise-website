@@ -37,7 +37,7 @@ export default function AboutPage() {
     <div className="bg-base min-h-screen">
       <PageHero
         title="30 Years of Reliable Chemical Distribution"
-        description="Operating from the heart of Jodia Bazar, Karachi since 1995 — connecting industrial manufacturers with Pakistan's most established chemical sourcing networks."
+        description="Operating from the heart of Jodia Bazar, Karachi since 1995 — supplying bulk industrial chemicals and raw materials with ready warehouse inventory and verified manufacturer COAs."
         badgeText="Heritage & Trust"
       />
 
@@ -50,11 +50,11 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-ink font-medium">
-              For three decades, <strong className="text-ink font-extrabold">Al Mobeen Enterprise</strong> has served as a cornerstone chemical trading business in Jodia Bazar, Karachi. Operating as a sole proprietorship, we have built long-standing relationships with industrial clients across Pakistan based on a single core principle: <em className="text-ink font-semibold">dependable sourcing and transparent dealing</em>.
+              For three decades, <strong className="text-ink font-extrabold">Al Mobeen Enterprise</strong> has served as a cornerstone chemical trading business in Jodia Bazar, Karachi. We have built long-standing relationships with industrial clients across Pakistan based on a single core principle: <em className="text-ink font-semibold">dependable supply, consistent purity, and transparent commercial dealing</em>.
             </p>
 
             <p className="text-ink font-medium">
-              We operate exclusively as a <strong className="text-ink font-extrabold">bulk chemical distributor and trader</strong>. Rather than importing directly or manufacturing, we leverage an extensive network of Pakistan&apos;s leading chemical importers and tier-1 dealers. This enables us to source exact specifications, grade requirements, and volume orders tailored specifically to our clients&apos; industrial needs.
+              We operate as a dedicated <strong className="text-ink font-extrabold">bulk chemical stockist and wholesale distributor</strong>. Operating from the heart of Jodia Bazar, we maintain extensive ready warehouse inventory and reliable commercial supply lines to fulfill exact specifications, grade requirements, and high-volume orders tailored specifically to our clients&apos; industrial manufacturing needs.
             </p>
 
             <div className="p-6 rounded-2xl bg-base border border-border my-6">
@@ -64,10 +64,10 @@ export default function AboutPage() {
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-ink">
                 <li className="text-ink"><strong className="text-ink font-bold">Location:</strong> G/9, Golden Center, Weaver Lane, Jodia Bazar, Karachi</li>
                 <li className="text-ink"><strong className="text-ink font-bold">Experience:</strong> 30 Years (Established 1995)</li>
-                <li className="text-ink"><strong className="text-ink font-bold">Business Model:</strong> Bulk &amp; Wholesale Distributor / Trader</li>
+                <li className="text-ink"><strong className="text-ink font-bold">Business Model:</strong> Bulk Wholesale Stockist &amp; Distributor</li>
                 <li className="text-ink"><strong className="text-ink font-bold">Service Area:</strong> Nationwide (Main Focus Karachi)</li>
                 <li className="text-ink"><strong className="text-ink font-bold">Business Hours:</strong> 9:00 AM – 6:00 PM</li>
-                <li className="text-ink"><strong className="text-ink font-bold">Ownership:</strong> Sole Proprietorship</li>
+                <li className="text-ink"><strong className="text-ink font-bold">Quality Assurance:</strong> 100% Manufacturer COA Verified</li>
               </ul>
             </div>
 

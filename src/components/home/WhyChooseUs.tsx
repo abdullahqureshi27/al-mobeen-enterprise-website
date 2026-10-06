@@ -15,8 +15,8 @@ const steps = [
   },
   {
     num: "03",
-    title: "Direct Wholesale Spot Pricing",
-    desc: "Direct partnerships with tier-1 global chemical importers allow us to pass transparent Jodia Bazar market rates directly to your procurement team.",
+    title: "Competitive Wholesale Spot Pricing",
+    desc: "Leveraging 30 years of high-volume market presence in Jodia Bazar to deliver transparent daily market rates, bulk cost savings, and direct delivery to your factory floor.",
   },
   {
     num: "04",
