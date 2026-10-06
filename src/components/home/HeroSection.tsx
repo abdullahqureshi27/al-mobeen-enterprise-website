@@ -49,7 +49,7 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 0.16 }}
               className="text-sm sm:text-base text-ink-muted leading-relaxed mb-6 sm:mb-8 max-w-[500px]"
             >
-              Direct wholesale supply of bulk industrial chemicals, raw materials, and processing compounds. Ready warehouse stock in Jodia Bazar with verified manufacturer COAs and fast factory dispatch across Pakistan.
+              Direct wholesale supply of bulk industrial chemicals, raw materials, and processing compounds. Transparent grade purity — we sell exactly what we claim — with fast dispatch from Jodia Bazar across Pakistan.
             </motion.p>
 
             {/* Dual Pill CTA Buttons */}
@@ -127,7 +127,7 @@ export default function HeroSection() {
                   100 <span className="text-accent">%</span>
                 </div>
                 <p className="text-[10px] sm:text-xs font-semibold text-ink-muted leading-tight">
-                  Verified COA
+                  Genuine Quality
                 </p>
               </div>
 

@@ -185,7 +185,7 @@ export default function HeroChemicalTerminal() {
 
         {/* Footer Link in Terminal */}
         <div className="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between text-[11px] sm:text-xs">
-          <span className="text-ink-subtle font-medium">Original Manufacturer COA Included</span>
+          <span className="text-ink-subtle font-medium">We Sell Exactly What We Claim</span>
           <Link
             href="/products"
             className="font-extrabold text-ink hover:text-accent inline-flex items-center gap-1 transition-colors"

@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqs = [
   {
     q: "Why is Al Mobeen Enterprise considered the premier bulk chemical dealer in Karachi?",
-    a: "Operating from Jodia Bazar since 1995, Al Mobeen Enterprise has built a 30-year legacy of transparent dealing, direct wholesale pricing, and uninterrupted bulk chemical supply. We maintain extensive ready warehouse stock, ensuring certified purity, original manufacturer COAs, and rapid dispatch across Karachi and Pakistan.",
+    a: "Operating from Jodia Bazar since 1995, Al Mobeen Enterprise has built a 30-year legacy of transparent dealing, direct wholesale pricing, and uninterrupted bulk chemical supply. We maintain extensive ready warehouse stock, ensuring genuine purity with zero adulteration (we sell what we claim), and rapid dispatch across Karachi and Pakistan.",
   },
   {
     q: "Where is your main office located in Jodia Bazar, Karachi?",
@@ -21,8 +21,8 @@ const faqs = [
     a: "Yes. While our primary warehouse hubs are in Karachi, we routinely dispatch bulk consignments across Pakistan, including major industrial zones in Lahore, Faisalabad, Gujranwala, Sialkot, Sheikhupura, Rawalpindi, and Peshawar via trusted freight and logistics partners.",
   },
   {
-    q: "How can procurement managers obtain bulk price quotes and Certificate of Analysis (COA)?",
-    a: "You can assemble your required chemical items using our online Quote Drawer, or message our Jodia Bazar desk directly on WhatsApp at +92 332 1134530. We promptly provide formal commercial quotations, batch purity specifications, and manufacturer test certificates (COA).",
+    q: "How can procurement managers verify chemical grade purity and request price quotes?",
+    a: "You can assemble your required chemical items using our online Quote Drawer, or message our Jodia Bazar desk directly on WhatsApp at +92 332 1134530. We provide spot market quotations, exact grade specifications (we sell what we claim), testing samples, and manufacturer technical datasheets upon request.",
   },
 ];
 

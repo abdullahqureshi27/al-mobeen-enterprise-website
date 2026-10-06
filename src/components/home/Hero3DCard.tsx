@@ -224,7 +224,7 @@ export default function Hero3DCard() {
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-success">
             <path d="M20 6 9 17l-5-5" />
           </svg>
-          Batch COA Provided
+          We Sell What We Claim
         </span>
         <span className="flex items-center gap-1">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-success">

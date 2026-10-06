@@ -17,9 +17,9 @@ const highlights = [
   },
   {
     step: "02",
-    title: "Certified Manufacturer COA",
-    description: "Every shipment comes with original manufacturer Certificate of Analysis, guaranteeing genuine lab-tested purity and batch consistency.",
-    tag: "100% Verified Purity",
+    title: "We Sell What We Claim",
+    description: "Honest purity and exact chemical grading with zero adulteration. Sample testing and manufacturer specs available upon request.",
+    tag: "Genuine Quality Guaranteed",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />

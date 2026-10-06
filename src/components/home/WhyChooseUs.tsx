@@ -10,8 +10,8 @@ const steps = [
   },
   {
     num: "02",
-    title: "Lab COA & Batch Verification",
-    desc: "Every batch is cross-referenced with original manufacturer Certificates of Analysis (COA) to guarantee chemical assay and zero contamination.",
+    title: "Exact Grade Purity — We Sell What We Claim",
+    desc: "Whether your process requires 91%, 95%, or 99% purity, we deliver the exact honest grade specified with zero adulteration. Sample testing and manufacturer specs available upon request.",
   },
   {
     num: "03",
@@ -56,10 +56,10 @@ export default function WhyChooseUs() {
             <div className="hidden lg:flex flex-col gap-3">
               <div className="p-4 rounded-[20px] bg-surface-muted border border-border">
                 <span className="text-xs font-bold text-ink block mb-0.5">
-                  ✓ 100% Original Manufacturer COA
+                  ✓ We Sell Exactly What We Claim
                 </span>
                 <span className="text-[11px] text-ink-muted">
-                  Batch testing and purity guaranteed on every consignment.
+                  Guaranteed honest grade purity with zero adulteration on every order.
                 </span>
               </div>
               <div className="p-4 rounded-[20px] bg-surface-muted border border-border">
@@ -105,7 +105,7 @@ export default function WhyChooseUs() {
                     Ready to Procure Bulk Chemicals?
                   </h3>
                   <p className="text-xs sm:text-sm text-ink-inverse-muted leading-relaxed">
-                    Contact our Jodia Bazar desk directly for spot quotes, technical specifications, and batch COA verification.
+                    Contact our Jodia Bazar desk directly for spot quotes, technical specifications, and physical sample inspection.
                   </p>
                 </div>
               </div>

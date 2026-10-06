@@ -28,8 +28,8 @@ const stats: StatItem[] = [
   {
     value: 100,
     suffix: "%",
-    label: "Manufacturer COA",
-    sub: "Guaranteed batch purity test",
+    label: "Genuine Quality",
+    sub: "We sell exactly what we claim",
     isNumeric: true,
   },
   {

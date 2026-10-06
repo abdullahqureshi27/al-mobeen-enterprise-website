@@ -116,7 +116,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <span>Karachi Industrial Chemical Hub</span>
             <span>•</span>
-            <span>Original Manufacturer COA</span>
+            <span>We Sell What We Claim</span>
           </div>
         </div>
       </div>

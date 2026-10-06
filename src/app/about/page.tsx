@@ -37,7 +37,7 @@ export default function AboutPage() {
     <div className="bg-base min-h-screen">
       <PageHero
         title="30 Years of Reliable Chemical Distribution"
-        description="Operating from the heart of Jodia Bazar, Karachi since 1995 — supplying bulk industrial chemicals and raw materials with ready warehouse inventory and verified manufacturer COAs."
+        description="Operating from the heart of Jodia Bazar, Karachi since 1995 — supplying bulk industrial chemicals and raw materials with ready warehouse inventory and honest grade purity."
         badgeText="Heritage & Trust"
       />
 
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 <li className="text-ink"><strong className="text-ink font-bold">Business Model:</strong> Bulk Wholesale Stockist &amp; Distributor</li>
                 <li className="text-ink"><strong className="text-ink font-bold">Service Area:</strong> Nationwide (Main Focus Karachi)</li>
                 <li className="text-ink"><strong className="text-ink font-bold">Business Hours:</strong> 9:00 AM – 6:00 PM</li>
-                <li className="text-ink"><strong className="text-ink font-bold">Quality Assurance:</strong> 100% Manufacturer COA Verified</li>
+                <li className="text-ink"><strong className="text-ink font-bold">Quality Promise:</strong> We Sell What We Claim (Honest Grades)</li>
               </ul>
             </div>
 
