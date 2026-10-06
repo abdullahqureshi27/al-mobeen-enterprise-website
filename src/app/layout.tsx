@@ -254,6 +254,7 @@ export default function RootLayout({
                   <main className="flex-1 relative z-10">{children}</main>
                   <Footer />
                   <QuickQuoteWidget />
+                  <ScrollProgressWidget />
                   <QuoteListDrawer />
                 </ToastProvider>
               </QuoteProvider>
