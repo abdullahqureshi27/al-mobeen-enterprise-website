@@ -54,27 +54,53 @@ export default function HomeFAQSection() {
               return (
                 <div
                   key={i}
-                  className={`p-4 sm:p-6 rounded-[18px] sm:rounded-[22px] cursor-pointer transition-all duration-300 border ${
+                  className={`group p-4 sm:p-6 rounded-[18px] sm:rounded-[22px] cursor-pointer transition-all duration-300 border ${
                     isOpen
                       ? "bg-surface border-border shadow-xs"
-                      : "bg-surface-subtle border-border-subtle hover:bg-surface-muted"
+                      : "bg-surface-subtle border-border-subtle hover:bg-surface-muted hover:border-border"
                   }`}
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                 >
                   <div className="flex items-center justify-between gap-3 sm:gap-4">
-                    <h3 className="text-base sm:text-lg font-bold text-ink tracking-tight leading-snug">
+                    <h3 className="text-base sm:text-lg font-bold text-ink tracking-tight leading-snug group-hover:text-accent transition-colors">
                       {faq.q}
                     </h3>
                     <div
                       className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
                         isOpen
-                          ? "bg-accent text-ink-inverse shadow-xs"
-                          : "bg-surface text-ink border border-border"
+                          ? "bg-accent text-ink-inverse border border-accent shadow-xs"
+                          : "bg-surface text-ink border border-border shadow-xs group-hover:bg-accent group-hover:text-ink-inverse group-hover:border-accent group-hover:scale-105"
                       }`}
                     >
-                      <span className="text-base sm:text-lg font-bold leading-none">
-                        {isOpen ? "−" : "+"}
-                      </span>
+                      {isOpen ? (
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                      ) : (
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="transition-transform duration-300 group-hover:rotate-90"
+                        >
+                          <line x1="12" y1="5" x2="12" y2="19" />
+                          <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                      )}
                     </div>
                   </div>
 
