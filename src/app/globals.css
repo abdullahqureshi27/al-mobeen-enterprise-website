@@ -95,7 +95,7 @@
   --success: #059669;
   --success-light: #ECFDF5;
   --success-border: #A7F3D0;
-  --whatsapp: #25D366;
+  --whatsapp: #059669;
   --warning: #D97706;
   --danger: #DC2626;
 
@@ -187,7 +187,7 @@ html.dark {
   --success: #10B981;
   --success-light: rgba(16, 185, 129, 0.15);
   --success-border: rgba(16, 185, 129, 0.3);
-  --whatsapp: #25D366;
+  --whatsapp: #10B981;
   --warning: #F59E0B;
   --danger: #EF4444;
 
