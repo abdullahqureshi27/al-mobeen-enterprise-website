@@ -85,7 +85,7 @@ export default function AboutPage() {
               <ScrollReveal key={evt.year} delay={i * 100}>
                 <div className="bg-surface p-6 rounded-2xl border border-border relative flex flex-col justify-between h-full">
                   <div>
-                    <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-primary text-inverse-ink mb-4">
+                    <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-primary text-white mb-4">
                       {evt.year}
                     </span>
                     <h3 className="text-base font-bold mb-2 text-ink">{evt.title}</h3>

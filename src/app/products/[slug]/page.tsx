@@ -109,7 +109,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             <div className="lg:col-span-7">
               {category && (
                 <span className="inline-flex items-center gap-2 text-xs font-bold px-3 py-1 rounded-full bg-base border border-border text-ink mb-3">
-                  <span className="category-dot" style={{ background: category.tintColor }} />
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                   {category.name}
                 </span>
               )}

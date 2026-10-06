@@ -89,13 +89,13 @@ function ContactFormContent() {
 
       {status === "success" ? (
         <div className="py-12 text-center">
-          <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
+          <div className="w-16 h-16 rounded-full bg-success-light text-success border border-success-border flex items-center justify-center mx-auto mb-4">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="20 6 9 17 4 12" />
             </svg>
           </div>
           <h3 className="text-2xl font-bold mb-2">Quote Request Sent!</h3>
-          <p className="text-sm text-neutral max-w-md mx-auto mb-8">
+          <p className="text-sm text-ink-muted max-w-md mx-auto mb-8">
             Thank you! Your quote request has been received. Our team will review your specifications and contact you at <span className="font-semibold text-ink">{phone}</span> shortly.
           </p>
           <Button
@@ -118,7 +118,7 @@ function ContactFormContent() {
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
           {status === "error" && (
-            <div className="p-4 rounded-xl bg-red-50 text-red-600 text-xs font-medium border border-red-200">
+            <div className="p-4 rounded-xl bg-accent-light text-accent text-xs font-medium border border-accent-border">
               {errorMessage}
             </div>
           )}
@@ -278,7 +278,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <strong className="block text-xs text-neutral uppercase tracking-wider mb-0.5">Address</strong>
+                    <strong className="block text-xs text-ink-muted uppercase tracking-wider mb-0.5">Address</strong>
                     <span>G/9, Golden Center, Weaver Lane, Jodia Bazar, Karachi, Pakistan</span>
                   </div>
                 </div>
@@ -290,7 +290,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <strong className="block text-xs text-neutral uppercase tracking-wider mb-0.5">Phone & WhatsApp</strong>
+                    <strong className="block text-xs text-ink-muted uppercase tracking-wider mb-0.5">Phone & WhatsApp</strong>
                     <div className="flex flex-col gap-1 font-medium">
                     <a href="tel:+923321134530" className="hover:text-accent transition-colors">0332-1134530 (Primary)</a>
                       <a href="tel:+923002268847" className="hover:text-accent transition-colors">0300-2268847</a>
@@ -307,7 +307,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <strong className="block text-xs text-neutral uppercase tracking-wider mb-0.5">Email</strong>
+                    <strong className="block text-xs text-ink-muted uppercase tracking-wider mb-0.5">Email</strong>
                     <a href="mailto:almobeenenterprise@gmail.com" className="hover:text-accent transition-colors font-medium">
                       almobeenenterprise@gmail.com
                     </a>
@@ -322,7 +322,7 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <strong className="block text-xs text-neutral uppercase tracking-wider mb-0.5">Business Hours</strong>
+                    <strong className="block text-xs text-ink-muted uppercase tracking-wider mb-0.5">Business Hours</strong>
                     <span>Monday – Saturday: 9:00 AM – 6:00 PM</span>
                   </div>
                 </div>

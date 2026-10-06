@@ -2,99 +2,70 @@
 
 import Link from "next/link";
 import { categories } from "@/data/categories";
-import { useLanguage } from "./LanguageProvider";
 
 export default function Footer() {
-  const { t } = useLanguage();
-
   const quickLinks = [
-    { href: "/", label: t("nav.home") },
-    { href: "/about", label: t("nav.about") },
-    { href: "/products", label: t("nav.products") },
-    { href: "/industries", label: t("nav.industries") },
-    { href: "/contact", label: t("nav.contact") },
+    { href: "/", label: "Home" },
+    { href: "/products", label: "Chemical Catalog (80+ Items)" },
+    { href: "/industries", label: "Industries Served" },
+    { href: "/about", label: "About Our Company" },
+    { href: "/contact", label: "Contact & Quotation" },
   ];
 
   return (
-    <footer
-      className="text-ink bg-surface border-t border-border"
-      
-    >
-      <div className="section-container section-padding">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
-          {/* Column 1: Company Info */}
-          <div>
-            <div className="flex items-center gap-3 mb-4 group">
-              <img 
-                src="/ame-logo.png" 
-                alt="Al Mobeen Enterprise Logo" 
-                className="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextElementSibling?.classList.remove('hidden');
-                }}
-              />
-              <div className="hidden w-9 h-9 rounded-lg flex items-center justify-center bg-ink/5 text-ink font-bold text-sm">
-                AM
+    <footer className="bg-surface-inverse text-ink-inverse pt-14 sm:pt-18 md:pt-20 pb-8 sm:pb-12 relative overflow-hidden w-full border-t border-border-inverse">
+      <div className="mx-auto max-w-[1320px] px-4 sm:px-6 md:px-10 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 items-start mb-12 sm:mb-16">
+          {/* Column 1: Brand & Bio */}
+          <div className="sm:col-span-2 lg:col-span-5">
+            <Link href="/" className="inline-flex items-center gap-2.5 sm:gap-3 group mb-4 sm:mb-5">
+              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-accent text-white flex items-center justify-center font-black text-lg sm:text-xl shadow-md group-hover:scale-105 transition-transform">
+                A
               </div>
-              <span className="font-bold text-lg tracking-tight">
-                Al Mobeen Enterprise
-              </span>
-            </div>
-            <p className="text-ink opacity-80 text-sm leading-relaxed mb-5">
-              {t("footer.tagline")}
+              <div className="flex flex-col">
+                <span className="text-xl sm:text-2xl font-black tracking-tight text-ink-inverse group-hover:text-accent transition-colors leading-none">
+                  AL MOBEEN
+                </span>
+                <span className="text-[10px] font-bold tracking-widest text-ink-inverse-muted uppercase mt-0.5">
+                  ENTERPRISE • KARACHI
+                </span>
+              </div>
+            </Link>
+
+            <p className="text-xs sm:text-sm text-ink-inverse-muted max-w-[420px] leading-relaxed mb-6">
+              Premier bulk industrial chemical dealer and wholesaler operating directly from Jodia Bazar, Karachi since 1995. Supplying solvents, plasticizers, titanium dioxide, pigments, resins, and acids nationwide.
             </p>
-            {/* Social Icons */}
-            <div className="flex items-center gap-3">
+
+            <div className="flex items-center gap-2.5">
               <a
-                href="https://www.instagram.com/almobeenenterprise"
+                href="https://wa.me/923321134530"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-ink/10 text-ink flex items-center justify-center transition-all hover:bg-primary hover:text-surface hover:scale-110"
-                aria-label="Instagram"
-                style={{ transitionDuration: "var(--dur-micro)" }}
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-whatsapp/20 text-whatsapp border border-whatsapp/30 text-xs font-bold hover:bg-whatsapp hover:text-white transition-all"
               >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
+                <span>WhatsApp Desk</span>
+                <span>→</span>
               </a>
               <a
-                href="https://www.facebook.com/almobeenenterprise"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-ink/10 text-ink flex items-center justify-center transition-all hover:bg-primary hover:text-surface hover:scale-110"
-                aria-label="Facebook"
-                style={{ transitionDuration: "var(--dur-micro)" }}
+                href="tel:+923321134530"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-inverse-hover text-ink-inverse border border-border-inverse text-xs font-bold hover:bg-surface-hover hover:text-ink transition-all"
               >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385h-3.047v-3.47h3.047v-2.642c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.514c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385c5.738-.9 10.126-5.864 10.126-11.854z" />
-                </svg>
+                <span>0332-1134530</span>
               </a>
             </div>
           </div>
 
-          {/* Column 2: Quick Links */}
-          <div>
-            <h3 className="font-bold text-xs uppercase tracking-wider mb-4 text-ink">
-              {t("footer.quickLinks")}
-            </h3>
-            <ul className="space-y-2.5">
+          {/* Column 2: Navigation */}
+          <div className="lg:col-span-2">
+            <h4 className="text-xs sm:text-sm text-ink-inverse-muted mb-3 sm:mb-5 font-normal tracking-wider">
+              /Navigation
+            </h4>
+            <ul className="space-y-2 sm:space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-ink opacity-80 text-sm font-medium hover:text-primary transition-colors"
-                    style={{ transitionDuration: "var(--dur-micro)" }}
+                    className="text-sm sm:text-base font-semibold text-ink-inverse hover:text-accent transition-colors duration-200 block"
                   >
                     {link.label}
                   </Link>
@@ -103,23 +74,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Product Categories */}
-          <div>
-            <h3 className="font-bold text-xs uppercase tracking-wider mb-4 text-ink">
-              {t("footer.categories")}
-            </h3>
-            <ul className="space-y-2.5">
-              {categories.map((cat) => (
+          {/* Column 3: Bulk Categories */}
+          <div className="lg:col-span-2">
+            <h4 className="text-xs sm:text-sm text-ink-inverse-muted mb-3 sm:mb-5 font-normal tracking-wider">
+              /Categories
+            </h4>
+            <ul className="space-y-2 sm:space-y-2.5">
+              {categories.slice(0, 5).map((cat) => (
                 <li key={cat.slug}>
                   <Link
                     href={`/products?category=${cat.slug}`}
-                    className="text-ink opacity-80 text-sm font-medium hover:text-primary transition-colors flex items-center gap-2"
-                    style={{ transitionDuration: "var(--dur-micro)" }}
+                    className="text-sm sm:text-base font-semibold text-ink-inverse hover:text-accent transition-colors duration-200 block"
                   >
-                    <span
-                      className="category-dot"
-                      style={{ background: cat.tintColor }}
-                    />
                     {cat.name}
                   </Link>
                 </li>
@@ -127,113 +93,39 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Contact Info */}
-          <div>
-            <h3 className="font-bold text-xs uppercase tracking-wider mb-4 text-ink">
-              {t("footer.contactInfo")}
-            </h3>
-            <div className="space-y-3 text-sm text-ink opacity-85 font-medium">
-              <p className="leading-relaxed">
-                G/9, Golden Center, Weaver Lane,
-                <br />
-                Jodia Bazar, Karachi
+          {/* Column 4: Physical Office & Legal */}
+          <div className="lg:col-span-3">
+            <h4 className="text-xs sm:text-sm text-ink-inverse-muted mb-3 sm:mb-5 font-normal tracking-wider">
+              /Trading Office
+            </h4>
+            <div className="text-xs sm:text-sm text-ink-inverse-muted space-y-2 leading-relaxed">
+              <p className="font-semibold text-ink-inverse">
+                G/9, Golden Center, Weaver Lane, Jodia Bazar, Karachi, Pakistan
               </p>
-              <div className="space-y-1.5">
-                <a
-                  href="tel:+923321134530"
-                  className="flex items-center gap-2 hover:text-primary transition-colors"
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                  </svg>
-                  0332-1134530
-                </a>
-                <a
-                  href="tel:+923002268847"
-                  className="flex items-center gap-2 hover:text-primary transition-colors"
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                  </svg>
-                  0300-2268847
-                </a>
-                <a
-                  href="tel:+923152703824"
-                  className="flex items-center gap-2 hover:text-primary transition-colors"
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                  </svg>
-                  0315-2703824
-                </a>
-              </div>
-              <a
-                href="mailto:almobeenenterprise@gmail.com"
-                className="flex items-center gap-2 hover:text-primary transition-colors"
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect x="2" y="4" width="20" height="16" rx="2" />
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                </svg>
-                almobeenenterprise@gmail.com
-              </a>
-              <p className="text-ink opacity-70 text-xs mt-3 font-semibold">
-                9:00 AM – 6:00 PM
+              <p>Mon - Sat: 9:00 AM - 6:00 PM PKT</p>
+              <p className="text-accent font-bold">
+                NTN / Wholesale Registered
               </p>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-ink opacity-80 text-xs font-semibold">
-          <div>{t("footer.rights")}</div>
-          <div>
-            Designed &amp; Built by{" "}
-            <a
-              href="https://abdullah-qureshi.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:underline font-bold transition-colors"
-            >
-              Abdullah Qureshi
-            </a>
+        {/* Bottom Copyright & Verification */}
+        <div className="pt-8 sm:pt-10 border-t border-border-inverse flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ink-inverse-muted">
+          <p>© {new Date().getFullYear()} Al Mobeen Enterprise. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <span>Karachi Industrial Chemical Hub</span>
+            <span>•</span>
+            <span>Original Manufacturer COA</span>
           </div>
         </div>
+      </div>
+
+      {/* Massive Sanock-Style Low-Opacity Watermark */}
+      <div className="absolute bottom-0 left-0 right-0 w-full overflow-hidden pointer-events-none z-0 flex items-end justify-center select-none pb-1">
+        <span className="text-[clamp(40px,13vw,190px)] font-black tracking-[-0.04em] leading-none text-ink-inverse/[0.035] select-none uppercase whitespace-nowrap">
+          AL MOBEEN
+        </span>
       </div>
     </footer>
   );

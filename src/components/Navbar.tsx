@@ -2,28 +2,32 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
 import { useQuote } from "./QuoteProvider";
 import { useLanguage } from "./LanguageProvider";
 import { useTheme } from "./ThemeProvider";
-import { Button } from "@/components/ui/button";
 import { type Language, languageNames } from "@/data/translations";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
   const { count } = useQuote();
   const { t, lang, setLang } = useLanguage();
-  const { theme, setTheme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
+
+  const openDrawer = () => {
+    window.dispatchEvent(new CustomEvent("toggle-quote-drawer"));
+  };
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 30);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock body scroll when mobile drawer is open
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -34,43 +38,43 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "/", label: t("nav.home") },
-    { href: "/about", label: t("nav.about") },
     { href: "/products", label: t("nav.products") },
     { href: "/industries", label: t("nav.industries") },
+    { href: "/about", label: t("nav.about") },
     { href: "/contact", label: t("nav.contact") },
   ];
 
   return (
     <>
-      {/* Top B2B Announcement Bar (Hidden on Mobile) */}
-      <div className="bg-primary text-inverse-ink py-2 px-4 text-xs font-semibold border-b border-inverse-ink/10 hidden md:block">
-        <div className="section-container flex items-center justify-between">
-          <div className="flex items-center gap-6 text-inverse-ink/90">
-            <span className="flex items-center gap-1.5">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+      {/* Top B2B Announcement Strip */}
+      <div className="bg-surface-inverse text-ink-inverse py-1.5 px-4 text-[11px] sm:text-xs font-semibold border-b border-border-inverse">
+        <div className="mx-auto max-w-[1320px] flex items-center justify-between">
+          <div className="flex items-center gap-4 sm:gap-6">
+            <span className="flex items-center gap-1.5 text-ink-inverse-muted">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-accent">
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              G/9 Golden Center, Weaver Lane, Jodia Bazar, Karachi
+              <span>
+                <strong className="text-ink-inverse">Jodia Bazar Karachi Desk:</strong> G/9 Golden Center, Weaver Lane
+              </span>
             </span>
-            <span className="flex items-center gap-1.5">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
-              Mon - Sat: 9:00 AM – 6:00 PM
+            <span className="hidden lg:inline-flex items-center gap-1.5 text-ink-inverse-muted">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+              Bulk Spot Pricing &amp; Certified COAs
             </span>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 text-ink-inverse-muted">
+            <span className="hidden sm:inline text-[11px]">Mon - Sat: 9:00 AM - 6:00 PM</span>
             <a
               href="tel:+923321134530"
-              className="flex items-center gap-1.5 text-inverse-ink hover:text-accent transition-colors"
+              className="inline-flex items-center gap-1.5 text-ink-inverse hover:text-accent font-bold transition-colors"
             >
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
               </svg>
-              Desk: 0332-1134530
+              0332-1134530
             </a>
           </div>
         </div>
@@ -78,281 +82,190 @@ export default function Navbar() {
 
       {/* Main Sticky Header */}
       <header
-        className={`sticky top-0 inset-x-0 z-40 transition-all duration-300 ${scrolled
-          ? "glass-nav py-3 border-b border-border shadow-sm"
-          : "bg-surface py-3.5 border-b border-border"
-          }`}
+        className={`sticky top-0 inset-x-0 z-40 transition-all duration-300 ${
+          scrolled
+            ? "bg-surface/90 backdrop-blur-md py-2.5 sm:py-3 border-b border-border shadow-xs"
+            : "bg-surface py-3 sm:py-3.5 border-b border-border-subtle"
+        }`}
       >
-        <div className="section-container flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 z-10 group shrink-0">
-            <img
-              src="/ame-logo.png"
-              alt="Al Mobeen Enterprise Logo"
-              className="h-9 sm:h-11 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-              onError={(e) => {
-                e.currentTarget.style.display = 'none';
-                e.currentTarget.nextElementSibling?.classList.remove('hidden');
-              }}
-            />
-            <div className="hidden w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-ink flex items-center justify-center text-inverse-ink font-black text-lg shadow-md">
-              AM
+        <div className="mx-auto max-w-[1320px] px-3.5 sm:px-6 md:px-10 flex items-center justify-between">
+          {/* Logo with Sanock-style circular badge */}
+          <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group shrink-0">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-accent text-white flex items-center justify-center font-black text-sm sm:text-xl shadow-xs transition-transform duration-300 group-hover:scale-105">
+              A
             </div>
-            <div className="hidden sm:block">
-              <span className="text-ink font-black text-base sm:text-lg tracking-tight block leading-none">
-                Al Mobeen Enterprise
+            <div className="flex flex-col">
+              <span className="text-base sm:text-xl font-extrabold tracking-tight text-ink group-hover:text-accent transition-colors leading-none">
+                AL MOBEEN
               </span>
-              <span className="text-neutral text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wider block mt-0.5">
-                Bulk Chemical Trader • Est. 1995
+              <span className="text-[9px] sm:text-[10px] font-bold text-ink-muted tracking-wider uppercase mt-0.5">
+                ENTERPRISE
               </span>
             </div>
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="relative text-sm font-bold text-ink hover:text-primary transition-colors py-1 group"
-              >
-                {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full rounded-full" />
-              </Link>
-            ))}
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative text-xs sm:text-sm font-semibold transition-colors py-1 ${
+                    isActive
+                      ? "text-accent"
+                      : "text-ink-secondary hover:text-ink"
+                  }`}
+                >
+                  {link.label}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent rounded-full" />
+                  )}
+                </Link>
+              );
+            })}
           </nav>
 
-          {/* Right Side Actions */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Dark/Light Mode Toggle (Desktop & Tablet) */}
-            <button
-              onClick={toggleTheme}
-              className="hidden md:flex p-2.5 rounded-xl border border-border bg-base text-ink hover:bg-surface-hover transition-colors shadow-sm"
-              aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-            >
-              {theme === "light" ? (
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-ink">
-                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-                </svg>
-              ) : (
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-accent">
-                  <circle cx="12" cy="12" r="4" />
-                  <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M18.36 5.64l1.41-1.41" />
-                </svg>
-              )}
-            </button>
-
-            {/* Language Switcher (Desktop Only) */}
-            <div className="hidden lg:flex items-center rounded-xl border border-border bg-base overflow-hidden text-xs shadow-sm p-0.5">
+          {/* Right Action Controls */}
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            {/* Language Switcher */}
+            <div className="hidden sm:flex items-center bg-surface-muted border border-border rounded-full p-0.5 text-[11px] font-bold">
               {(["en", "romanUrdu", "urdu"] as Language[]).map((l) => (
                 <button
                   key={l}
                   onClick={() => setLang(l)}
-                  className={`px-3 py-1 rounded-lg transition-all font-bold ${lang === l
-                    ? "bg-primary text-inverse-ink shadow-sm"
-                    : "text-neutral hover:text-ink"
-                    }`}
+                  className={`px-2 py-0.5 rounded-full transition-all cursor-pointer ${
+                    lang === l
+                      ? "bg-surface text-ink shadow-xs"
+                      : "text-ink-muted hover:text-ink"
+                  }`}
                 >
                   {languageNames[l]}
                 </button>
               ))}
             </div>
 
-            {/* Quote List / Cart Icon Button (Visible on Mobile & Desktop) */}
+            {/* Dark / Light Toggle */}
             <button
-              onClick={() => {
-                window.dispatchEvent(new CustomEvent("toggle-quote-drawer"));
-              }}
-              className="flex relative p-2.5 rounded-xl border border-border bg-base text-ink hover:bg-surface-hover transition-colors shadow-sm"
-              aria-label="Quote List"
+              onClick={toggleTheme}
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-surface-muted text-ink hover:bg-surface-hover border border-border transition-colors flex items-center justify-center cursor-pointer"
+              aria-label="Toggle Theme"
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-                <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
-                <path d="M9 14l2 2 4-4" />
+              {theme === "dark" ? (
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2" />
+                  <path d="M12 20v2" />
+                  <path d="m4.93 4.93 1.41 1.41" />
+                  <path d="m17.66 17.66 1.41 1.41" />
+                  <path d="M2 12h2" />
+                  <path d="M20 12h2" />
+                  <path d="m6.34 17.66-1.41 1.41" />
+                  <path d="m19.07 4.93-1.41 1.41" />
+                </svg>
+              ) : (
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                </svg>
+              )}
+            </button>
+
+            {/* Quote List Button */}
+            <button
+              onClick={openDrawer}
+              className="relative inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 text-[11px] sm:text-xs font-bold text-ink bg-surface-muted hover:bg-surface-hover border border-border rounded-full transition-all cursor-pointer"
+              aria-label="View Quote Cart"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                <path d="M3 6h18" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
               </svg>
+              <span>Quote</span>
               {count > 0 && (
-                <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-accent text-inverse-ink text-[10px] font-extrabold flex items-center justify-center shadow-md">
+                <span className="w-4 h-4 rounded-full bg-accent text-white text-[10px] font-black flex items-center justify-center">
                   {count}
                 </span>
               )}
             </button>
 
-            {/* Desktop CTA */}
-            <Button variant="primary" size="default" className="hidden lg:inline-flex" asChild>
-              <Link href="/contact">
-                {t("nav.getQuote")}
-              </Link>
-            </Button>
-
-            {/* Mobile Hamburger Icon */}
-            <button
-              onClick={() => setMobileMenuOpen(true)}
-              className="lg:hidden p-2.5 rounded-xl border border-border bg-base text-ink hover:bg-surface-hover transition-colors"
-              aria-label="Open Navigation Menu"
+            {/* WhatsApp Quick Icon Button */}
+            <a
+              href="https://wa.me/923321134530"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-whatsapp hover:brightness-110 text-white flex items-center justify-center shadow-xs transition-transform duration-300 hover:scale-105 shrink-0"
+              aria-label="WhatsApp Inquiry"
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="4" y1="6" x2="20" y2="6" />
-                <line x1="4" y1="12" x2="20" y2="12" />
-                <line x1="4" y1="18" x2="20" y2="18" />
+              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+            </a>
+
+            {/* Sanock Pill CTA */}
+            <Link
+              href="/contact"
+              className="hidden sm:inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 text-[11px] sm:text-xs font-bold text-ink bg-surface-muted border border-border rounded-full hover:bg-surface-hover transition-all duration-300 shadow-xs group cursor-pointer"
+            >
+              <span>Request Quote</span>
+              <span className="w-5 h-5 rounded-full bg-accent text-white flex items-center justify-center text-[10px] shadow-xs transition-transform group-hover:translate-x-0.5">
+                →
+              </span>
+            </Link>
+
+            {/* Mobile Menu Toggle */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2 text-ink bg-surface-muted hover:bg-surface-hover border border-border rounded-full transition-colors cursor-pointer"
+              aria-label="Open menu"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                {mobileMenuOpen ? (
+                  <path d="M18 6 6 18M6 6l12 12" />
+                ) : (
+                  <path d="M4 12h16M4 6h16M4 18h16" />
+                )}
               </svg>
             </button>
           </div>
         </div>
       </header>
 
-      {/* Shadcn-style Slide-over Mobile Drawer */}
+      {/* Mobile Drawer Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <>
-            {/* Dark Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs"
-            />
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-x-0 top-[108px] z-50 bg-surface border-b border-border p-6 shadow-2xl lg:hidden max-h-[85vh] overflow-y-auto"
+          >
+            <nav className="flex flex-col gap-3 mb-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="px-4 py-3 rounded-xl text-sm font-bold text-ink hover:bg-surface-muted transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
 
-            {/* Slide-in Sheet Drawer (From Right) */}
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 250 }}
-              className="fixed top-0 right-0 bottom-0 z-50 w-[85%] max-w-[340px] bg-surface border-l border-border shadow-2xl flex flex-col justify-between p-6 overflow-y-auto"
-            >
-              {/* Drawer Header */}
-              <div>
-                <div className="flex items-center justify-between pb-5 border-b border-border mb-6">
-                  <div className="flex items-center gap-2">
-                    <img src="/ame-logo.png" alt="Logo" className="h-8 w-auto object-contain" />
-                    <span className="font-black text-base text-ink">
-                      Al Mobeen
-                    </span>
-                  </div>
-                  <button
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="p-2 rounded-xl border border-border bg-base text-ink hover:bg-surface-hover"
-                    aria-label="Close menu"
-                  >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <line x1="18" y1="6" x2="6" y2="18" />
-                      <line x1="6" y1="6" x2="18" y2="18" />
-                    </svg>
-                  </button>
-                </div>
-
-                {/* Navigation Links */}
-                <nav className="flex flex-col gap-2 mb-8">
-                  {navLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className="px-4 py-3 rounded-xl font-extrabold text-base text-ink hover:bg-base transition-colors flex items-center justify-between"
-                    >
-                      <span>{link.label}</span>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="9 18 15 12 9 6" />
-                      </svg>
-                    </Link>
-                  ))}
-                </nav>
-
-                {/* Controls Section: Language, Theme & Quote List */}
-                <div className="space-y-4 pt-4 border-t border-border mb-6">
-                  <button
-                    onClick={() => {
-                      setMobileMenuOpen(false);
-                      window.dispatchEvent(new CustomEvent("toggle-quote-drawer"));
-                    }}
-                    className="w-full flex items-center justify-between p-3 rounded-xl bg-base border border-border text-ink font-bold text-xs hover:bg-surface-hover transition-colors shadow-xs"
-                  >
-                    <span className="flex items-center gap-2">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
-                        <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
-                        <path d="M9 14l2 2 4-4" />
-                      </svg>
-                      {t("quote.title") || "Quote List"}
-                    </span>
-                    {count > 0 ? (
-                      <span className="px-2 py-0.5 rounded-full bg-accent text-inverse-ink text-[10px] font-extrabold shadow-xs">
-                        {count} Selected
-                      </span>
-                    ) : (
-                      <span className="text-[10px] text-neutral font-semibold">0 Items</span>
-                    )}
-                  </button>
-                  <div>
-                    <label className="text-xs font-bold uppercase tracking-wider text-neutral block mb-2">
-                      Language / Zaban
-                    </label>
-                    <div className="grid grid-cols-3 gap-1.5 bg-base p-1 rounded-xl border border-border text-xs font-bold text-center">
-                      {(["en", "romanUrdu", "urdu"] as Language[]).map((l) => (
-                        <button
-                          key={l}
-                          onClick={() => setLang(l)}
-                          className={`py-2 rounded-lg transition-all ${lang === l
-                            ? "bg-primary text-inverse-ink shadow-sm"
-                            : "text-neutral hover:text-ink"
-                            }`}
-                        >
-                          {languageNames[l]}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="text-xs font-bold uppercase tracking-wider text-neutral block mb-2">
-                      Appearance Theme
-                    </label>
-                    <div className="grid grid-cols-3 gap-1.5 bg-base p-1 rounded-xl border border-border text-xs font-bold text-center">
-                      {[
-                        { id: "light", label: "☀️ Light" },
-                        { id: "dark", label: "🌙 Dark" },
-                        { id: "system", label: "💻 System" },
-                      ].map((item) => (
-                        <button
-                          key={item.id}
-                          onClick={() => setTheme(item.id as "light" | "dark" | "system")}
-                          className={`py-2 rounded-lg transition-all ${theme === item.id
-                            ? "bg-primary text-inverse-ink shadow-sm"
-                            : "text-neutral hover:text-ink"
-                            }`}
-                        >
-                          {item.label}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Drawer Footer Actions */}
-              <div className="pt-4 border-t border-border space-y-3">
-                <Button variant="primary" size="lg" className="w-full justify-center" asChild>
-                  <Link
-                    href="/contact"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {t("nav.getQuote")}
-                  </Link>
-                </Button>
-
-                <Button variant="outline" size="default" className="w-full justify-center text-xs" asChild>
-                  <a href="tel:+923321134530">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                    </svg>
-                    Call Desk: 0332-1134530
-                  </a>
-                </Button>
-              </div>
-            </motion.div>
-          </>
+            <div className="pt-4 border-t border-border space-y-3">
+              <Link
+                href="/contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-accent text-white text-xs font-bold shadow-md"
+              >
+                <span>Request Spot Wholesale Quote</span>
+                <span>→</span>
+              </Link>
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </>

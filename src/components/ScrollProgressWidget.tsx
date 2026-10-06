@@ -66,7 +66,7 @@ export default function ScrollProgressWidget() {
         </motion.svg>
 
         {/* Inner Dual-Tone Fill Progress Circle with WhatsApp Logo */}
-        <div className="relative w-[64px] h-[64px] rounded-full bg-inverse-base overflow-hidden border-2 border-border shadow-2xl flex items-center justify-center group-hover:shadow-whatsapp transition-all">
+        <div className="relative w-[64px] h-[64px] rounded-full bg-surface-inverse overflow-hidden border-2 border-border shadow-2xl flex items-center justify-center group-hover:shadow-whatsapp transition-all">
           {/* Green Liquid Fill Level (Fills vertically from top to bottom as you scroll) */}
           <motion.div
             style={{ height: fillHeightPercent }}
@@ -74,7 +74,7 @@ export default function ScrollProgressWidget() {
           />
 
           {/* WhatsApp Logo Icon in the Center */}
-          <div className="relative z-10 text-inverse-ink drop-shadow-md">
+          <div className="relative z-10 text-white drop-shadow-md">
             <svg
               width="28"
               height="28"

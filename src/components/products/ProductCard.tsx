@@ -39,10 +39,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="flex items-center justify-between gap-2 mb-3">
           {category && (
             <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-ink">
-              <span
-                className="category-dot"
-                style={{ background: category.tintColor }}
-              />
+              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
               {category.name}
             </span>
           )}
@@ -55,7 +52,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <div className="flex items-center justify-between p-4 rounded-xl mb-4 bg-base border border-border">
           <CategoryIcon category={product.category} size={42} />
           <div className="text-right">
-            <span className="text-[10px] font-extrabold uppercase block text-neutral">
+            <span className="text-[10px] font-extrabold uppercase block text-ink-muted">
               {t("products.packaging")}
             </span>
             <span className="text-xs font-black block text-ink">
@@ -88,7 +85,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Description */}
-        <p className="text-xs leading-relaxed font-medium text-neutral-light line-clamp-2 mb-4">
+        <p className="text-xs leading-relaxed font-medium text-ink-muted line-clamp-2 mb-4">
           {product.description}
         </p>
       </div>

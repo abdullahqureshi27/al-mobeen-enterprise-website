@@ -13,7 +13,7 @@ export const categories: Category[] = [
     description:
       "Industrial-grade solvents and glycols for manufacturing, cleaning, and chemical processing applications.",
     icon: "droplet",
-    tintColor: "var(--tint-solvents)",
+    tintColor: "var(--accent)",
   },
   {
     name: "Plasticizers",
@@ -21,7 +21,7 @@ export const categories: Category[] = [
     description:
       "Plasticizer compounds — primarily DOP — used to increase flexibility and durability of PVC and other polymers.",
     icon: "layers",
-    tintColor: "var(--tint-plasticizers)",
+    tintColor: "var(--accent)",
   },
   {
     name: "Pigments & Dyes",
@@ -29,7 +29,7 @@ export const categories: Category[] = [
     description:
       "A wide range of organic and inorganic pigments and dyes for paints, inks, textiles, and plastics.",
     icon: "palette",
-    tintColor: "var(--tint-pigments)",
+    tintColor: "var(--accent)",
   },
   {
     name: "Titanium Dioxide & White Pigments / Fillers",
@@ -37,7 +37,7 @@ export const categories: Category[] = [
     description:
       "High-opacity white pigments and industrial fillers used across paints, coatings, plastics, and paper.",
     icon: "sun",
-    tintColor: "var(--tint-titanium)",
+    tintColor: "var(--accent)",
   },
   {
     name: "Resins & Binders",
@@ -45,7 +45,7 @@ export const categories: Category[] = [
     description:
       "Synthetic and natural resins for adhesive, coating, and binding applications in manufacturing.",
     icon: "hexagon",
-    tintColor: "var(--tint-resins)",
+    tintColor: "var(--accent)",
   },
   {
     name: "Acids & Specialty Chemicals",
@@ -53,7 +53,7 @@ export const categories: Category[] = [
     description:
       "Industrial acids and specialty chemicals for metal treatment, water treatment, and chemical synthesis.",
     icon: "flask",
-    tintColor: "var(--tint-acids)",
+    tintColor: "var(--accent)",
   },
   {
     name: "Other Industrial Chemicals",
@@ -61,7 +61,7 @@ export const categories: Category[] = [
     description:
       "General-purpose industrial chemicals including waxes, powders, and processing aids for various manufacturing needs.",
     icon: "box",
-    tintColor: "var(--tint-other)",
+    tintColor: "var(--accent)",
   },
 ];
 

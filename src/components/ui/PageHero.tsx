@@ -24,19 +24,19 @@ export default function PageHero({ title, description, badgeText }: PageHeroProp
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-6 border border-primary/20 shadow-sm"
+              transition={{ duration: 0.4 }}
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-light border border-accent-border text-ink text-xs font-semibold tracking-tight mb-5 shadow-xs"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-              {badgeText}
+              <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+              <span>{badgeText}</span>
             </motion.div>
           )}
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-black text-ink mb-6 leading-[1.1] tracking-tight"
+            transition={{ duration: 0.5, delay: 0.08 }}
+            className="text-4xl md:text-5xl lg:text-[54px] font-extrabold text-ink mb-4 leading-[1.08] tracking-[-0.03em]"
           >
             {title}
           </motion.h1>
@@ -44,8 +44,8 @@ export default function PageHero({ title, description, badgeText }: PageHeroProp
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base md:text-lg font-medium leading-relaxed max-w-2xl mx-auto text-ink"
+            transition={{ duration: 0.5, delay: 0.16 }}
+            className="text-sm md:text-base font-normal leading-relaxed max-w-2xl mx-auto text-ink-muted"
           >
             {description}
           </motion.p>

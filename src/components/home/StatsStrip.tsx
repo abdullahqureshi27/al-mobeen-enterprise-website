@@ -1,35 +1,56 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useLanguage } from "@/components/LanguageProvider";
 
 interface StatItem {
   value: number | string;
   suffix: string;
-  labelKey: string;
+  label: string;
+  sub: string;
   isNumeric: boolean;
 }
 
 const stats: StatItem[] = [
-  { value: 30, suffix: "", labelKey: "stats.years", isNumeric: true },
-  { value: 80, suffix: "+", labelKey: "stats.products", isNumeric: true },
-  { value: 7, suffix: "", labelKey: "stats.industries", isNumeric: true },
-  { value: "Nationwide", suffix: "", labelKey: "stats.coverage", isNumeric: false },
+  {
+    value: 30,
+    suffix: "+",
+    label: "Trading Legacy",
+    sub: "Established 1995 in Jodia Bazar",
+    isNumeric: true,
+  },
+  {
+    value: 80,
+    suffix: "+",
+    label: "Bulk Chemicals",
+    sub: "Solvents, Plasticizers & Resins",
+    isNumeric: true,
+  },
+  {
+    value: 100,
+    suffix: "%",
+    label: "Manufacturer COA",
+    sub: "Guaranteed batch purity test",
+    isNumeric: true,
+  },
+  {
+    value: "Nationwide",
+    suffix: "",
+    label: "Direct Bulk Dispatch",
+    sub: "Dispatched from Karachi hubs",
+    isNumeric: false,
+  },
 ];
 
 export default function StatsStrip() {
   const [hasAnimated, setHasAnimated] = useState(false);
   const [counts, setCounts] = useState<(number | string)[]>(stats.map(() => 0));
   const ref = useRef<HTMLDivElement>(null);
-  const { t } = useLanguage();
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
-    const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -41,14 +62,12 @@ export default function StatsStrip() {
             return;
           }
 
-          // Animate each numeric counter
           const duration = 1200;
           const startTime = performance.now();
 
           function tick(now: number) {
             const elapsed = now - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            // Ease-out cubic
             const eased = 1 - Math.pow(1 - progress, 3);
 
             setCounts(
@@ -65,7 +84,7 @@ export default function StatsStrip() {
           observer.unobserve(el);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
 
     observer.observe(el);
@@ -73,35 +92,46 @@ export default function StatsStrip() {
   }, [hasAnimated]);
 
   return (
-    <section
-      ref={ref}
-      className="relative rounded-t-[3rem] md:rounded-t-[4rem] -mt-10 md:-mt-14 z-10 shadow-[0_-15px_40px_rgba(0,0,0,0.06)] bg-surface border border-border pb-12"
-    >
-      <div className="section-container py-8 md:py-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-4">
-          {stats.map((stat, i) => (
-            <div key={stat.labelKey} className="text-center">
-              <p
-                className="text-3xl md:text-4xl font-bold font-tabular mb-1 text-primary"
+    <section ref={ref} className="bg-base py-10 sm:py-14 border-b border-border transition-colors">
+      <div className="mx-auto max-w-[1320px] px-4 sm:px-6 md:px-10">
+        <div className="bg-surface-muted p-3.5 sm:p-5 md:p-6 rounded-[28px] sm:rounded-[36px] border border-border">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5">
+            {stats.map((stat, i) => (
+              <div
+                key={stat.label}
+                className="bg-surface p-5 sm:p-6 rounded-[20px] sm:rounded-[24px] border border-border-subtle shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between"
               >
-                {stat.isNumeric ? (
-                  <>
-                    {counts[i]}
-                    {stat.suffix}
-                  </>
-                ) : (
-                  <span className="text-2xl md:text-3xl">
-                    {counts[i] || t("stats.nationwide")}
+                <div className="flex items-center justify-between mb-4">
+                  <span className="w-8 h-8 rounded-full bg-accent-light text-accent flex items-center justify-center font-mono font-bold text-xs">
+                    0{i + 1}
                   </span>
-                )}
-              </p>
-              <p
-                className="text-sm font-medium text-neutral"
-              >
-                {t(stat.labelKey)}
-              </p>
-            </div>
-          ))}
+                  <div className="flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-border"></span>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-ink leading-none mb-1.5">
+                    {stat.isNumeric ? (
+                      <>
+                        {counts[i]}
+                        <span className="text-accent ml-0.5">{stat.suffix}</span>
+                      </>
+                    ) : (
+                      <span>{counts[i] || "Nationwide"}</span>
+                    )}
+                  </div>
+                  <h3 className="text-xs sm:text-sm font-extrabold text-ink mb-0.5">
+                    {stat.label}
+                  </h3>
+                  <p className="text-[11px] sm:text-xs text-ink-muted leading-tight">
+                    {stat.sub}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

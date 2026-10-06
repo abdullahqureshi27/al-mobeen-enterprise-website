@@ -60,7 +60,7 @@ export default function IndustriesPage() {
                             key={cat!.slug}
                             className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-base text-ink border border-border"
                           >
-                            <span className="category-dot" style={{ background: cat!.tintColor }} />
+                            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
                             {cat!.name}
                           </span>
                         ))}

@@ -9,7 +9,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-inverse-ink shadow-md hover:bg-primary-light hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.99]",
+          "bg-primary text-white shadow-md hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.99]",
         primary:
           "btn-primary",
         outline:
@@ -17,15 +17,15 @@ const buttonVariants = cva(
         secondary:
           "bg-surface text-ink border border-border shadow-xs hover:bg-surface-hover hover:-translate-y-0.5",
         ghost:
-          "text-ink hover:bg-ink/5 hover:text-ink",
+          "text-ink hover:bg-surface-muted hover:text-ink",
         link:
           "text-primary underline-offset-4 hover:underline p-0 h-auto font-semibold",
         destructive:
-          "bg-danger text-inverse-ink shadow-sm hover:bg-danger/90 hover:-translate-y-0.5",
+          "bg-accent text-white shadow-sm hover:bg-accent-hover hover:-translate-y-0.5",
         success:
-          "bg-success text-inverse-ink shadow-sm hover:bg-success/90 hover:-translate-y-0.5",
+          "bg-success text-white shadow-sm hover:brightness-110 hover:-translate-y-0.5",
         whatsapp:
-          "bg-whatsapp text-white shadow-md hover:bg-whatsapp/90 hover:-translate-y-0.5 hover:shadow-whatsapp",
+          "bg-whatsapp text-white shadow-md hover:brightness-110 hover:-translate-y-0.5",
       },
       size: {
         default: "h-11 px-6 py-2.5 text-sm",

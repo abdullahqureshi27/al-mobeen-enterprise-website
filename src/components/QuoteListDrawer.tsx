@@ -46,7 +46,7 @@ export default function QuoteListDrawer() {
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 z-[60] bg-inverse-base/30 backdrop-blur-sm"
+        className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm"
         onClick={() => setIsOpen(false)}
         style={{ animation: "fadeIn 200ms var(--ease-out)" }}
       />
@@ -65,7 +65,7 @@ export default function QuoteListDrawer() {
           </h2>
           <button
             onClick={() => setIsOpen(false)}
-            className="p-2 rounded-lg hover:bg-surface-hover transition-colors text-ink"
+            className="p-2 rounded-lg hover:bg-surface-hover transition-colors text-ink cursor-pointer"
             aria-label="Close"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -79,11 +79,11 @@ export default function QuoteListDrawer() {
         <div className="flex-1 overflow-y-auto px-6 py-4">
           {items.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-center">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="mb-4 text-neutral-light">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="mb-4 text-ink-subtle">
                 <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
                 <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
               </svg>
-              <p className="font-semibold text-sm text-neutral">{t("quote.empty")}</p>
+              <p className="font-semibold text-sm text-ink-muted">{t("quote.empty")}</p>
             </div>
           ) : (
             <ul className="space-y-4">
@@ -95,13 +95,13 @@ export default function QuoteListDrawer() {
                   <div className="flex items-start justify-between mb-3">
                     <div>
                       <p className="font-extrabold text-sm text-ink">{item.displayName}</p>
-                      <p className="text-xs font-semibold text-neutral-light mt-0.5 capitalize">
+                      <p className="text-xs font-semibold text-ink-muted mt-0.5 capitalize">
                         {item.category.replace(/-/g, " ")}
                       </p>
                     </div>
                     <button
                       onClick={() => removeItem(item.slug)}
-                      className="text-ink hover:text-danger transition-colors p-1"
+                      className="text-ink-muted hover:text-accent transition-colors p-1 cursor-pointer"
                       aria-label={`Remove ${item.displayName}`}
                     >
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

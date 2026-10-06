@@ -1,111 +1,128 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useLanguage } from "@/components/LanguageProvider";
+import Link from "next/link";
 
-const reasons = [
+const steps = [
   {
-    titleKey: "why.experience.title",
-    textKey: "why.experience.text",
-    gradient: "from-primary to-accent",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <polyline points="12 6 12 12 16 14" />
-      </svg>
-    ),
+    num: "01",
+    title: "Commercial Specification & Inquiries",
+    desc: "We analyze your factory requirements: required chemical purity, monthly consumption, and preferred packaging (200L drums, 1000L IBC totes, or ISO bulk tanks).",
   },
   {
-    titleKey: "why.sourcing.title",
-    textKey: "why.sourcing.text",
-    gradient: "from-primary to-accent",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
-        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
-      </svg>
-    ),
+    num: "02",
+    title: "Lab COA & Batch Verification",
+    desc: "Every batch is cross-referenced with original manufacturer Certificates of Analysis (COA) to guarantee chemical assay and zero contamination.",
   },
   {
-    titleKey: "why.bulk.title",
-    textKey: "why.bulk.text",
-    gradient: "from-primary to-accent",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="1" y="6" width="22" height="16" rx="2" />
-        <path d="M1 10h22" />
-        <path d="M12 6v16" />
-        <path d="M1 14h22" />
-      </svg>
-    ),
+    num: "03",
+    title: "Direct Wholesale Spot Pricing",
+    desc: "Direct partnerships with tier-1 global chemical importers allow us to pass transparent Jodia Bazar market rates directly to your procurement team.",
   },
   {
-    titleKey: "why.jodiabazar.title",
-    textKey: "why.jodiabazar.text",
-    gradient: "from-primary to-accent",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-        <circle cx="12" cy="10" r="3" />
-      </svg>
-    ),
+    num: "04",
+    title: "Karachi Staging & Warehouse Sealing",
+    desc: "Consignments are staged at our Weaver Lane warehouse network with rigorous tamper-evident seals and certified weight calibrations.",
+  },
+  {
+    num: "05",
+    title: "Nationwide Freight Dispatch",
+    desc: "Same-day or next-day dispatch across Karachi industrial estates (SITE, Korangi, Landhi, FB Area) and expedited transit to Lahore, Faisalabad, and upcountry plants.",
+  },
+  {
+    num: "06",
+    title: "Commercial Handover & Documentation",
+    desc: "Complete documentation package including commercial invoice, delivery challan, verified test reports, and continuous after-sales technical support.",
   },
 ];
 
 export default function WhyChooseUs() {
-  const { t } = useLanguage();
-
   return (
-    <section className="section-padding bg-surface relative overflow-hidden rounded-t-[3rem] md:rounded-t-[4rem]  z-60 shadow-[0_-15px_40px_rgba(0,0,0,0.06)]">
-      <div className="section-container relative z-10">
-        <div className="text-center mb-14">
-          <motion.h2
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl font-black mb-4 tracking-tight text-ink"
-          >
-            {t("why.title")}
-          </motion.h2>
+    <section id="workflow" className="py-14 sm:py-20 md:py-24 bg-base border-b border-border">
+      <div className="mx-auto max-w-[1320px] px-4 sm:px-6 md:px-10">
+        <div className="grid lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-16 items-start">
+          {/* Left Column: Sticky Workflow Header */}
+          <div className="lg:col-span-5 lg:sticky lg:top-28">
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-inverse text-ink-inverse text-xs font-bold uppercase tracking-wider mb-3 sm:mb-5 shadow-xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+              PROCUREMENT PIPELINE
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-extrabold leading-[1.08] tracking-[-0.03em] text-ink mb-3 sm:mb-5">
+              The Action Behind <span className="text-accent">Bulk Supply</span>
+            </h2>
+            <p className="text-sm sm:text-base text-ink-muted leading-relaxed max-w-[400px] mb-6 sm:mb-8">
+              A disciplined, verified methodology engineered to bring purity verification, price transparency, and rapid dispatch to every industrial customer.
+            </p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className=" md:text-lg max-w-2xl mx-auto font-semibold text-neutral"
-          >
-            {t("why.subtitle")}
-          </motion.p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {reasons.map((reason, i) => (
-            <motion.div
-              key={reason.titleKey}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              whileHover={{ y: -6 }}
-              className="group relative rounded-3xl border border-border bg-base p-6 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 flex flex-col justify-between"
-            >
-              <div>
-                <div className="w-12 h-12 rounded-2xl bg-primary text-inverse-ink flex items-center justify-center mb-5 shadow-md">
-                  {reason.icon}
-                </div>
-
-                <h3 className="text-base font-extrabold mb-2.5 text-ink">
-                  {t(reason.titleKey)}
-                </h3>
-
-                <p className="text-xs leading-relaxed font-medium text-ink opacity-85">
-                  {t(reason.textKey)}
-                </p>
+            <div className="hidden lg:flex flex-col gap-3">
+              <div className="p-4 rounded-[20px] bg-surface-muted border border-border">
+                <span className="text-xs font-bold text-ink block mb-0.5">
+                  ✓ 100% Original Manufacturer COA
+                </span>
+                <span className="text-[11px] text-ink-muted">
+                  Batch testing and purity guaranteed on every consignment.
+                </span>
               </div>
-            </motion.div>
-          ))}
+              <div className="p-4 rounded-[20px] bg-surface-muted border border-border">
+                <span className="text-xs font-bold text-ink block mb-0.5">
+                  ✓ Urgent Karachi &amp; Upcountry Dispatches
+                </span>
+                <span className="text-[11px] text-ink-muted">
+                  Trusted freight partners for rapid nationwide delivery.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Stacked Process Cards */}
+          <div className="lg:col-span-7 space-y-3.5 sm:space-y-4">
+            {steps.map((step) => (
+              <div
+                key={step.num}
+                className="bg-surface p-5 sm:p-7 rounded-[20px] sm:rounded-[24px] border border-border shadow-xs hover:shadow-md hover:border-accent/40 transition-all duration-300 flex items-start gap-4 sm:gap-6 cursor-pointer group"
+              >
+                <span className="text-2xl sm:text-3xl font-black text-accent tracking-tight shrink-0 font-mono">
+                  {step.num}
+                </span>
+                <div>
+                  <h3 className="text-base sm:text-lg md:text-xl font-extrabold text-ink tracking-tight mb-1.5 group-hover:text-accent transition-colors">
+                    {step.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+
+            {/* Bottom Highlight Final Step */}
+            <div className="rounded-[20px] sm:rounded-[24px] overflow-hidden shadow-md mt-6">
+              <div className="bg-surface-inverse text-ink-inverse p-5 sm:p-7 flex items-start gap-4 sm:gap-6 border border-border-inverse">
+                <span className="text-2xl sm:text-3xl font-black text-accent tracking-tight shrink-0 font-mono">
+                  ✓
+                </span>
+                <div>
+                  <h3 className="text-base sm:text-lg md:text-xl font-extrabold text-ink-inverse tracking-tight mb-1.5">
+                    Ready to Procure Bulk Chemicals?
+                  </h3>
+                  <p className="text-xs sm:text-sm text-ink-inverse-muted leading-relaxed">
+                    Contact our Jodia Bazar desk directly for spot quotes, technical specifications, and batch COA verification.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-accent text-white py-3.5 sm:py-4 px-6 flex items-center justify-between">
+                <span className="text-xs sm:text-sm font-extrabold text-white uppercase tracking-wider">
+                  Karachi Trading Desk
+                </span>
+                <Link
+                  href="/contact"
+                  className="text-xs sm:text-sm font-extrabold text-white uppercase tracking-widest hover:underline flex items-center gap-1.5"
+                >
+                  <span>Request Spot Quote</span>
+                  <span>→</span>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,99 +1,109 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { categories } from "@/data/categories";
+import { getProductsByCategory } from "@/data/products";
 import CategoryIcon from "@/components/ui/CategoryIcon";
-import { useLanguage } from "@/components/LanguageProvider";
+
+const categoryTags: Record<string, string[]> = {
+  solvents: ["IPA 99%", "Butyl Glycol", "Xylene", "Ethyl Alcohol"],
+  plasticizers: ["DOP 99.5%", "DOTP", "DBP", "DINP"],
+  "pigments-fillers": ["Titanium TiO2", "Lithopone", "Carbon Black"],
+  "titanium-dioxide": ["Rutile Grade", "Anatase Grade", "High Opacity"],
+  "synthetic-resins": ["Epoxy CYD-128", "Alkyd Resin", "Maleic Resin"],
+  "industrial-acids": ["Formic Acid 85%", "Acetic Acid", "Phosphoric"],
+  "other-raw-materials": ["Hydrogen Peroxide", "Caustic Soda", "Additives"],
+};
 
 export default function ProductCategoriesGrid() {
-  const { t } = useLanguage();
-
   return (
-    <section className="section-padding relative overflow-hidden bg-base rounded-t-[3rem] md:rounded-t-[4rem]  z-30 shadow-[0_-15px_40px_rgba(0,0,0,0.06)]">
-      {/* Ambient background blobs for glassmorphism to distort */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-[10%] -right-[5%] w-[40%] h-[50%] rounded-full bg-primary/10 blur-[100px]" />
-        <div className="absolute top-[40%] -left-[10%] w-[30%] h-[40%] rounded-full bg-accent/10 blur-[100px]" />
-        <div className="absolute -bottom-[10%] left-[20%] w-[50%] h-[50%] rounded-full bg-primary-light/10 blur-[120px]" />
-      </div>
-
-      <div className="section-container relative z-10">
-        <div className="text-center mb-16">
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-xs font-black uppercase tracking-[0.2em] mb-2 text-primary"
-          >
-            {t("categories.eyebrow")}
-          </motion.p>
-          <motion.h2
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="mb-4 text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-ink"
-          >
-            {t("categories.title")}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-base md:text-lg max-w-lg mx-auto font-semibold text-neutral"
-          >
-            {t("categories.subtitle")}
-          </motion.p>
+    <section className="py-14 sm:py-20 md:py-24 bg-base border-b border-border">
+      <div className="mx-auto max-w-[1320px] px-4 sm:px-6 md:px-10">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6 mb-10 sm:mb-14">
+          <div>
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-inverse text-ink-inverse text-xs font-bold uppercase tracking-wider mb-3 sm:mb-4 shadow-xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+              INDUSTRIAL CATALOG
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-extrabold leading-[1.08] tracking-[-0.03em] text-ink">
+              Bulk Chemical Categories
+            </h2>
+          </div>
+          <p className="text-sm sm:text-base text-ink-muted leading-relaxed max-w-[420px]">
+            Direct wholesale inventory stored in Karachi. Fulfilling single drums, IBC totes, and metric tons with guaranteed manufacturer COA.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
-          {categories.map((cat, i) => (
-            <motion.div
-              key={cat.slug}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="h-full"
-            >
-              <Link
-                href={`/products?category=${cat.slug}`}
-                className="block p-8 rounded-[2rem] border border-border/40 bg-surface shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_40px_rgba(27,38,59,0.12)] transition-all duration-500 group h-full flex flex-col relative overflow-hidden"
+        {/* 3-Column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+          {categories.map((cat) => {
+            const count = getProductsByCategory(cat.slug).length;
+            const tags = categoryTags[cat.slug] || ["Ready Stock", "Bulk Packaging", "COA Included"];
+
+            return (
+              <div
+                key={cat.slug}
+                className="bg-surface-muted p-2.5 sm:p-3 rounded-[24px] sm:rounded-[32px] flex flex-col justify-between border border-border-subtle hover:border-border hover:shadow-lg transition-all duration-300 group"
               >
-                {/* Large watermark icon */}
-                <div className="absolute -bottom-8 -right-8 opacity-[0.03] group-hover:opacity-10 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-700 text-primary">
-                  <CategoryIcon category={cat.slug} size={180} />
-                </div>
+                <div className="bg-surface rounded-[20px] sm:rounded-[26px] p-5 sm:p-6 sm:min-h-[290px] flex flex-col justify-between border border-border shadow-xs">
+                  <div>
+                    <div className="flex items-center justify-between mb-5">
+                      <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center bg-accent text-white shadow-xs group-hover:scale-105 group-hover:bg-accent-hover transition-all duration-300">
+                        <CategoryIcon category={cat.slug} size={26} />
+                      </div>
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-muted text-[11px] font-bold text-ink border border-border">
+                        <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                        {count} Items
+                      </span>
+                    </div>
 
-                <div className="relative z-10 flex-1">
-                  <div className="mb-6 p-4 rounded-2xl w-max bg-gradient-to-br from-surface to-base border border-border/50 group-hover:-translate-y-1 transition-transform duration-500 shadow-sm">
-                    <CategoryIcon category={cat.slug} size={32} className="text-primary group-hover:text-accent transition-colors" />
+                    <h3 className="text-xl sm:text-2xl font-extrabold text-ink tracking-tight mb-2 group-hover:text-accent transition-colors">
+                      {cat.name}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-ink-muted leading-relaxed mb-4">
+                      {cat.description}
+                    </p>
                   </div>
 
-                  <h3 className="text-xl font-extrabold mb-3 text-ink group-hover:text-accent transition-colors">
-                    {cat.name}
-                  </h3>
-
-                  <p className="text-sm leading-relaxed mb-8 line-clamp-3 font-medium text-ink opacity-85">
-                    {cat.description}
-                  </p>
+                  {/* Chemical Tag Pills */}
+                  <div className="flex flex-wrap gap-1.5 pt-3 border-t border-border">
+                    {tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-muted text-[10px] sm:text-[11px] font-semibold text-ink-secondary border border-border-subtle"
+                      >
+                        <span className="w-1 h-1 rounded-full bg-accent"></span>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="relative z-10 flex items-center justify-between w-full mt-auto pt-4 border-t border-border/20 group-hover:border-border/40 transition-colors">
-                  <span className="inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:text-accent transition-colors">
-                    {t("categories.explore")}
+                {/* Bottom Action Pill inside container */}
+                <Link
+                  href={`/products?category=${cat.slug}`}
+                  className="mt-2 px-5 py-3 rounded-[18px] bg-surface hover:bg-surface-hover border border-border flex items-center justify-between text-xs font-bold text-ink transition-all group-hover:shadow-xs"
+                >
+                  <span>Explore {cat.name}</span>
+                  <span className="w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs group-hover:translate-x-1 group-hover:bg-accent-hover transition-all shadow-xs">
+                    →
                   </span>
-                  <div className="w-10 h-10 rounded-full bg-base flex items-center justify-center group-hover:bg-primary group-hover:text-surface text-primary transition-all duration-300 shadow-sm">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="m9 18 6-6-6-6" />
-                    </svg>
-                  </div>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Catalog Link */}
+        <div className="mt-10 sm:mt-12 text-center">
+          <Link
+            href="/products"
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-surface-inverse text-ink-inverse text-xs sm:text-sm font-extrabold hover:bg-accent hover:text-white transition-all shadow-md group"
+          >
+            <span>View Complete 80+ Chemical Catalog &amp; Specifications</span>
+            <span className="group-hover:translate-x-1 transition-transform">→</span>
+          </Link>
         </div>
       </div>
     </section>

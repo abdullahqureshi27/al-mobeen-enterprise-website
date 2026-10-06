@@ -91,7 +91,7 @@ function ProductCatalogContent() {
             {searchQuery && (
               <button
                 onClick={() => updateFilters(selectedCategory, selectedIndustry, "")}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-neutral hover:text-ink font-bold text-base"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-ink-muted hover:text-ink font-bold text-base"
               >
                 ×
               </button>
@@ -150,7 +150,7 @@ function ProductCatalogContent() {
                 onClick={() => setViewMode("grid")}
                 className={`p-2 rounded-lg text-xs font-bold flex items-center gap-1 transition-colors ${
                   viewMode === "grid"
-                    ? "bg-primary text-inverse-ink shadow-sm"
+                    ? "bg-surface-inverse text-ink-inverse shadow-sm"
                     : "text-ink/70 hover:text-ink"
                 }`}
                 title="Grid View"
@@ -166,7 +166,7 @@ function ProductCatalogContent() {
                 onClick={() => setViewMode("table")}
                 className={`p-2 rounded-lg text-xs font-bold flex items-center gap-1 transition-colors ${
                   viewMode === "table"
-                    ? "bg-primary text-inverse-ink shadow-sm"
+                    ? "bg-surface-inverse text-ink-inverse shadow-sm"
                     : "text-ink/70 hover:text-ink"
                 }`}
                 title="Industrial Table View"
@@ -188,7 +188,7 @@ function ProductCatalogContent() {
               {t("products.showing")} <strong>{filteredProducts.length}</strong> {t("products.items")}
             </span>
             {selectedCategory && (
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs bg-primary/10 text-primary font-bold border border-primary/20">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs bg-accent/10 text-accent font-bold border border-accent/20">
                 Category: {categories.find((c) => c.slug === selectedCategory)?.name}
                 <button onClick={() => updateFilters("", selectedIndustry, searchQuery)} className="hover:text-danger font-black text-sm">×</button>
               </span>
@@ -230,7 +230,7 @@ function ProductCatalogContent() {
           /* Industrial Table View */
           <div className="overflow-x-auto rounded-2xl border border-border bg-surface shadow-sm">
             <table className="w-full text-left text-xs text-ink">
-              <thead className="bg-base border-b border-border uppercase text-[10px] font-extrabold tracking-wider text-neutral">
+              <thead className="bg-base border-b border-border uppercase text-[10px] font-extrabold tracking-wider text-ink-muted">
                 <tr>
                   <th className="py-3.5 px-4">{t("products.tableName")}</th>
                   <th className="py-3.5 px-4">{t("products.tableCategory")}</th>
@@ -250,16 +250,16 @@ function ProductCatalogContent() {
                           {p.displayName}
                         </Link>
                         {p.bestSeller && (
-                          <span className="ml-2 text-[9px] font-extrabold uppercase px-1.5 py-0.2 rounded bg-warning text-inverse-ink">
+                          <span className="ml-2 text-[9px] font-extrabold uppercase px-1.5 py-0.2 rounded bg-warning text-white">
                             {t("products.bestSeller")}
                           </span>
                         )}
                       </td>
-                      <td className="py-3 px-4 text-neutral font-semibold">
+                      <td className="py-3 px-4 text-ink-muted font-semibold">
                         {cat?.name || p.category}
                       </td>
                       <td className="py-3 px-4 font-semibold">{p.packaging}</td>
-                      <td className="py-3 px-4 text-neutral">{p.grade} {p.purity ? `(${p.purity})` : ""}</td>
+                      <td className="py-3 px-4 text-ink-muted">{p.grade} {p.purity ? `(${p.purity})` : ""}</td>
                       <td className="py-3 px-4 text-right">
                         <Button
                           onClick={() => {
@@ -286,8 +286,8 @@ function ProductCatalogContent() {
         )
       ) : (
         <div className="text-center py-16 px-4 bg-surface rounded-2xl border border-border">
-          <h3 className="text-lg font-bold mb-2">{t("products.noMatching")}</h3>
-          <p className="text-sm text-neutral max-w-sm mx-auto mb-6">
+          <h3 className="text-lg font-bold mb-2 text-ink">{t("products.noMatching")}</h3>
+          <p className="text-sm text-ink-muted max-w-sm mx-auto mb-6">
             {t("products.noMatchingSub")}
           </p>
           <Button onClick={clearAllFilters} variant="primary" size="default">
@@ -301,7 +301,7 @@ function ProductCatalogContent() {
 
 export default function ProductCatalog() {
   return (
-    <Suspense fallback={<div className="py-20 text-center text-sm text-neutral">Loading catalog...</div>}>
+    <Suspense fallback={<div className="py-20 text-center text-sm text-ink-muted">Loading catalog...</div>}>
       <ProductCatalogContent />
     </Suspense>
   );
