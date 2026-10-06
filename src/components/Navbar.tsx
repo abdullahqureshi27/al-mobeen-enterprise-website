@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useQuote } from "./QuoteProvider";
 import { useLanguage } from "./LanguageProvider";
-import { useTheme } from "./ThemeProvider";
 import { type Language, languageNames } from "@/data/translations";
 
 export default function Navbar() {
@@ -15,7 +14,6 @@ export default function Navbar() {
   const pathname = usePathname();
   const { count } = useQuote();
   const { t, lang, setLang } = useLanguage();
-  const { theme, toggleTheme } = useTheme();
 
   const openDrawer = () => {
     window.dispatchEvent(new CustomEvent("toggle-quote-drawer"));
@@ -145,31 +143,6 @@ export default function Navbar() {
                 </button>
               ))}
             </div>
-
-            {/* Dark / Light Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-surface-muted text-ink hover:bg-surface-hover border border-border transition-colors flex items-center justify-center cursor-pointer"
-              aria-label="Toggle Theme"
-            >
-              {theme === "dark" ? (
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="12" cy="12" r="4" />
-                  <path d="M12 2v2" />
-                  <path d="M12 20v2" />
-                  <path d="m4.93 4.93 1.41 1.41" />
-                  <path d="m17.66 17.66 1.41 1.41" />
-                  <path d="M2 12h2" />
-                  <path d="M20 12h2" />
-                  <path d="m6.34 17.66-1.41 1.41" />
-                  <path d="m19.07 4.93-1.41 1.41" />
-                </svg>
-              ) : (
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-                </svg>
-              )}
-            </button>
 
             {/* Quote List Button */}
             <button
