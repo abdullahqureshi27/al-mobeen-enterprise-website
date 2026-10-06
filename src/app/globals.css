@@ -284,41 +284,137 @@ h3 {
 .bg-surface-inverse-hover { background-color: var(--surface-inverse-hover); }
 .bg-inverse-base { background-color: var(--surface-inverse); }
 
-.bg-primary { background-color: var(--primary); }
-.bg-primary-hover { background-color: var(--primary-hover); }
-.bg-primary-light { background-color: var(--primary-light); }
-.bg-secondary { background-color: var(--secondary); }
-.bg-secondary-hover { background-color: var(--secondary-hover); }
-.bg-secondary-light { background-color: var(--secondary-light); }
-.bg-accent { background-color: var(--accent); }
-.bg-accent-hover { background-color: var(--accent-hover); }
-.bg-accent-light { background-color: var(--accent-light); }
-.bg-success { background-color: var(--success); }
-.bg-success-light { background-color: var(--success-light); }
-.bg-whatsapp { background-color: var(--whatsapp); }
+.bg-primary {
+  background-color: var(--primary);
+}
 
-.text-ink { color: var(--ink); }
-.text-ink-secondary { color: var(--ink-secondary); }
-.text-ink-muted { color: var(--ink-muted); }
-.text-ink-subtle { color: var(--ink-subtle); }
-.text-ink-inverse { color: var(--ink-inverse); }
-.text-ink-inverse-muted { color: var(--ink-inverse-muted); }
-.text-inverse-ink { color: var(--ink-inverse); }
-.text-neutral { color: var(--ink-muted); }
-.text-neutral-light { color: var(--ink-subtle); }
-.text-primary { color: var(--primary); }
-.text-secondary { color: var(--secondary); }
-.text-accent { color: var(--accent); }
-.text-success { color: var(--success); }
+.bg-primary-hover {
+  background-color: var(--primary-hover);
+}
 
-.border-border { border-color: var(--border); }
-.border-border-subtle { border-color: var(--border-subtle); }
-.border-border-strong { border-color: var(--border-strong); }
-.border-border-inverse { border-color: var(--border-inverse); }
-.border-accent-border { border-color: var(--accent-border); }
-.border-primary-border { border-color: var(--primary-border); }
-.border-secondary-border { border-color: var(--secondary-border); }
-.border-success-border { border-color: var(--success-border); }
+.bg-primary-light {
+  background-color: var(--primary-light);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-secondary-hover {
+  background-color: var(--secondary-hover);
+}
+
+.bg-secondary-light {
+  background-color: var(--secondary-light);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.bg-accent-hover {
+  background-color: var(--accent-hover);
+}
+
+.bg-accent-light {
+  background-color: var(--accent-light);
+}
+
+.bg-success {
+  background-color: var(--success);
+}
+
+.bg-success-light {
+  background-color: var(--success-light);
+}
+
+.bg-whatsapp {
+  background-color: var(--whatsapp);
+}
+
+.text-ink {
+  color: var(--ink);
+}
+
+.text-ink-secondary {
+  color: var(--ink-secondary);
+}
+
+.text-ink-muted {
+  color: var(--ink-muted);
+}
+
+.text-ink-subtle {
+  color: var(--ink-subtle);
+}
+
+.text-ink-inverse {
+  color: var(--ink-inverse);
+}
+
+.text-ink-inverse-muted {
+  color: var(--ink-inverse-muted);
+}
+
+.text-inverse-ink {
+  color: var(--ink-inverse);
+}
+
+.text-neutral {
+  color: var(--ink-muted);
+}
+
+.text-neutral-light {
+  color: var(--ink-subtle);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+.border-border {
+  border-color: var(--border);
+}
+
+.border-border-subtle {
+  border-color: var(--border-subtle);
+}
+
+.border-border-strong {
+  border-color: var(--border-strong);
+}
+
+.border-border-inverse {
+  border-color: var(--border-inverse);
+}
+
+.border-accent-border {
+  border-color: var(--accent-border);
+}
+
+.border-primary-border {
+  border-color: var(--primary-border);
+}
+
+.border-secondary-border {
+  border-color: var(--secondary-border);
+}
+
+.border-success-border {
+  border-color: var(--success-border);
+}
 
 /* Gradients */
 .text-gradient-primary {
@@ -404,8 +500,13 @@ html.dark .enterprise-card:hover {
 
 /* Marquee Track */
 @keyframes marqueeScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .marquee-container {
@@ -542,4 +643,117 @@ html.dark ::-webkit-scrollbar-thumb {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Shadcn Sheet Slide Keyframes & Transitions */
+@keyframes sheet-in-right {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sheet-out-right {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes sheet-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sheet-out-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes sheet-in-top {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes sheet-out-top {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes sheet-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sheet-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.sheet-overlay[data-state="open"] {
+  animation: sheet-fade-in 240ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sheet-overlay[data-state="closed"] {
+  animation: sheet-fade-out 180ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sheet-content-right[data-state="open"] {
+  animation: sheet-in-right 300ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sheet-content-right[data-state="closed"] {
+  animation: sheet-out-right 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sheet-content-left[data-state="open"] {
+  animation: sheet-in-left 300ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sheet-content-left[data-state="closed"] {
+  animation: sheet-out-left 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sheet-content-top[data-state="open"] {
+  animation: sheet-in-top 300ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.sheet-content-top[data-state="closed"] {
+  animation: sheet-out-top 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

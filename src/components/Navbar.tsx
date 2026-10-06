@@ -4,10 +4,16 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "framer-motion";
 import { useQuote } from "./QuoteProvider";
 import { useLanguage } from "./LanguageProvider";
 import { type Language, languageNames } from "@/data/translations";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -213,42 +219,69 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Drawer Menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-[108px] z-50 bg-surface border-b border-border p-6 shadow-2xl lg:hidden max-h-[85vh] overflow-y-auto"
-          >
-            <nav className="flex flex-col gap-3 mb-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="px-4 py-3 rounded-xl text-sm font-bold text-ink hover:bg-surface-muted transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
+      {/* Mobile Drawer Navigation (shadcn Sheet sliding from right) */}
+      <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+        <SheetContent side="right" className="w-[300px] sm:w-[350px] p-6 flex flex-col justify-between">
+          <div>
+            <SheetHeader className="text-left mb-6 pb-4 border-b border-border">
+              <SheetTitle className="text-base font-extrabold text-ink flex items-center gap-2.5">
+                <div className="w-8 h-8 aspect-square rounded-lg bg-surface border border-border p-1 flex items-center justify-center shrink-0">
+                  <Image
+                    src="/ame-logo.png"
+                    alt="Logo"
+                    width={32}
+                    height={32}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <span>AL MOBEEN</span>
+              </SheetTitle>
+              <SheetDescription className="text-xs text-ink-muted">
+                Jodia Bazar Commercial Desk • Karachi
+              </SheetDescription>
+            </SheetHeader>
 
-            <div className="pt-4 border-t border-border space-y-3">
-              <Link
-                href="/contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-accent text-ink-inverse text-xs font-bold shadow-md"
-              >
-                <span>Order Bulk Chemicals</span>
-                <span>→</span>
-              </Link>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            <nav className="flex flex-col gap-2">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`px-4 py-3 rounded-xl text-sm font-bold transition-colors ${
+                      isActive
+                        ? "bg-accent text-ink-inverse"
+                        : "text-ink hover:bg-surface-muted"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </nav>
+          </div>
+
+          <div className="pt-4 border-t border-border space-y-3">
+            <Link
+              href="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-accent text-ink-inverse text-xs font-bold shadow-md hover:bg-accent-hover transition-colors"
+            >
+              <span>Order Bulk Chemicals</span>
+              <span>→</span>
+            </Link>
+            <a
+              href="https://wa.me/923321134530"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-full bg-whatsapp text-ink-inverse text-xs font-bold hover:brightness-110 transition-all shadow-xs"
+            >
+              <span>WhatsApp Desk</span>
+            </a>
+          </div>
+        </SheetContent>
+      </Sheet>
     </>
   );
 }
