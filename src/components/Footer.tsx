@@ -104,7 +104,7 @@ export default function Footer() {
               </p>
               <p>Mon - Sat: 9:00 AM - 6:00 PM PKT</p>
               <p className="text-accent font-bold">
-                NTN / Wholesale Registered
+                B2B Bulk Chemical Stockist
               </p>
             </div>
           </div>
@@ -116,7 +116,7 @@ export default function Footer() {
           <div className="flex items-center gap-4">
             <span>Karachi Industrial Chemical Hub</span>
             <span>•</span>
-            <span>Original Manufacturer COA</span>
+            <span>We Sell What We Claim</span>
           </div>
         </div>
       </div>

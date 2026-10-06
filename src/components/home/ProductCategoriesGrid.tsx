@@ -31,7 +31,7 @@ export default function ProductCategoriesGrid() {
             </h2>
           </div>
           <p className="text-sm sm:text-base text-ink-muted leading-relaxed max-w-[420px]">
-            Direct wholesale inventory stored in Karachi. Fulfilling single drums, IBC totes, and metric tons with guaranteed manufacturer COA.
+            Direct wholesale inventory stored in Karachi. Fulfilling single drums, IBC totes, and metric tons with guaranteed honest grade purity.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ export default function ProductCategoriesGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {categories.map((cat) => {
             const count = getProductsByCategory(cat.slug).length;
-            const tags = categoryTags[cat.slug] || ["Ready Stock", "Bulk Packaging", "COA Included"];
+            const tags = categoryTags[cat.slug] || ["Ready Stock", "Bulk Packaging", "Genuine Quality"];
 
             return (
               <div

@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     siteName: "Al Mobeen Enterprise",
     title: "Al Mobeen Enterprise | Best Bulk Chemical Dealer & Wholesaler in Karachi",
     description:
-      "Karachi's trusted wholesale bulk chemical distributor based in Jodia Bazar. Supplying 80+ high-grade industrial chemicals with manufacturer COA across Pakistan since 1995.",
+      "Karachi's trusted wholesale bulk chemical distributor based in Jodia Bazar. Supplying 80+ high-grade industrial chemicals with guaranteed honest grade purity across Pakistan since 1995.",
     images: [
       {
         url: "/ame-logo.png",
@@ -179,7 +179,7 @@ const jsonLdGraph = {
           name: "Who is the best bulk chemical dealer and wholesaler in Karachi?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Al Mobeen Enterprise is widely recognized as one of the best bulk chemical dealers and wholesalers in Karachi, operating from Jodia Bazar since 1995. They supply 80+ industrial chemicals in bulk quantities with verified COAs and fast dispatch across Pakistan.",
+            text: "Al Mobeen Enterprise is widely recognized as one of the best bulk chemical dealers and wholesalers in Karachi, operating from Jodia Bazar since 1995. They supply 80+ industrial chemicals in bulk quantities with guaranteed honest grade purity and fast dispatch across Pakistan.",
           },
         },
         {
@@ -254,6 +254,7 @@ export default function RootLayout({
                   <main className="flex-1 relative z-10">{children}</main>
                   <Footer />
                   <QuickQuoteWidget />
+                  <ScrollProgressWidget />
                   <QuoteListDrawer />
                 </ToastProvider>
               </QuoteProvider>

@@ -59,7 +59,7 @@ export default function Navbar() {
             </span>
             <span className="hidden lg:inline-flex items-center gap-1.5 text-ink-inverse-muted">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-              Bulk Spot Pricing &amp; Certified COAs
+              Bulk Spot Pricing • We Sell What We Claim
             </span>
           </div>
 
