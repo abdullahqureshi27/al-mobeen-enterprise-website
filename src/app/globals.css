@@ -36,6 +36,7 @@
   --color-accent-hover: var(--accent-hover);
   --color-accent-light: var(--accent-light);
   --color-accent-border: var(--accent-border);
+  --color-accent-cyan: var(--accent-cyan);
 
   --color-success: var(--success);
   --color-success-light: var(--success-light);
@@ -74,21 +75,22 @@
   --border-strong: #CBD5E1;
   --border-inverse: #334155;
 
-  /* Brand Primary, Secondary & Accents */
-  --primary: #0F2444;
-  --primary-hover: #1E3A8A;
-  --primary-light: #EFF6FF;
-  --primary-border: #BFDBFE;
+  /* Brand Primary, Secondary & Accents - Logo-Aligned Palette */
+  --primary: #041D46;
+  --primary-hover: #07265A;
+  --primary-light: #EEF4FF;
+  --primary-border: #C7D9F8;
 
-  --secondary: #2563EB;
-  --secondary-hover: #1D4ED8;
-  --secondary-light: #DBEAFE;
-  --secondary-border: #93C5FD;
+  --secondary: #64748B;
+  --secondary-hover: #475569;
+  --secondary-light: #F1F5F9;
+  --secondary-border: #CBD5E1;
 
-  --accent: #ED1E3A;
-  --accent-hover: #DC2626;
-  --accent-light: #FEF2F2;
-  --accent-border: #FECACA;
+  --accent: #1D4ED8;
+  --accent-hover: #1E40AF;
+  --accent-light: #EFF6FF;
+  --accent-border: #BFDBFE;
+  --accent-cyan: #0284C7;
 
   --success: #059669;
   --success-light: #ECFDF5;
@@ -107,11 +109,11 @@
   --tint-other: var(--accent);
 
   /* Shadows */
-  --shadow-subtle: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02);
-  --shadow-sm: 0 4px 14px rgba(15, 23, 42, 0.05);
-  --shadow-md: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
-  --shadow-lg: 0 20px 35px -4px rgba(15, 23, 42, 0.1), 0 8px 10px -4px rgba(15, 23, 42, 0.04);
-  --shadow-glow: 0 0 25px rgba(237, 30, 58, 0.15);
+  --shadow-subtle: 0 1px 3px rgba(4, 29, 70, 0.04), 0 1px 2px rgba(4, 29, 70, 0.02);
+  --shadow-sm: 0 4px 14px rgba(4, 29, 70, 0.05);
+  --shadow-md: 0 10px 25px -3px rgba(4, 29, 70, 0.08), 0 4px 6px -2px rgba(4, 29, 70, 0.03);
+  --shadow-lg: 0 20px 35px -4px rgba(4, 29, 70, 0.1), 0 8px 10px -4px rgba(4, 29, 70, 0.04);
+  --shadow-glow: 0 0 25px rgba(29, 78, 216, 0.2);
 
   /* Typography */
   --font-heading: var(--font-outfit), var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -171,15 +173,16 @@ html.dark {
   --primary-light: rgba(59, 130, 246, 0.15);
   --primary-border: rgba(59, 130, 246, 0.3);
 
-  --secondary: #60A5FA;
-  --secondary-hover: #93C5FD;
-  --secondary-light: rgba(96, 165, 250, 0.15);
-  --secondary-border: rgba(96, 165, 250, 0.3);
+  --secondary: #94A3B8;
+  --secondary-hover: #CBD5E1;
+  --secondary-light: rgba(148, 163, 184, 0.15);
+  --secondary-border: rgba(148, 163, 184, 0.3);
 
-  --accent: #EF4444;
-  --accent-hover: #F87171;
-  --accent-light: rgba(239, 68, 68, 0.15);
-  --accent-border: rgba(239, 68, 68, 0.3);
+  --accent: #38BDF8;
+  --accent-hover: #7DD3FC;
+  --accent-light: rgba(56, 189, 248, 0.15);
+  --accent-border: rgba(56, 189, 248, 0.3);
+  --accent-cyan: #38BDF8;
 
   --success: #10B981;
   --success-light: rgba(16, 185, 129, 0.15);
@@ -193,7 +196,7 @@ html.dark {
   --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.5);
   --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.6);
   --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.7);
-  --shadow-glow: 0 0 25px rgba(239, 68, 68, 0.2);
+  --shadow-glow: 0 0 25px rgba(56, 189, 248, 0.25);
 
   --background: var(--base);
   --foreground: var(--ink);
