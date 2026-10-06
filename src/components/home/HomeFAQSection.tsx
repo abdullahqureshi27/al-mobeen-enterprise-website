@@ -9,8 +9,8 @@ const faqs = [
     a: "Operating from Jodia Bazar since 1995, Al Mobeen Enterprise has built a 30-year legacy of transparent dealing, direct wholesale pricing, and uninterrupted bulk chemical supply. We maintain extensive ready warehouse stock, ensuring genuine purity with zero adulteration (we sell what we claim), and rapid dispatch across Karachi and Pakistan.",
   },
   {
-    q: "Where is your main office located in Jodia Bazar, Karachi?",
-    a: "Our central trading desk is located at G/9, Golden Center, Weaver Lane, Jodia Bazar, Karachi. Procurement officers and plant managers are welcome to visit our office during business hours (Monday to Saturday, 9:00 AM to 6:00 PM) for in-person consultations, sample inspections, and contract terms.",
+    q: "Where is your commercial trading office located in Karachi?",
+    a: "Our central commercial trading desk is located at G/9, Golden Center, Weaver Lane, Jodia Bazar, Karachi—the central chemical trading market in Pakistan. We provide daily spot market quotes, contracts, and consultation directly from our Weaver Lane office.",
   },
   {
     q: "What bulk chemicals do you specialize in supplying?",
@@ -18,11 +18,11 @@ const faqs = [
   },
   {
     q: "Do you supply bulk chemical orders outside Karachi across Pakistan?",
-    a: "Yes. While our primary warehouse hubs are in Karachi, we routinely dispatch bulk consignments across Pakistan, including major industrial zones in Lahore, Faisalabad, Gujranwala, Sialkot, Sheikhupura, Rawalpindi, and Peshawar via trusted freight and logistics partners.",
+    a: "Yes. Operating from Jodia Bazar, Karachi, we routinely fulfill bulk consignments across Pakistan, delivering directly to industrial manufacturing plants in Lahore, Faisalabad, Gujranwala, Sialkot, Sheikhupura, Rawalpindi, Peshawar, and Hattar via reliable freight and logistics partners.",
   },
   {
-    q: "How can procurement managers verify chemical grade purity and request price quotes?",
-    a: "You can assemble your required chemical items using our online Quote Drawer, or message our Jodia Bazar desk directly on WhatsApp at +92 332 1134530. We provide spot market quotations, exact grade specifications (we sell what we claim), testing samples, and manufacturer technical datasheets upon request.",
+    q: "How do daily chemical pricing and stock availability work?",
+    a: "Because industrial chemical markets fluctuate daily based on currency exchange rates and international supply lines, pricing is quoted on a daily spot-market basis. Procurement managers can order directly or confirm today's spot rate and availability by messaging our Jodia Bazar desk on WhatsApp at +92 332 1134530.",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function HomeFAQSection() {
                     <div
                       className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
                         isOpen
-                          ? "bg-accent text-white shadow-xs"
+                          ? "bg-accent text-ink-inverse shadow-xs"
                           : "bg-surface text-ink border border-border"
                       }`}
                     >

@@ -20,13 +20,13 @@ const steps = [
   },
   {
     num: "04",
-    title: "Karachi Staging & Warehouse Sealing",
-    desc: "Consignments are staged at our Weaver Lane warehouse network with rigorous tamper-evident seals and certified weight calibrations.",
+    title: "Rigorous Quality & Tamper-Evident Sealing",
+    desc: "Consignments sourced directly from verified importers are dispatched with rigorous tamper-evident seals and certified specifications.",
   },
   {
     num: "05",
-    title: "Nationwide Freight Dispatch",
-    desc: "Same-day or next-day dispatch across Karachi industrial estates (SITE, Korangi, Landhi, FB Area) and expedited transit to Lahore, Faisalabad, and upcountry plants.",
+    title: "Nationwide Freight Delivery",
+    desc: "Direct delivery across Karachi industrial estates (Korangi, Landhi, FB Area, Hub) and expedited transit to industrial facilities across Punjab and KPK.",
   },
   {
     num: "06",
@@ -109,13 +109,13 @@ export default function WhyChooseUs() {
                   </p>
                 </div>
               </div>
-              <div className="bg-accent text-white py-3.5 sm:py-4 px-6 flex items-center justify-between">
-                <span className="text-xs sm:text-sm font-extrabold text-white uppercase tracking-wider">
+              <div className="bg-accent text-ink-inverse py-3.5 sm:py-4 px-6 flex items-center justify-between">
+                <span className="text-xs sm:text-sm font-extrabold text-ink-inverse uppercase tracking-wider">
                   Karachi Trading Desk
                 </span>
                 <Link
                   href="/contact"
-                  className="text-xs sm:text-sm font-extrabold text-white uppercase tracking-widest hover:underline flex items-center gap-1.5"
+                  className="text-xs sm:text-sm font-extrabold text-ink-inverse uppercase tracking-widest hover:underline flex items-center gap-1.5"
                 >
                   <span>Request Spot Quote</span>
                   <span>→</span>

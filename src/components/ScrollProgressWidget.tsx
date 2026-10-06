@@ -74,7 +74,7 @@ export default function ScrollProgressWidget() {
           />
 
           {/* WhatsApp Logo Icon in the Center */}
-          <div className="relative z-10 text-white drop-shadow-md">
+          <div className="relative z-10 text-ink-inverse drop-shadow-md">
             <svg
               width="28"
               height="28"

@@ -250,7 +250,7 @@ function ProductCatalogContent() {
                           {p.displayName}
                         </Link>
                         {p.bestSeller && (
-                          <span className="ml-2 text-[9px] font-extrabold uppercase px-1.5 py-0.2 rounded bg-warning text-white">
+                          <span className="ml-2 text-[9px] font-extrabold uppercase px-1.5 py-0.2 rounded bg-warning text-ink-inverse">
                             {t("products.bestSeller")}
                           </span>
                         )}

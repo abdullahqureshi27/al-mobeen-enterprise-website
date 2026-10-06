@@ -5,9 +5,9 @@ import Link from "next/link";
 const highlights = [
   {
     step: "01",
-    title: "Prime Jodia Bazar Hub",
-    description: "Located at G/9, Golden Center, Weaver Lane, Jodia Bazar, Karachi—Pakistan's largest chemical trading center with instant physical market access.",
-    tag: "Established 1995",
+    title: "Jodia Bazar Trading Desk",
+    description: "Central commercial trading desk at G/9, Golden Center, Weaver Lane, Jodia Bazar, Karachi—providing daily spot market rates, contracts, and sample reviews.",
+    tag: "Commercial Desk (Est. 1995)",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
@@ -18,7 +18,7 @@ const highlights = [
   {
     step: "02",
     title: "We Sell What We Claim",
-    description: "Honest purity and exact chemical grading with zero adulteration. Sample testing and manufacturer specs available upon request.",
+    description: "Honest purity and exact chemical grading with zero adulteration. Daily market pricing and grade specs transparently confirmed upon order.",
     tag: "Genuine Quality Guaranteed",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -29,9 +29,9 @@ const highlights = [
   },
   {
     step: "03",
-    title: "Nationwide Bulk Logistics",
-    description: "Swift dispatch to all Karachi industrial zones (SITE, Korangi, Landhi) plus regular freight to Lahore, Faisalabad, Gujranwala, and Peshawar.",
-    tag: "Dispatched from Karachi",
+    title: "Direct Nationwide Supply",
+    description: "Bulk chemical consignments and drum shipments delivered directly to industrial manufacturing facilities across Pakistan without delays.",
+    tag: "Direct Factory Delivery",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />

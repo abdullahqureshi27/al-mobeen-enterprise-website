@@ -20,12 +20,12 @@ export default function Footer() {
           {/* Column 1: Brand & Bio */}
           <div className="sm:col-span-2 lg:col-span-5">
             <Link href="/" className="inline-flex items-center gap-3 sm:gap-3.5 group mb-4 sm:mb-5">
-              <div className="relative h-12 sm:h-14 w-15 sm:w-18 rounded-xl bg-white border border-border shadow-sm p-1.5 flex items-center justify-center shrink-0 overflow-hidden group-hover:scale-105 transition-transform">
+              <div className="relative w-12 h-12 sm:w-14 sm:h-14 aspect-square rounded-xl bg-surface border border-border shadow-sm p-1.5 flex items-center justify-center shrink-0 overflow-hidden group-hover:scale-105 transition-transform">
                 <Image
                   src="/ame-logo.png"
                   alt="Al Mobeen Enterprise Logo"
-                  width={72}
-                  height={54}
+                  width={56}
+                  height={56}
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -40,7 +40,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-xs sm:text-sm text-ink-inverse-muted max-w-[420px] leading-relaxed mb-6">
-              Premier bulk industrial chemical dealer and wholesaler operating directly from Jodia Bazar, Karachi since 1995. Supplying solvents, plasticizers, titanium dioxide, pigments, resins, and acids nationwide.
+              Premier wholesale industrial chemical distributor. Operating our commercial trading desk from Jodia Bazar, Karachi since 1995. Direct sourcing from trusted global importers and delivering bulk chemicals, drums, and metric tons directly to manufacturing plants nationwide.
             </p>
 
             <div className="flex items-center gap-2.5">
@@ -48,7 +48,7 @@ export default function Footer() {
                 href="https://wa.me/923321134530"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-whatsapp/20 text-whatsapp border border-whatsapp/30 text-xs font-bold hover:bg-whatsapp hover:text-white transition-all"
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-whatsapp/20 text-whatsapp border border-whatsapp/30 text-xs font-bold hover:bg-whatsapp hover:text-ink-inverse transition-all"
               >
                 <span>WhatsApp Desk</span>
                 <span>→</span>
@@ -100,18 +100,21 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Physical Office & Legal */}
+          {/* Column 4: Physical Office & Supply Desk */}
           <div className="lg:col-span-3">
             <h4 className="text-xs sm:text-sm text-ink-inverse-muted mb-3 sm:mb-5 font-normal tracking-wider">
               /Trading Office
             </h4>
             <div className="text-xs sm:text-sm text-ink-inverse-muted space-y-2 leading-relaxed">
-              <p className="font-semibold text-ink-inverse">
-                G/9, Golden Center, Weaver Lane, Jodia Bazar, Karachi, Pakistan
+              <p>
+                <strong className="text-ink-inverse">Commercial Desk:</strong> G/9, Golden Center, Weaver Lane, Jodia Bazar, Karachi
+              </p>
+              <p>
+                <strong className="text-ink-inverse">Delivery:</strong> Direct Factory Dispatch Across Pakistan
               </p>
               <p>Mon - Sat: 9:00 AM - 6:00 PM PKT</p>
-              <p className="text-accent font-bold">
-                B2B Bulk Chemical Stockist
+              <p className="text-ink-inverse font-bold">
+                Daily Spot Pricing • Genuine Grade Quality
               </p>
             </div>
           </div>

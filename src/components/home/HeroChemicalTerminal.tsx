@@ -38,7 +38,7 @@ export default function HeroChemicalTerminal() {
 
   const handleAdd = (p: Product) => {
     addItem(p.slug, p.displayName, p.category);
-    showToast(`${p.displayName} added to Quote List`);
+    showToast(`${p.displayName} added to Order List`);
   };
 
   return (
@@ -48,15 +48,15 @@ export default function HeroChemicalTerminal() {
         <div className="flex items-center justify-between gap-3 mb-4 pb-3.5 border-b border-border-subtle">
           <div className="flex items-center gap-2">
             <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success"></span>
             </span>
             <span className="text-xs font-black tracking-tight uppercase text-ink">
-              Procurement Desk Stock
+              Daily Sourcing &amp; Order Desk
             </span>
           </div>
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent-light border border-accent-border text-[10px] sm:text-[11px] font-bold text-accent">
-            <span>80+ Items Ready Stock</span>
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-muted border border-border text-[10px] sm:text-[11px] font-bold text-ink">
+            <span>Daily Spot Rates • Direct Supply</span>
           </span>
         </div>
 
@@ -147,7 +147,7 @@ export default function HeroChemicalTerminal() {
                       <span>{item.packaging}</span>
                       <span>•</span>
                       <span className="text-success font-semibold">
-                        Ready Stock
+                        Direct Factory Delivery
                       </span>
                     </div>
                   </div>
@@ -160,9 +160,9 @@ export default function HeroChemicalTerminal() {
                           ? "bg-success text-ink-inverse"
                           : "bg-surface text-ink border border-border hover:bg-surface-inverse hover:text-ink-inverse"
                       }`}
-                      title={inQuote ? "In Quote List" : "Add to Quote"}
+                      title={inQuote ? "In Order List" : "Order It"}
                     >
-                      {inQuote ? "✓ Added" : "+ Quote"}
+                      {inQuote ? "✓ In Order" : "+ Order"}
                     </button>
                     <a
                       href={waUrl}

@@ -31,7 +31,7 @@ export default function ProductCategoriesGrid() {
             </h2>
           </div>
           <p className="text-sm sm:text-base text-ink-muted leading-relaxed max-w-[420px]">
-            Direct wholesale inventory stored in Karachi. Fulfilling single drums, IBC totes, and metric tons with guaranteed honest grade purity.
+            Direct wholesale supply of bulk industrial chemicals. Fulfilling single drums, IBC totes, and metric tons with daily spot rates and honest grade purity directly to factories nationwide.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ export default function ProductCategoriesGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {categories.map((cat) => {
             const count = getProductsByCategory(cat.slug).length;
-            const tags = categoryTags[cat.slug] || ["Ready Stock", "Bulk Packaging", "Genuine Quality"];
+            const tags = categoryTags[cat.slug] || ["Direct Supply", "Bulk Packaging", "Genuine Quality"];
 
             return (
               <div
@@ -49,7 +49,7 @@ export default function ProductCategoriesGrid() {
                 <div className="bg-surface rounded-[20px] sm:rounded-[26px] p-5 sm:p-6 sm:min-h-[290px] flex flex-col justify-between border border-border shadow-xs">
                   <div>
                     <div className="flex items-center justify-between mb-5">
-                      <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center bg-accent text-white shadow-xs group-hover:scale-105 group-hover:bg-accent-hover transition-all duration-300">
+                      <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center bg-accent text-ink-inverse shadow-xs group-hover:scale-105 group-hover:bg-accent-hover transition-all duration-300">
                         <CategoryIcon category={cat.slug} size={26} />
                       </div>
                       <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-muted text-[11px] font-bold text-ink border border-border">
@@ -85,8 +85,8 @@ export default function ProductCategoriesGrid() {
                   href={`/products?category=${cat.slug}`}
                   className="mt-2 px-5 py-3 rounded-[18px] bg-surface hover:bg-surface-hover border border-border flex items-center justify-between text-xs font-bold text-ink transition-all group-hover:shadow-xs"
                 >
-                  <span>Explore {cat.name}</span>
-                  <span className="w-6 h-6 rounded-full bg-accent text-white flex items-center justify-center text-xs group-hover:translate-x-1 group-hover:bg-accent-hover transition-all shadow-xs">
+                  <span>Explore &amp; Order {cat.name}</span>
+                  <span className="w-6 h-6 rounded-full bg-accent text-ink-inverse flex items-center justify-center text-xs group-hover:translate-x-1 group-hover:bg-accent-hover transition-all shadow-xs">
                     →
                   </span>
                 </Link>
@@ -99,9 +99,9 @@ export default function ProductCategoriesGrid() {
         <div className="mt-10 sm:mt-12 text-center">
           <Link
             href="/products"
-            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-surface-inverse text-ink-inverse text-xs sm:text-sm font-extrabold hover:bg-accent hover:text-white transition-all shadow-md group"
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-surface-inverse text-ink-inverse text-xs sm:text-sm font-extrabold hover:bg-accent hover:text-ink-inverse transition-all shadow-md group"
           >
-            <span>View Complete 80+ Chemical Catalog &amp; Specifications</span>
+            <span>View Complete 80+ Chemical Catalog &amp; Order Online</span>
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </Link>
         </div>

@@ -227,7 +227,7 @@ function ContactFormContent() {
           >
             {status === "submitting" ? (
               <span className="flex items-center gap-2">
-                <span className="w-4 h-4 rounded-full border-2 border-white border-t-transparent animate-spin" />
+                <span className="w-4 h-4 rounded-full border-2 border-ink-inverse border-t-transparent animate-spin" />
                 Submitting Request...
               </span>
             ) : (

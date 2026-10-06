@@ -46,7 +46,7 @@ export default function QuoteListDrawer() {
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm"
+        className="fixed inset-0 z-[60] bg-ink/50 backdrop-blur-sm"
         onClick={() => setIsOpen(false)}
         style={{ animation: "fadeIn 200ms var(--ease-out)" }}
       />

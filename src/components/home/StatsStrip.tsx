@@ -33,10 +33,10 @@ const stats: StatItem[] = [
     isNumeric: true,
   },
   {
-    value: "Nationwide",
+    value: "Direct",
     suffix: "",
-    label: "Direct Bulk Dispatch",
-    sub: "Dispatched from Karachi hubs",
+    label: "Nationwide Supply",
+    sub: "Direct delivery to factories across Pakistan",
     isNumeric: false,
   },
 ];

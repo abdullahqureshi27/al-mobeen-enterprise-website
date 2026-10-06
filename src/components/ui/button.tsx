@@ -9,7 +9,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-white shadow-md hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.99]",
+          "bg-primary text-ink-inverse shadow-md hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.99]",
         primary:
           "btn-primary",
         outline:
@@ -21,11 +21,11 @@ const buttonVariants = cva(
         link:
           "text-primary underline-offset-4 hover:underline p-0 h-auto font-semibold",
         destructive:
-          "bg-accent text-white shadow-sm hover:bg-accent-hover hover:-translate-y-0.5",
+          "bg-accent text-ink-inverse shadow-sm hover:bg-accent-hover hover:-translate-y-0.5",
         success:
-          "bg-success text-white shadow-sm hover:brightness-110 hover:-translate-y-0.5",
+          "bg-success text-ink-inverse shadow-sm hover:brightness-110 hover:-translate-y-0.5",
         whatsapp:
-          "bg-whatsapp text-white shadow-md hover:brightness-110 hover:-translate-y-0.5",
+          "bg-whatsapp text-ink-inverse shadow-md hover:brightness-110 hover:-translate-y-0.5",
       },
       size: {
         default: "h-11 px-6 py-2.5 text-sm",

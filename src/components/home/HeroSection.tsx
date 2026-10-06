@@ -22,11 +22,11 @@ export default function HeroSection() {
               transition={{ duration: 0.4 }}
               className="mb-4 sm:mb-5"
             >
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-light border border-accent-border text-ink text-xs sm:text-[13px] font-semibold tracking-tight shadow-xs">
-                <span className="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-muted border border-border text-ink text-xs sm:text-[13px] font-semibold tracking-tight shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-success animate-pulse"></span>
                 <span>
-                  Karachi&apos;s Trusted Bulk Chemical Hub •{" "}
-                  <strong className="text-accent font-extrabold">Jodia Bazar Since 1995</strong>
+                  Commercial Trading Desk: <strong className="text-ink font-extrabold">Jodia Bazar, Karachi</strong> •{" "}
+                  <strong className="text-ink font-extrabold">Direct Factory Supply</strong>
                 </span>
               </div>
             </motion.div>
@@ -49,7 +49,7 @@ export default function HeroSection() {
               transition={{ duration: 0.5, delay: 0.16 }}
               className="text-sm sm:text-base text-ink-muted leading-relaxed mb-6 sm:mb-8 max-w-[500px]"
             >
-              Direct wholesale supply of bulk industrial chemicals, raw materials, and processing compounds. Transparent grade purity — we sell exactly what we claim — with fast dispatch from Jodia Bazar across Pakistan.
+              Direct wholesale supply of bulk industrial chemicals, solvents, resins, and raw materials. Transparent grade purity — we sell exactly what we claim — with daily spot rates and bulk consignments delivered directly to manufacturing facilities across Pakistan.
             </motion.p>
 
             {/* Dual Pill CTA Buttons */}
@@ -63,7 +63,7 @@ export default function HeroSection() {
                 href="/products"
                 className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-bold text-ink-inverse bg-accent hover:bg-accent-hover rounded-full shadow-md hover:shadow-lg transition-all duration-300 group"
               >
-                <span>Explore 80+ Chemicals</span>
+                <span>Explore &amp; Order Chemicals</span>
                 <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-surface text-accent flex items-center justify-center text-xs shadow-xs transition-transform group-hover:translate-x-0.5">
                   <svg
                     stroke="currentColor"

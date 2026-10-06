@@ -54,7 +54,7 @@ export default function AboutPage() {
             </p>
 
             <p className="text-ink font-medium">
-              We operate as a dedicated <strong className="text-ink font-extrabold">bulk chemical stockist and wholesale distributor</strong>. Operating from the heart of Jodia Bazar, we maintain extensive ready warehouse inventory and reliable commercial supply lines to fulfill exact specifications, grade requirements, and high-volume orders tailored specifically to our clients&apos; industrial manufacturing needs.
+              We operate as a dedicated <strong className="text-ink font-extrabold">bulk chemical distributor and wholesale supplier</strong>. With our central commercial trading office at Jodia Bazar, Karachi, we maintain direct sourcing lines with leading global importers and manufacturers to deliver exact specifications, grade requirements, and bulk chemical consignments directly to manufacturing facilities across Pakistan.
             </p>
 
             <div className="p-6 rounded-2xl bg-base border border-border my-6">
@@ -62,12 +62,14 @@ export default function AboutPage() {
                 Business Profile Highlights
               </h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-ink">
-                <li className="text-ink"><strong className="text-ink font-bold">Location:</strong> G/9, Golden Center, Weaver Lane, Jodia Bazar, Karachi</li>
+                <li className="text-ink"><strong className="text-ink font-bold">Commercial Desk:</strong> G/9, Golden Center, Weaver Lane, Jodia Bazar, Karachi</li>
+                <li className="text-ink"><strong className="text-ink font-bold">Delivery:</strong> Direct Factory Dispatch Across Pakistan</li>
                 <li className="text-ink"><strong className="text-ink font-bold">Experience:</strong> 30 Years (Established 1995)</li>
-                <li className="text-ink"><strong className="text-ink font-bold">Business Model:</strong> Bulk Wholesale Stockist &amp; Distributor</li>
-                <li className="text-ink"><strong className="text-ink font-bold">Service Area:</strong> Nationwide (Main Focus Karachi)</li>
-                <li className="text-ink"><strong className="text-ink font-bold">Business Hours:</strong> 9:00 AM – 6:00 PM</li>
+                <li className="text-ink"><strong className="text-ink font-bold">Business Model:</strong> Bulk Wholesale Supplier &amp; Distributor</li>
+                <li className="text-ink"><strong className="text-ink font-bold">Pricing Model:</strong> Daily Spot Market Rates</li>
+                <li className="text-ink"><strong className="text-ink font-bold">Service Area:</strong> Nationwide Dispatches Across Pakistan</li>
                 <li className="text-ink"><strong className="text-ink font-bold">Quality Promise:</strong> We Sell What We Claim (Honest Grades)</li>
+                <li className="text-ink"><strong className="text-ink font-bold">Business Hours:</strong> 9:00 AM – 6:00 PM (Mon - Sat)</li>
               </ul>
             </div>
 
@@ -85,7 +87,7 @@ export default function AboutPage() {
               <ScrollReveal key={evt.year} delay={i * 100}>
                 <div className="bg-surface p-6 rounded-2xl border border-border relative flex flex-col justify-between h-full">
                   <div>
-                    <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-primary text-white mb-4">
+                    <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-primary text-ink-inverse mb-4">
                       {evt.year}
                     </span>
                     <h3 className="text-base font-bold mb-2 text-ink">{evt.title}</h3>

@@ -40,10 +40,10 @@ export default function CTABand() {
               B2B TRADING DESK
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-extrabold leading-[1.08] tracking-[-0.03em] text-ink mb-3 sm:mb-4">
-              Let’s Talk <span className="text-accent">Supply.</span>
+              Order Your <span className="text-accent">Chemicals.</span>
             </h2>
             <p className="text-sm sm:text-base text-ink-muted leading-relaxed mb-6 sm:mb-8 max-w-[380px]">
-              Need spot rates, technical data sheets, or metric-ton contract pricing? Contact our Jodia Bazar desk directly.
+              Need today&apos;s spot rates, technical data sheets, or bulk chemical consignments delivered directly to your plant? Order directly with our desk.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
@@ -102,10 +102,10 @@ export default function CTABand() {
           {/* Right Column: High-Contrast Dark Form */}
           <div className="lg:col-span-7 bg-surface-inverse text-ink-inverse p-6 sm:p-8 md:p-10 rounded-[24px] sm:rounded-[32px] shadow-2xl border border-border-inverse">
             <h3 className="text-xl sm:text-2xl md:text-[26px] font-extrabold tracking-tight mb-2 leading-snug text-ink-inverse">
-              Request Fast Bulk Quotation
+              Place Your Bulk Chemical Order
             </h3>
             <p className="text-xs sm:text-sm text-ink-inverse-muted mb-6 sm:mb-8">
-              Specify your volume requirement and get an immediate WhatsApp quotation from our Jodia Bazar desk.
+              Specify your volume requirement and get immediate spot pricing and dispatch confirmation from our Jodia Bazar desk.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
@@ -166,7 +166,7 @@ export default function CTABand() {
                         onClick={() => setVolume(v)}
                         className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-[11px] sm:text-xs font-bold transition-all duration-200 cursor-pointer ${
                           isSelected
-                            ? "bg-white text-primary font-black shadow-xs"
+                            ? "bg-surface text-primary font-black shadow-xs"
                             : "bg-surface-inverse-hover text-ink-inverse-muted border border-border-inverse hover:border-ink-muted hover:text-ink-inverse"
                         }`}
                       >
@@ -180,10 +180,10 @@ export default function CTABand() {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 text-xs sm:text-sm font-bold bg-white text-primary rounded-full hover:bg-slate-100 transition-all duration-300 shadow-lg group cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 text-xs sm:text-sm font-bold bg-surface text-primary rounded-full hover:bg-surface-hover transition-all duration-300 shadow-lg group cursor-pointer"
                 >
-                  <span>Submit WhatsApp RFQ</span>
-                  <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-xs transition-transform duration-300 group-hover:translate-x-0.5">
+                  <span>Order on WhatsApp</span>
+                  <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-primary text-ink-inverse flex items-center justify-center font-bold text-xs sm:text-sm shadow-xs transition-transform duration-300 group-hover:translate-x-0.5">
                     →
                   </span>
                 </button>
