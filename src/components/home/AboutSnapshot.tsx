@@ -81,10 +81,10 @@ export default function AboutSnapshot() {
                       {item.step}
                     </span>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-extrabold text-ink tracking-tight mb-2">
+                  <h3 className="text-lg sm:text-xl font-extrabold text-ink tracking-tight mb-2 min-h-[32px] sm:min-h-[36px] flex items-center">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-ink-muted leading-relaxed mb-4">
+                  <p className="text-xs sm:text-sm text-ink-muted leading-relaxed mb-4 min-h-[64px] sm:min-h-[72px]">
                     {item.description}
                   </p>
                 </div>

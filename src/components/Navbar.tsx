@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useQuote } from "./QuoteProvider";
@@ -87,16 +88,23 @@ export default function Navbar() {
         }`}
       >
         <div className="mx-auto max-w-[1320px] px-3.5 sm:px-6 md:px-10 flex items-center justify-between">
-          {/* Logo with Sanock-style circular badge */}
-          <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group shrink-0">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-accent text-white flex items-center justify-center font-black text-sm sm:text-xl shadow-xs transition-transform duration-300 group-hover:scale-105">
-              A
+          {/* Official AME Logo Badge */}
+          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+            <div className="relative w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-white border border-border p-1 shadow-xs flex items-center justify-center shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105">
+              <Image
+                src="/ame-logo.png"
+                alt="Al Mobeen Enterprise Logo"
+                width={44}
+                height={44}
+                className="w-full h-full object-contain"
+                priority
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-base sm:text-xl font-extrabold tracking-tight text-ink group-hover:text-accent transition-colors leading-none">
                 AL MOBEEN
               </span>
-              <span className="text-[9px] sm:text-[10px] font-bold text-ink-muted tracking-wider uppercase mt-0.5">
+              <span className="text-[9px] sm:text-[10px] font-bold text-ink-muted tracking-wider uppercase mt-1">
                 ENTERPRISE
               </span>
             </div>

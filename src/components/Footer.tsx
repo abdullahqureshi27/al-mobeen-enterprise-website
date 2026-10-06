@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { categories } from "@/data/categories";
 
 export default function Footer() {
@@ -19,14 +20,20 @@ export default function Footer() {
           {/* Column 1: Brand & Bio */}
           <div className="sm:col-span-2 lg:col-span-5">
             <Link href="/" className="inline-flex items-center gap-2.5 sm:gap-3 group mb-4 sm:mb-5">
-              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-accent text-white flex items-center justify-center font-black text-lg sm:text-xl shadow-md group-hover:scale-105 transition-transform">
-                A
+              <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white border border-border/80 shadow-sm p-1.5 flex items-center justify-center shrink-0 overflow-hidden group-hover:scale-105 transition-transform">
+                <Image
+                  src="/ame-logo.png"
+                  alt="Al Mobeen Enterprise Logo"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl sm:text-2xl font-black tracking-tight text-ink-inverse group-hover:text-accent transition-colors leading-none">
                   AL MOBEEN
                 </span>
-                <span className="text-[10px] font-bold tracking-widest text-ink-inverse-muted uppercase mt-0.5">
+                <span className="text-[10px] font-bold tracking-widest text-ink-inverse-muted uppercase mt-1">
                   ENTERPRISE • KARACHI
                 </span>
               </div>

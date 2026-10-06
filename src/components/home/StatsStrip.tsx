@@ -99,7 +99,7 @@ export default function StatsStrip() {
             {stats.map((stat, i) => (
               <div
                 key={stat.label}
-                className="bg-surface p-5 sm:p-6 rounded-[20px] sm:rounded-[24px] border border-border-subtle shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+                className="bg-surface p-5 sm:p-6 rounded-[20px] sm:rounded-[24px] border border-border-subtle shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full"
               >
                 <div className="flex items-center justify-between mb-4">
                   <span className="w-8 h-8 rounded-full bg-accent-light text-accent flex items-center justify-center font-mono font-bold text-xs">
@@ -112,7 +112,7 @@ export default function StatsStrip() {
                 </div>
 
                 <div>
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-ink leading-none mb-1.5">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-ink leading-none mb-2">
                     {stat.isNumeric ? (
                       <>
                         {counts[i]}
@@ -122,10 +122,10 @@ export default function StatsStrip() {
                       <span>{counts[i] || "Nationwide"}</span>
                     )}
                   </div>
-                  <h3 className="text-xs sm:text-sm font-extrabold text-ink mb-0.5">
+                  <h3 className="text-xs sm:text-sm font-extrabold text-ink mb-1 min-h-[20px] flex items-center">
                     {stat.label}
                   </h3>
-                  <p className="text-[11px] sm:text-xs text-ink-muted leading-tight">
+                  <p className="text-[11px] sm:text-xs text-ink-muted leading-relaxed min-h-[32px]">
                     {stat.sub}
                   </p>
                 </div>
