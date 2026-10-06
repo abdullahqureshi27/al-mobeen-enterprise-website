@@ -90,12 +90,12 @@ export default function Navbar() {
         <div className="mx-auto max-w-[1320px] px-3.5 sm:px-6 md:px-10 flex items-center justify-between">
           {/* Official AME Logo Badge */}
           <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
-            <div className="relative w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-white border border-border p-1 shadow-xs flex items-center justify-center shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105">
+            <div className="relative h-10 sm:h-12 w-12 sm:w-15 rounded-xl bg-white border border-border shadow-xs p-1 flex items-center justify-center shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105">
               <Image
                 src="/ame-logo.png"
                 alt="Al Mobeen Enterprise Logo"
-                width={44}
-                height={44}
+                width={60}
+                height={46}
                 className="w-full h-full object-contain"
                 priority
               />

@@ -166,7 +166,7 @@ export default function CTABand() {
                         onClick={() => setVolume(v)}
                         className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-[11px] sm:text-xs font-bold transition-all duration-200 cursor-pointer ${
                           isSelected
-                            ? "bg-accent text-white shadow-xs"
+                            ? "bg-white text-primary font-black shadow-xs"
                             : "bg-surface-inverse-hover text-ink-inverse-muted border border-border-inverse hover:border-ink-muted hover:text-ink-inverse"
                         }`}
                       >
@@ -180,10 +180,10 @@ export default function CTABand() {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 text-xs sm:text-sm font-bold bg-accent text-white rounded-full hover:bg-accent-hover transition-all duration-300 shadow-lg group cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-3.5 sm:py-4 text-xs sm:text-sm font-bold bg-white text-primary rounded-full hover:bg-slate-100 transition-all duration-300 shadow-lg group cursor-pointer"
                 >
                   <span>Submit WhatsApp RFQ</span>
-                  <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white text-accent flex items-center justify-center font-bold text-xs sm:text-sm shadow-xs transition-transform duration-300 group-hover:translate-x-0.5">
+                  <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xs sm:text-sm shadow-xs transition-transform duration-300 group-hover:translate-x-0.5">
                     →
                   </span>
                 </button>

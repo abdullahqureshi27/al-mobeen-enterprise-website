@@ -19,13 +19,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 items-start mb-12 sm:mb-16">
           {/* Column 1: Brand & Bio */}
           <div className="sm:col-span-2 lg:col-span-5">
-            <Link href="/" className="inline-flex items-center gap-2.5 sm:gap-3 group mb-4 sm:mb-5">
-              <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white border border-border/80 shadow-sm p-1.5 flex items-center justify-center shrink-0 overflow-hidden group-hover:scale-105 transition-transform">
+            <Link href="/" className="inline-flex items-center gap-3 sm:gap-3.5 group mb-4 sm:mb-5">
+              <div className="relative h-12 sm:h-14 w-15 sm:w-18 rounded-xl bg-white border border-border shadow-sm p-1.5 flex items-center justify-center shrink-0 overflow-hidden group-hover:scale-105 transition-transform">
                 <Image
                   src="/ame-logo.png"
                   alt="Al Mobeen Enterprise Logo"
-                  width={48}
-                  height={48}
+                  width={72}
+                  height={54}
                   className="w-full h-full object-contain"
                 />
               </div>
