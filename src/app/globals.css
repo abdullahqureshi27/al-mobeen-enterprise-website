@@ -86,11 +86,11 @@
   --secondary-light: #F1F5F9;
   --secondary-border: #CBD5E1;
 
-  --accent: #041D46;
-  --accent-hover: #08285C;
-  --accent-light: #EEF3FA;
-  --accent-border: #CBD8EB;
-  --accent-cyan: #475569;
+  --accent: #ED1E3A;
+  --accent-hover: #DC2626;
+  --accent-light: #FEF2F2;
+  --accent-border: #FECACA;
+  --accent-cyan: #ED1E3A;
 
   --success: #059669;
   --success-light: #ECFDF5;
@@ -113,7 +113,7 @@
   --shadow-sm: 0 4px 14px rgba(4, 29, 70, 0.06);
   --shadow-md: 0 10px 25px -3px rgba(4, 29, 70, 0.1), 0 4px 6px -2px rgba(4, 29, 70, 0.04);
   --shadow-lg: 0 20px 35px -4px rgba(4, 29, 70, 0.14), 0 8px 10px -4px rgba(4, 29, 70, 0.06);
-  --shadow-glow: 0 0 25px rgba(4, 29, 70, 0.15);
+  --shadow-glow: 0 0 25px rgba(237, 30, 58, 0.15);
 
   /* Typography */
   --font-heading: var(--font-outfit), var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -178,11 +178,11 @@ html.dark {
   --secondary-light: rgba(148, 163, 184, 0.15);
   --secondary-border: rgba(148, 163, 184, 0.3);
 
-  --accent: #F8FAFC;
-  --accent-hover: #E2E8F0;
-  --accent-light: rgba(248, 250, 252, 0.12);
-  --accent-border: rgba(248, 250, 252, 0.25);
-  --accent-cyan: #94A3B8;
+  --accent: #EF4444;
+  --accent-hover: #F87171;
+  --accent-light: rgba(239, 68, 68, 0.15);
+  --accent-border: rgba(239, 68, 68, 0.3);
+  --accent-cyan: #EF4444;
 
   --success: #10B981;
   --success-light: rgba(16, 185, 129, 0.15);
@@ -196,7 +196,7 @@ html.dark {
   --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.5);
   --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.6);
   --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.7);
-  --shadow-glow: 0 0 25px rgba(248, 250, 252, 0.15);
+  --shadow-glow: 0 0 25px rgba(239, 68, 68, 0.2);
 
   --background: var(--base);
   --foreground: var(--ink);
@@ -603,9 +603,9 @@ html.dark .enterprise-card:hover {
 }
 
 html.dark .badge-bestseller {
-  background: rgba(239, 68, 68, 0.15);
-  color: #EF4444;
-  border-color: rgba(239, 68, 68, 0.3);
+  background: var(--accent-light);
+  color: var(--accent);
+  border-color: var(--accent-border);
 }
 
 /* Custom Clean Scrollbar */
