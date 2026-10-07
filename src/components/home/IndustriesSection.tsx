@@ -2,6 +2,7 @@
 
 import { type ReactNode } from "react";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
 import { industries } from "@/data/industries";
 
 const industryIcons: Record<string, ReactNode> = {
@@ -100,7 +101,7 @@ export default function IndustriesSection() {
                 <div className="pt-3 border-t border-border flex items-center justify-between text-[11px] font-bold text-ink">
                   <span>View Chemicals</span>
                   <span className="w-5 h-5 rounded-full bg-accent text-ink-inverse flex items-center justify-center text-xs group-hover:translate-x-1 group-hover:bg-accent-hover transition-all shadow-xs">
-                    →
+                    <FaArrowRight className="w-2.5 h-2.5" />
                   </span>
                 </div>
               </div>
@@ -132,7 +133,7 @@ export default function IndustriesSection() {
               <div className="pt-3 border-t border-border flex items-center justify-between text-[11px] font-bold text-ink">
                 <span>Request Custom Supply</span>
                 <span className="w-5 h-5 rounded-full bg-accent text-ink-inverse flex items-center justify-center text-xs group-hover:translate-x-1 group-hover:bg-accent-hover transition-all shadow-xs">
-                  →
+                  <FaArrowRight className="w-2.5 h-2.5" />
                 </span>
               </div>
             </div>

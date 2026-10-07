@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
 import { categories } from "@/data/categories";
 import { getProductsByCategory } from "@/data/products";
 import CategoryIcon from "@/components/ui/CategoryIcon";
@@ -87,7 +88,7 @@ export default function ProductCategoriesGrid() {
                 >
                   <span>Explore &amp; Order {cat.name}</span>
                   <span className="w-6 h-6 rounded-full bg-accent text-ink-inverse flex items-center justify-center text-xs group-hover:translate-x-1 group-hover:bg-accent-hover transition-all shadow-xs">
-                    →
+                    <FaArrowRight className="w-2.5 h-2.5" />
                   </span>
                 </Link>
               </div>
@@ -102,7 +103,9 @@ export default function ProductCategoriesGrid() {
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-surface-inverse text-ink-inverse text-xs sm:text-sm font-extrabold hover:bg-accent hover:text-ink-inverse transition-all shadow-md group"
           >
             <span>View Complete 80+ Chemical Catalog &amp; Order Online</span>
-            <span className="group-hover:translate-x-1 transition-transform">→</span>
+            <span className="group-hover:translate-x-1 transition-transform">
+              <FaArrowRight className="w-3 h-3" />
+            </span>
           </Link>
         </div>
       </div>

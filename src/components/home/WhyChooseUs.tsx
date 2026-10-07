@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
 
 const steps = [
   {
@@ -118,7 +119,7 @@ export default function WhyChooseUs() {
                   className="text-xs sm:text-sm font-extrabold text-ink-inverse uppercase tracking-widest hover:underline flex items-center gap-1.5"
                 >
                   <span>Request Spot Quote</span>
-                  <span>→</span>
+                  <FaArrowRight className="w-3 h-3" />
                 </Link>
               </div>
             </div>

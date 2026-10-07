@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
 import { products, type Product } from "@/data/products";
 import { useQuote } from "@/components/QuoteProvider";
 import { useToast } from "@/components/ui/Toast";
@@ -188,10 +189,10 @@ export default function HeroChemicalTerminal() {
           <span className="text-ink-subtle font-medium">We Sell Exactly What We Claim</span>
           <Link
             href="/products"
-            className="font-extrabold text-ink hover:text-accent inline-flex items-center gap-1 transition-colors"
+            className="font-extrabold text-ink hover:text-accent inline-flex items-center gap-1.5 transition-colors"
           >
             <span>View All 80+ Chemicals</span>
-            <span>→</span>
+            <FaArrowRight className="w-2.5 h-2.5" />
           </Link>
         </div>
       </div>

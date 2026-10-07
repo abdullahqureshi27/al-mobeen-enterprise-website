@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { FaArrowRight } from "react-icons/fa6";
 
 const volumeOptions = [
   "1 - 5 Drums",
@@ -184,7 +185,7 @@ export default function CTABand() {
                 >
                   <span>Order on WhatsApp</span>
                   <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-primary text-ink-inverse flex items-center justify-center font-bold text-xs sm:text-sm shadow-xs transition-transform duration-300 group-hover:translate-x-0.5">
-                    →
+                    <FaArrowRight className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                   </span>
                 </button>
               </div>

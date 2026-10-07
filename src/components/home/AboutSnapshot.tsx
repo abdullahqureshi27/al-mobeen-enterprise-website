@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
 
 const highlights = [
   {
@@ -116,14 +117,14 @@ export default function AboutSnapshot() {
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface text-xs font-bold text-ink border border-border hover:border-accent transition-colors shadow-xs"
             >
               <span>Our History</span>
-              <span>→</span>
+              <FaArrowRight className="w-2.5 h-2.5" />
             </Link>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-inverse text-xs font-bold text-ink-inverse hover:bg-accent transition-colors shadow-xs"
             >
               <span>Visit Office</span>
-              <span>→</span>
+              <FaArrowRight className="w-2.5 h-2.5" />
             </Link>
           </div>
         </div>

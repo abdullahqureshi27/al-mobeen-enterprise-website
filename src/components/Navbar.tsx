@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
 import { useQuote } from "./QuoteProvider";
 import { useLanguage } from "./LanguageProvider";
@@ -197,7 +198,7 @@ export default function Navbar() {
             >
               <span>Order It</span>
               <span className="w-5 h-5 rounded-full bg-accent text-ink-inverse flex items-center justify-center text-[10px] shadow-xs transition-transform group-hover:translate-x-0.5">
-                →
+                <FaArrowRight className="w-2.5 h-2.5" />
               </span>
             </Link>
 
@@ -269,7 +270,7 @@ export default function Navbar() {
               className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full bg-accent text-ink-inverse text-xs font-bold shadow-md hover:bg-accent-hover transition-colors"
             >
               <span>Order Bulk Chemicals</span>
-              <span>→</span>
+              <FaArrowRight className="w-3 h-3" />
             </Link>
             <a
               href="https://wa.me/923321134530"

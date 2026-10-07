@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa6";
 import { categories } from "@/data/categories";
 
 export default function Footer() {
@@ -51,7 +52,7 @@ export default function Footer() {
                 className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-whatsapp/20 text-whatsapp border border-whatsapp/30 text-xs font-bold hover:bg-whatsapp hover:text-ink-inverse transition-all"
               >
                 <span>WhatsApp Desk</span>
-                <span>→</span>
+                <FaArrowRight className="w-2.5 h-2.5" />
               </a>
               <a
                 href="tel:+923321134530"
