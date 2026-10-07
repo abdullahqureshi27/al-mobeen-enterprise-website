@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import ProductCatalog from "@/components/products/ProductCatalog";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "https://almobeenenterprise.vercel.app");
+
 export const metadata: Metadata = {
   title: "Bulk Industrial Chemicals Catalog | Al Mobeen Enterprise (Mobeen Chemicals)",
   description:
@@ -15,7 +21,7 @@ export const metadata: Metadata = {
     "DOP bulk supplier Jodia Bazar",
   ],
   alternates: {
-    canonical: "https://almobeenenterprise.com/products",
+    canonical: `${siteUrl}/products`,
   },
 };
 

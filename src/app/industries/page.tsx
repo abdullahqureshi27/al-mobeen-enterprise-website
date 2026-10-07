@@ -4,6 +4,12 @@ import { industries } from "@/data/industries";
 import { getCategoryBySlug } from "@/data/categories";
 import { Button } from "@/components/ui/button";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "https://almobeenenterprise.vercel.app");
+
 export const metadata: Metadata = {
   title: "Industries Served | Al Mobeen Enterprise (Mobeen Chemicals)",
   description:
@@ -17,7 +23,7 @@ export const metadata: Metadata = {
     "Al Mobeen Ent industries",
   ],
   alternates: {
-    canonical: "https://almobeenenterprise.com/industries",
+    canonical: `${siteUrl}/industries`,
   },
 };
 

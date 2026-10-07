@@ -67,16 +67,16 @@ export const metadata: Metadata = {
     "bulk chemical importers Pakistan",
     "Karachi chemical distributors",
   ],
-  authors: [{ name: "Al Mobeen Enterprise (Mobeen Chemicals)", url: "https://almobeenenterprise.com" }],
+  authors: [{ name: "Al Mobeen Enterprise (Mobeen Chemicals)", url: siteUrl }],
   creator: "Al Mobeen Enterprise",
   publisher: "Al Mobeen Enterprise (Mobeen Chemicals)",
   alternates: {
-    canonical: "https://almobeenenterprise.com",
+    canonical: siteUrl,
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://almobeenenterprise.com",
+    url: siteUrl,
     siteName: "Al Mobeen Enterprise (Mobeen Chemicals)",
     title: "Al Mobeen Enterprise (Mobeen Chemicals) | Karachi's #1 Bulk Chemical Dealer & Wholesaler",
     description:
@@ -112,7 +112,7 @@ const jsonLdGraph = {
   "@graph": [
     {
       "@type": ["WholesaleStore", "LocalBusiness", "Organization"],
-      "@id": "https://almobeenenterprise.com/#localbusiness",
+      "@id": `${siteUrl}/#localbusiness`,
       name: "Al Mobeen Enterprise",
       alternateName: [
         "Mobeen Chemicals",
@@ -129,9 +129,9 @@ const jsonLdGraph = {
       ],
       description:
         "Al Mobeen Enterprise (also recognized as Mobeen Chemicals, Al Mobeen Ent, or Mobeen Chm) is Karachi's premier bulk chemical dealer, importer, and wholesale distributor based at Jodia Bazar since 1995. Over 30 years supplying 80+ industrial chemicals in bulk quantities across Pakistan.",
-      url: "https://almobeenenterprise.com",
-      logo: "https://almobeenenterprise.com/ame-logo.png",
-      image: "https://almobeenenterprise.com/ame-logo.png",
+      url: siteUrl,
+      logo: `${siteUrl}/ame-logo.png`,
+      image: `${siteUrl}/ame-logo.png`,
       telephone: "+92-332-1134530",
       email: "almobeenenterprise@gmail.com",
       priceRange: "$$$",
@@ -214,23 +214,23 @@ const jsonLdGraph = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://almobeenenterprise.com/#website",
-      url: "https://almobeenenterprise.com",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
       name: "Al Mobeen Enterprise (Mobeen Chemicals)",
       alternateName: ["Mobeen Chemicals", "Al Mobeen Ent", "Mobeen Chm"],
       description: "Karachi's Premier Bulk Chemical Dealer & Wholesaler - Jodia Bazar. Al Mobeen Enterprise (Mobeen Chemicals).",
       publisher: {
-        "@id": "https://almobeenenterprise.com/#localbusiness",
+        "@id": `${siteUrl}/#localbusiness`,
       },
       potentialAction: {
         "@type": "SearchAction",
-        target: "https://almobeenenterprise.com/products?search={search_term_string}",
+        target: `${siteUrl}/products?search={search_term_string}`,
         "query-input": "required name=search_term_string",
       },
     },
     {
       "@type": "FAQPage",
-      "@id": "https://almobeenenterprise.com/#faq",
+      "@id": `${siteUrl}/#faq`,
       mainEntity: [
         {
           "@type": "Question",

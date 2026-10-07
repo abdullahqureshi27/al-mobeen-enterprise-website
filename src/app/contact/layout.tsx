@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "https://almobeenenterprise.vercel.app");
+
 export const metadata: Metadata = {
   title: "Contact Al Mobeen Enterprise (Mobeen Chemicals) | Jodia Bazar Karachi",
   description:
@@ -14,13 +20,13 @@ export const metadata: Metadata = {
     "wholesale chemical inquiry Pakistan",
   ],
   alternates: {
-    canonical: "https://almobeenenterprise.com/contact",
+    canonical: `${siteUrl}/contact`,
   },
   openGraph: {
     title: "Contact Al Mobeen Enterprise (Mobeen Chemicals) | Jodia Bazar Karachi",
     description:
       "Get daily spot pricing and quotations for bulk industrial chemicals from Al Mobeen Enterprise (Mobeen Chemicals / Al Mobeen Ent / Mobeen Chm).",
-    url: "https://almobeenenterprise.com/contact",
+    url: `${siteUrl}/contact`,
   },
 };
 

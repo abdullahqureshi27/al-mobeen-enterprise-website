@@ -74,7 +74,11 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         "@type": "Organization",
         name: "Al Mobeen Enterprise",
         alternateName: ["Mobeen Chemicals", "Al Mobeen Ent", "Mobeen Chm"],
-        url: "https://almobeenenterprise.com",
+        url:
+          process.env.NEXT_PUBLIC_SITE_URL ||
+          (process.env.VERCEL_PROJECT_PRODUCTION_URL
+            ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+            : "https://almobeenenterprise.vercel.app"),
       },
     },
   };
