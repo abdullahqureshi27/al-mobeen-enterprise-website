@@ -25,14 +25,23 @@ const outfit = Outfit({
   display: "swap",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "https://almobeenenterprise.vercel.app");
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://almobeenenterprise.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Al Mobeen Enterprise (Mobeen Chemicals) | Karachi's #1 Bulk Chemical Dealer & Wholesaler",
     template: "%s | Al Mobeen Enterprise (Mobeen Chemicals)",
   },
   description:
     "Al Mobeen Enterprise (also known as Mobeen Chemicals, Al Mobeen Ent & Mobeen Chm) is Karachi's premier bulk chemical dealer, importer & wholesaler in Jodia Bazar. 30+ years supplying 80+ industrial chemicals, solvents, DOP, resins & acids in bulk quantities across Pakistan.",
+  verification: {
+    google: "googlee34c2c102a28c308",
+  },
   keywords: [
     "Al Mobeen Enterprise",
     "mobeen Chemicals",

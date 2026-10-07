@@ -3,7 +3,11 @@ import { products } from "@/data/products";
 import { industries } from "@/data/industries";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://almobeenenterprise.com";
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "https://almobeenenterprise.vercel.app");
 
   const routes = ["", "/about", "/products", "/industries", "/contact"].map(
     (route) => ({
