@@ -41,7 +41,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-xs sm:text-sm text-ink-inverse-muted max-w-[420px] leading-relaxed mb-6">
-              Premier wholesale industrial chemical distributor. Operating our commercial trading desk from Jodia Bazar, Karachi since 1995. Direct sourcing from trusted global importers and delivering bulk chemicals, drums, and metric tons directly to manufacturing plants nationwide.
+              <strong className="text-ink-inverse font-semibold">Al Mobeen Enterprise</strong> (also known as <strong className="text-ink-inverse font-semibold">Mobeen Chemicals</strong>, <strong className="text-ink-inverse font-semibold">Al Mobeen Ent</strong>, or <strong className="text-ink-inverse font-semibold">Mobeen Chm</strong>) is Karachi&apos;s premier bulk industrial chemical dealer and wholesale distributor based at Jodia Bazar since 1995. Supplying solvents, DOP, resins &amp; acids in bulk quantities nationwide.
             </p>
 
             <div className="flex items-center gap-2.5">
@@ -123,7 +123,7 @@ export default function Footer() {
 
         {/* Bottom Copyright & Verification */}
         <div className="pt-8 sm:pt-10 border-t border-border-inverse flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ink-inverse-muted">
-          <p>© {new Date().getFullYear()} Al Mobeen Enterprise. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Al Mobeen Enterprise (Mobeen Chemicals). All rights reserved.</p>
           <div className="flex items-center gap-4">
             <span>Karachi Industrial Chemical Hub</span>
             <span>•</span>

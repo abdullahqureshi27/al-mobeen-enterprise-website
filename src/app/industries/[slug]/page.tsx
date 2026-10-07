@@ -21,8 +21,15 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
   if (!industry) return {};
 
   return {
-    title: `Chemicals for ${industry.name} | Bulk Supply in Pakistan`,
-    description: `Al Mobeen Enterprise supplies bulk industrial chemicals for the ${industry.name} sector in Karachi and across Pakistan. ${industry.description}`,
+    title: `Bulk Chemicals for ${industry.name} | Al Mobeen Enterprise (Mobeen Chemicals)`,
+    description: `Al Mobeen Enterprise (Mobeen Chemicals / Al Mobeen Ent / Mobeen Chm) supplies bulk industrial chemicals for the ${industry.name} sector in Karachi and across Pakistan. ${industry.description}`,
+    keywords: [
+      `chemicals for ${industry.name} Karachi`,
+      `${industry.name} raw materials Pakistan`,
+      "Mobeen Chemicals",
+      "Al Mobeen Enterprise",
+      "bulk chemical supply Karachi",
+    ],
   };
 }
 

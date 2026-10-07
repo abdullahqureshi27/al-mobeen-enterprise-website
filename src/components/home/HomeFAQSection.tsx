@@ -5,8 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    q: "Why is Al Mobeen Enterprise considered the premier bulk chemical dealer in Karachi?",
-    a: "Operating from Jodia Bazar since 1995, Al Mobeen Enterprise has built a 30-year legacy of transparent dealing, direct wholesale pricing, and uninterrupted bulk chemical supply. We maintain extensive ready warehouse stock, ensuring genuine purity with zero adulteration (we sell what we claim), and rapid dispatch across Karachi and Pakistan.",
+    q: "Are Al Mobeen Enterprise, Mobeen Chemicals, Al Mobeen Ent, and Mobeen Chm the same business?",
+    a: "Yes. Al Mobeen Enterprise is frequently known and referred to across Jodia Bazar and industrial trade circles as Mobeen Chemicals, Al Mobeen Ent, or Mobeen Chm. Established in 1995, we are the same trusted entity providing direct wholesale and bulk quantity distribution for over 80 industrial chemicals.",
+  },
+  {
+    q: "Why is Al Mobeen Enterprise (Mobeen Chemicals) considered Karachi's premier bulk chemical dealer?",
+    a: "Operating from Jodia Bazar since 1995, Al Mobeen Enterprise (Mobeen Chemicals / Al Mobeen Ent) has built a 30-year legacy of transparent dealing, direct wholesale pricing, and uninterrupted bulk chemical supply. We maintain extensive ready warehouse stock, ensuring genuine purity with zero adulteration (we sell what we claim), and rapid dispatch across Karachi and Pakistan.",
   },
   {
     q: "Where is your commercial trading office located in Karachi?",
@@ -14,14 +18,14 @@ const faqs = [
   },
   {
     q: "What bulk chemicals do you specialize in supplying?",
-    a: "We specialize in high-volume industrial raw materials including Solvents (IPA, Butanol, Butyl Glycol, Ethyl Alcohol, Xylene), Plasticizers (DOP, DOTP, DBP), Pigments & Fillers (Titanium Dioxide Rutile & Anatase, Lithopone), Synthetic Resins (Epoxy, Alkyd, Maleic), Industrial Acids, and specialized performance additives for paints, textiles, and plastics.",
+    a: "We specialize in high-volume industrial raw materials including Solvents (IPA, Butanol, Butyl Glycol, Ethyl Alcohol, Xylene), Plasticizers (DOP, DOTP, DBP), Pigments & Fillers (Titanium Dioxide Rutile & Anatase, Lithopone), Synthetic Resins (Epoxy, Alkyd, Maleic), Industrial Acids, and specialized performance additives for paints, textiles, and plastics in bulk quantities.",
   },
   {
     q: "Do you supply bulk chemical orders outside Karachi across Pakistan?",
     a: "Yes. Operating from Jodia Bazar, Karachi, we routinely fulfill bulk consignments across Pakistan, delivering directly to industrial manufacturing plants in Lahore, Faisalabad, Gujranwala, Sialkot, Sheikhupura, Rawalpindi, Peshawar, and Hattar via reliable freight and logistics partners.",
   },
   {
-    q: "How do daily chemical pricing and stock availability work?",
+    q: "How do daily chemical pricing and bulk stock availability work?",
     a: "Because industrial chemical markets fluctuate daily based on currency exchange rates and international supply lines, pricing is quoted on a daily spot-market basis. Procurement managers can order directly or confirm today's spot rate and availability by messaging our Jodia Bazar desk on WhatsApp at +92 332 1134530.",
   },
 ];

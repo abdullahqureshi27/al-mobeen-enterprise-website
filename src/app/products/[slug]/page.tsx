@@ -24,11 +24,21 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   if (!product) return {};
 
   return {
-    title: `${product.displayName} Supplier in Karachi, Pakistan | Bulk Chemical`,
-    description: `${product.displayName} bulk distribution by Al Mobeen Enterprise, Jodia Bazar Karachi. ${product.description}`,
+    title: `${product.displayName} Bulk Supplier in Karachi | Al Mobeen Enterprise (Mobeen Chemicals)`,
+    description: `${product.displayName} bulk distribution by Al Mobeen Enterprise (Mobeen Chemicals / Al Mobeen Ent / Mobeen Chm), Jodia Bazar Karachi. ${product.description}`,
+    keywords: [
+      `${product.displayName} Karachi`,
+      `${product.displayName} bulk supplier`,
+      `${product.displayName} wholesale Pakistan`,
+      "Mobeen Chemicals",
+      "Al Mobeen Enterprise",
+      "Al Mobeen Ent",
+      "Mobeen Chm",
+      "bulk chemical dealer Karachi",
+    ],
     openGraph: {
-      title: `${product.displayName} Bulk Supply | Al Mobeen Enterprise`,
-      description: product.description,
+      title: `${product.displayName} Bulk Supply | Al Mobeen Enterprise (Mobeen Chemicals)`,
+      description: `${product.displayName} wholesale and bulk delivery by Al Mobeen Enterprise (Mobeen Chemicals), Jodia Bazar Karachi. ${product.description}`,
     },
   };
 }
@@ -63,6 +73,8 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       seller: {
         "@type": "Organization",
         name: "Al Mobeen Enterprise",
+        alternateName: ["Mobeen Chemicals", "Al Mobeen Ent", "Mobeen Chm"],
+        url: "https://almobeenenterprise.com",
       },
     },
   };

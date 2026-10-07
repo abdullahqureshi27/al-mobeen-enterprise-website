@@ -5,9 +5,20 @@ import { getCategoryBySlug } from "@/data/categories";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Industries Served | Paints, Plastics, Inks, Textile, Leather",
+  title: "Industries Served | Al Mobeen Enterprise (Mobeen Chemicals)",
   description:
-    "Al Mobeen Enterprise supplies bulk industrial chemicals across 7 major sectors in Pakistan: Paints & Coatings, Printing Inks, Plastics/PVC, Textile, Leather, Detergents, and General Manufacturing.",
+    "Al Mobeen Enterprise (Mobeen Chemicals / Al Mobeen Ent / Mobeen Chm) supplies bulk industrial chemicals across 7 major sectors in Pakistan: Paints & Coatings, Printing Inks, Plastics/PVC, Textile, Leather, Detergents, and General Manufacturing.",
+  keywords: [
+    "industrial chemicals for paints Karachi",
+    "Mobeen Chemicals industries",
+    "textile chemicals wholesale Pakistan",
+    "PVC chemicals bulk Karachi",
+    "printing ink raw materials Pakistan",
+    "Al Mobeen Ent industries",
+  ],
+  alternates: {
+    canonical: "https://almobeenenterprise.com/industries",
+  },
 };
 
 import PageHero from "@/components/ui/PageHero";

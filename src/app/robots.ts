@@ -8,5 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ["/api/"],
     },
     sitemap: "https://almobeenenterprise.com/sitemap.xml",
+    host: "https://almobeenenterprise.com",
   };
 }
+

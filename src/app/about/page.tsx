@@ -4,9 +4,9 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "About Us | 30 Years of Chemical Distribution in Jodia Bazar, Karachi",
+  title: "About Al Mobeen Enterprise (Mobeen Chemicals) | Karachi Bulk Supplier",
   description:
-    "Learn about Al Mobeen Enterprise's 30-year history as a trusted bulk chemical distributor in Jodia Bazar, Karachi. Sourcing quality chemicals across Pakistan.",
+    "Learn about Al Mobeen Enterprise (Mobeen Chemicals / Al Mobeen Ent / Mobeen Chm) — 30 years of trusted bulk industrial chemical distribution in Jodia Bazar, Karachi.",
 };
 
 const timelineEvents = [
@@ -36,7 +36,7 @@ export default function AboutPage() {
   return (
     <div className="bg-base min-h-screen">
       <PageHero
-        title="30 Years of Reliable Chemical Distribution"
+        title="30 Years of Reliable Bulk Chemical Distribution"
         description="Operating from the heart of Jodia Bazar, Karachi since 1995 — supplying bulk industrial chemicals and raw materials with ready warehouse inventory and honest grade purity."
         badgeText="Heritage & Trust"
       />
@@ -50,11 +50,11 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-ink font-medium">
-              For three decades, <strong className="text-ink font-extrabold">Al Mobeen Enterprise</strong> has served as a cornerstone chemical trading business in Jodia Bazar, Karachi. We have built long-standing relationships with industrial clients across Pakistan based on a single core principle: <em className="text-ink font-semibold">dependable supply, consistent purity, and transparent commercial dealing</em>.
+              For three decades, <strong className="text-ink font-extrabold">Al Mobeen Enterprise</strong> (widely recognized across the market as <strong className="text-ink font-extrabold">Mobeen Chemicals</strong>, <strong className="text-ink font-extrabold">Al Mobeen Ent</strong>, or <strong className="text-ink font-extrabold">Mobeen Chm</strong>) has served as a cornerstone chemical trading business in Jodia Bazar, Karachi. We have built long-standing relationships with industrial clients across Pakistan based on a single core principle: <em className="text-ink font-semibold">dependable bulk supply, consistent purity, and transparent commercial dealing</em>.
             </p>
 
             <p className="text-ink font-medium">
-              We operate as a dedicated <strong className="text-ink font-extrabold">bulk chemical distributor and wholesale supplier</strong>. With our central commercial trading office at Jodia Bazar, Karachi, we maintain direct sourcing lines with leading global importers and manufacturers to deliver exact specifications, grade requirements, and bulk chemical consignments directly to manufacturing facilities across Pakistan.
+              We operate as a dedicated <strong className="text-ink font-extrabold">bulk chemical distributor and wholesale supplier</strong>. With our central commercial trading office at Jodia Bazar, Karachi, we maintain direct sourcing lines with leading global chemical importers and manufacturers to deliver exact specifications, grade requirements, and bulk chemical consignments directly to manufacturing facilities across Pakistan.
             </p>
 
             <div className="p-6 rounded-2xl bg-base border border-border my-6">
@@ -62,10 +62,11 @@ export default function AboutPage() {
                 Business Profile Highlights
               </h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-ink">
+                <li className="text-ink"><strong className="text-ink font-bold">Trade Names:</strong> Al Mobeen Enterprise / Mobeen Chemicals / Al Mobeen Ent / Mobeen Chm</li>
                 <li className="text-ink"><strong className="text-ink font-bold">Commercial Desk:</strong> G/9, Golden Center, Weaver Lane, Jodia Bazar, Karachi</li>
-                <li className="text-ink"><strong className="text-ink font-bold">Delivery:</strong> Direct Factory Dispatch Across Pakistan</li>
+                <li className="text-ink"><strong className="text-ink font-bold">Delivery:</strong> Direct Factory Bulk Dispatch Across Pakistan</li>
                 <li className="text-ink"><strong className="text-ink font-bold">Experience:</strong> 30 Years (Established 1995)</li>
-                <li className="text-ink"><strong className="text-ink font-bold">Business Model:</strong> Bulk Wholesale Supplier &amp; Distributor</li>
+                <li className="text-ink"><strong className="text-ink font-bold">Business Model:</strong> Bulk Wholesale Supplier &amp; Importer</li>
                 <li className="text-ink"><strong className="text-ink font-bold">Pricing Model:</strong> Daily Spot Market Rates</li>
                 <li className="text-ink"><strong className="text-ink font-bold">Service Area:</strong> Nationwide Dispatches Across Pakistan</li>
                 <li className="text-ink"><strong className="text-ink font-bold">Quality Promise:</strong> We Sell What We Claim (Honest Grades)</li>

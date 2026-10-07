@@ -61,7 +61,7 @@ export default function AboutSnapshot() {
             </h2>
           </div>
           <p className="text-sm sm:text-base text-ink-muted leading-relaxed max-w-[440px]">
-            Operating from Jodia Bazar since 1995, delivering direct wholesale savings on bulk solvents, plasticizers, resins, and acids.
+            Operating from Jodia Bazar since 1995, Al Mobeen Enterprise (Mobeen Chemicals / Al Mobeen Ent) delivers direct wholesale savings on bulk industrial chemicals, solvents, plasticizers, resins, and acids.
           </p>
         </div>
 

@@ -2,9 +2,21 @@ import type { Metadata } from "next";
 import ProductCatalog from "@/components/products/ProductCatalog";
 
 export const metadata: Metadata = {
-  title: "Industrial Chemicals Catalog | 80+ Bulk Products",
+  title: "Bulk Industrial Chemicals Catalog | Al Mobeen Enterprise (Mobeen Chemicals)",
   description:
-    "Explore Al Mobeen Enterprise's extensive catalog of 80+ bulk industrial chemicals in Karachi: solvents, plasticizers (DOP), titanium dioxide, pigments, resins, and specialty acids.",
+    "Explore Al Mobeen Enterprise (Mobeen Chemicals / Al Mobeen Ent / Mobeen Chm) catalog of 80+ bulk industrial chemicals in Karachi: bulk solvents, plasticizers (DOP), titanium dioxide, pigments, resins, and acids.",
+  keywords: [
+    "bulk chemicals catalog Karachi",
+    "Mobeen Chemicals products",
+    "Al Mobeen Ent chemicals",
+    "mobeen chm catalog",
+    "bulk chemical dealer Karachi",
+    "industrial solvents wholesale Pakistan",
+    "DOP bulk supplier Jodia Bazar",
+  ],
+  alternates: {
+    canonical: "https://almobeenenterprise.com/products",
+  },
 };
 
 import PageHero from "@/components/ui/PageHero";
