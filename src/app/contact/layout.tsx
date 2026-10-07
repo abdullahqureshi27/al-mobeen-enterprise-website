@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "https://almobeenenterprise.vercel.app");
+  process.env.NEXT_PUBLIC_SITE_URL || "https://almobeenenterprise.vercel.app";
 
 export const metadata: Metadata = {
   title: "Contact Al Mobeen Enterprise (Mobeen Chemicals) | Jodia Bazar Karachi",
