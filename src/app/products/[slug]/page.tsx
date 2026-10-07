@@ -80,7 +80,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   };
 
   return (
-    <div className="pt-28 pb-20 bg-base min-h-screen">
+    <div className="pt-16 sm:pt-24 pb-14 sm:pb-20 bg-base min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -88,7 +88,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
       <div className="section-container">
         {/* Breadcrumb */}
-        <div className="mb-6 flex items-center gap-2 text-xs font-bold text-ink">
+        <div className="mb-4 sm:mb-6 flex flex-wrap items-center gap-1.5 sm:gap-2 text-xs font-bold text-ink">
           <Link href="/" className="hover:underline">Home</Link>
           <span>/</span>
           <Link href="/products" className="hover:underline">Products</Link>
@@ -101,17 +101,17 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               <span>/</span>
             </>
           )}
-          <span className="font-extrabold text-ink">{product.displayName}</span>
+          <span className="font-extrabold text-ink truncate max-w-[200px] sm:max-w-none">{product.displayName}</span>
         </div>
 
         {/* Detail Card */}
-        <div className="bg-surface text-ink rounded-3xl border border-border p-6 md:p-10 shadow-sm mb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
+        <div className="bg-surface text-ink rounded-2xl sm:rounded-3xl border border-border p-4 sm:p-6 md:p-10 shadow-sm mb-12 sm:mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 md:gap-12 items-center">
             {/* Visual Icon Column */}
-            <div className="lg:col-span-5 flex flex-col items-center justify-center p-12 rounded-2xl bg-base border border-border relative">
-              <CategoryIcon category={product.category} size={120} />
+            <div className="lg:col-span-5 flex flex-col items-center justify-center p-6 sm:p-12 rounded-xl sm:rounded-2xl bg-base border border-border relative">
+              <CategoryIcon category={product.category} size={90} />
               {product.bestSeller && (
-                <span className="absolute top-4 right-4 badge-bestseller">
+                <span className="absolute top-3 right-3 sm:top-4 sm:right-4 badge-bestseller">
                   Best Seller
                 </span>
               )}
@@ -126,11 +126,11 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 </span>
               )}
 
-              <h1 className="text-2xl md:text-4xl font-black mb-4 text-ink">
+              <h1 className="text-xl sm:text-2xl md:text-4xl font-black mb-3 sm:mb-4 text-ink">
                 {product.displayName}
               </h1>
 
-              <p className="text-base font-medium leading-relaxed mb-6 text-ink opacity-85">
+              <p className="text-xs sm:text-base font-medium leading-relaxed mb-5 sm:mb-6 text-ink opacity-85">
                 {product.description}
               </p>
 

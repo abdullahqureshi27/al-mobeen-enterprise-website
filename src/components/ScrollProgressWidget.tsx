@@ -41,15 +41,15 @@ export default function ScrollProgressWidget() {
       rel="noopener noreferrer"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.92 }}
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center cursor-pointer select-none group"
+      className="fixed bottom-4 right-3 sm:bottom-6 sm:right-6 z-50 flex items-center justify-center cursor-pointer select-none group"
       aria-label="Chat on WhatsApp - Scroll Progress"
       title="Chat on WhatsApp"
     >
-      <div className="relative w-28 h-28 flex items-center justify-center">
-        {/* Outer Curved Rotating Text SVG ("SCROLL TO SCROLL • SCROLL TO SCROLL •") */}
+      <div className="relative w-12 h-12 sm:w-24 sm:h-24 md:w-28 md:h-28 flex items-center justify-center">
+        {/* Outer Curved Rotating Text SVG ("SCROLL TO SCROLL • SCROLL TO SCROLL •") - Hidden on mobile */}
         <motion.svg
           style={{ rotate: rotation }}
-          className="absolute inset-0 w-full h-full text-ink"
+          className="absolute inset-0 w-full h-full text-ink hidden sm:block"
           viewBox="0 0 120 120"
         >
           <defs>
@@ -66,7 +66,7 @@ export default function ScrollProgressWidget() {
         </motion.svg>
 
         {/* Inner Dual-Tone Fill Progress Circle with WhatsApp Logo */}
-        <div className="relative w-[64px] h-[64px] rounded-full bg-surface-inverse overflow-hidden border-2 border-border shadow-2xl flex items-center justify-center group-hover:shadow-whatsapp transition-all">
+        <div className="relative w-12 h-12 sm:w-[56px] sm:h-[56px] md:w-[64px] md:h-[64px] rounded-full bg-surface-inverse overflow-hidden border-2 border-border shadow-2xl flex items-center justify-center group-hover:shadow-whatsapp transition-all">
           {/* Green Liquid Fill Level (Fills vertically from top to bottom as you scroll) */}
           <motion.div
             style={{ height: fillHeightPercent }}
@@ -76,8 +76,7 @@ export default function ScrollProgressWidget() {
           {/* WhatsApp Logo Icon in the Center */}
           <div className="relative z-10 text-ink-inverse drop-shadow-md">
             <svg
-              width="28"
-              height="28"
+              className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
               viewBox="0 0 24 24"
               fill="currentColor"
             >

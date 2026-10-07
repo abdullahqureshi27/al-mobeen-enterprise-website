@@ -47,10 +47,10 @@ export default function WhyChooseUs() {
               <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
               PROCUREMENT PIPELINE
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-extrabold leading-[1.08] tracking-[-0.03em] text-ink mb-3 sm:mb-5">
+            <h2 className="text-2xl sm:text-4xl lg:text-[50px] font-extrabold leading-[1.08] tracking-[-0.03em] text-ink mb-3 sm:mb-5">
               The Action Behind <span className="text-accent">Bulk Supply</span>
             </h2>
-            <p className="text-sm sm:text-base text-ink-muted leading-relaxed max-w-[400px] mb-6 sm:mb-8">
+            <p className="text-xs sm:text-base text-ink-muted leading-relaxed max-w-[400px] mb-6 sm:mb-8">
               A disciplined, verified methodology engineered to bring purity verification, price transparency, and rapid dispatch to every industrial customer.
             </p>
 
@@ -75,17 +75,17 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Right Column: Stacked Process Cards */}
-          <div className="lg:col-span-7 space-y-3.5 sm:space-y-4">
+          <div className="lg:col-span-7 space-y-3 sm:space-y-4">
             {steps.map((step) => (
               <div
                 key={step.num}
-                className="bg-surface p-5 sm:p-7 rounded-[20px] sm:rounded-[24px] border border-border shadow-xs hover:shadow-md hover:border-accent/40 transition-all duration-300 flex items-start gap-4 sm:gap-6 cursor-pointer group"
+                className="bg-surface p-4 sm:p-7 rounded-[18px] sm:rounded-[24px] border border-border shadow-xs hover:shadow-md hover:border-accent/40 transition-all duration-300 flex items-start gap-3 sm:gap-6 cursor-pointer group"
               >
-                <span className="text-2xl sm:text-3xl font-black text-accent tracking-tight shrink-0 font-mono">
+                <span className="text-xl sm:text-3xl font-black text-accent tracking-tight shrink-0 font-mono">
                   {step.num}
                 </span>
                 <div>
-                  <h3 className="text-base sm:text-lg md:text-xl font-extrabold text-ink tracking-tight mb-1.5 group-hover:text-accent transition-colors">
+                  <h3 className="text-base sm:text-lg md:text-xl font-extrabold text-ink tracking-tight mb-1 group-hover:text-accent transition-colors">
                     {step.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-ink-muted leading-relaxed">

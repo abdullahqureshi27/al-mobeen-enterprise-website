@@ -234,6 +234,8 @@ html[data-scroll-behavior="smooth"] {
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
@@ -242,7 +244,9 @@ body {
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
+  max-width: 100vw;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
   transition: background-color 200ms ease, color 200ms ease;
 }
 
@@ -445,7 +449,7 @@ html.dark .text-gradient-primary {
 .section-container {
   max-width: 1280px;
   margin-inline: auto;
-  padding-inline: clamp(1.25rem, 4vw, 3rem);
+  padding-inline: clamp(1rem, 4vw, 3rem);
 }
 
 .section-padding {

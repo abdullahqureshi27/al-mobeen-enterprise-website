@@ -56,23 +56,23 @@ export default function AboutSnapshot() {
               <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
               SOURCING &amp; MARKET HUB
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-extrabold leading-[1.08] tracking-[-0.03em] text-ink">
+            <h2 className="text-2xl sm:text-4xl lg:text-[50px] font-extrabold leading-[1.08] tracking-[-0.03em] text-ink">
               Karachi&apos;s Chemical Capital
             </h2>
           </div>
-          <p className="text-sm sm:text-base text-ink-muted leading-relaxed max-w-[440px]">
+          <p className="text-xs sm:text-base text-ink-muted leading-relaxed max-w-[440px]">
             Operating from Jodia Bazar since 1995, Al Mobeen Enterprise (Mobeen Chemicals / Al Mobeen Ent) delivers direct wholesale savings on bulk industrial chemicals, solvents, plasticizers, resins, and acids.
           </p>
         </div>
 
         {/* 3-Card Nesting Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-10">
           {highlights.map((item) => (
             <div
               key={item.title}
-              className="bg-surface-muted p-2.5 sm:p-3 rounded-[24px] sm:rounded-[30px] border border-border flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
+              className="bg-surface-muted p-2 sm:p-3 rounded-[20px] sm:rounded-[30px] border border-border flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"
             >
-              <div className="bg-surface rounded-[20px] sm:rounded-[24px] p-6 sm:p-7 min-h-[260px] flex flex-col justify-between border border-border-subtle">
+              <div className="bg-surface rounded-[16px] sm:rounded-[24px] p-4 sm:p-6 sm:p-7 min-h-[220px] sm:min-h-[260px] flex flex-col justify-between border border-border-subtle">
                 <div>
                   <div className="flex items-center justify-between mb-5">
                     <div className="w-11 h-11 rounded-2xl bg-surface-muted text-ink flex items-center justify-center shadow-xs group-hover:scale-105 group-hover:bg-accent group-hover:text-ink-inverse transition-all duration-300">

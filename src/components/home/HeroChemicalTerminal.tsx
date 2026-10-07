@@ -43,26 +43,26 @@ export default function HeroChemicalTerminal() {
   };
 
   return (
-    <div className="bg-surface-muted p-2.5 sm:p-3.5 rounded-[28px] sm:rounded-[32px] border border-border shadow-xl transition-all">
-      <div className="bg-surface rounded-[22px] sm:rounded-[26px] p-5 sm:p-6 border border-border-subtle shadow-xs">
+    <div className="bg-surface-muted p-1 sm:p-3.5 rounded-[20px] sm:rounded-[32px] border border-border shadow-xl transition-all">
+      <div className="bg-surface rounded-[16px] sm:rounded-[26px] p-3 sm:p-6 border border-border-subtle shadow-xs">
         {/* Top Terminal Status Header */}
-        <div className="flex items-center justify-between gap-3 mb-4 pb-3.5 border-b border-border-subtle">
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-3 sm:mb-4 pb-2.5 sm:pb-3 border-b border-border-subtle">
           <div className="flex items-center gap-2">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success"></span>
             </span>
-            <span className="text-xs font-black tracking-tight uppercase text-ink">
+            <span className="text-[11px] sm:text-xs font-black tracking-tight uppercase text-ink">
               Daily Sourcing &amp; Order Desk
             </span>
           </div>
           <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-muted border border-border text-[10px] sm:text-[11px] font-bold text-ink">
-            <span>Daily Spot Rates • Direct Supply</span>
+            <span>Spot Rates • Direct Supply</span>
           </span>
         </div>
 
         {/* Search Bar */}
-        <div className="relative mb-3.5">
+        <div className="relative mb-3">
           <svg
             className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-ink-subtle"
             fill="none"
@@ -77,8 +77,8 @@ export default function HeroChemicalTerminal() {
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search chemical (e.g. DOP, Titanium, IPA, Resin)..."
-            className="w-full pl-10 pr-4 py-2.5 rounded-full bg-surface-muted text-xs sm:text-sm font-medium text-ink placeholder:text-ink-subtle border border-border focus:border-accent focus:bg-surface focus:outline-none transition-all"
+            placeholder="Search chemical (e.g. DOP, Titanium, IPA)..."
+            className="w-full pl-10 pr-4 py-2 sm:py-2.5 rounded-full bg-surface-muted text-xs sm:text-sm font-medium text-ink placeholder:text-ink-subtle border border-border focus:border-accent focus:bg-surface focus:outline-none transition-all"
           />
           {search && (
             <button
@@ -91,14 +91,14 @@ export default function HeroChemicalTerminal() {
         </div>
 
         {/* Category Pill Tabs */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-hide mb-4">
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-hide mb-2.5 sm:mb-4">
           {categories.map((c) => {
             const isActive = activeTab === c.key;
             return (
               <button
                 key={c.key}
                 onClick={() => setActiveTab(c.key)}
-                className={`px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold whitespace-nowrap transition-all duration-200 cursor-pointer ${
+                className={`px-3 py-1 rounded-full text-[10.5px] sm:text-xs font-bold whitespace-nowrap transition-all duration-200 cursor-pointer ${
                   isActive
                     ? "bg-surface-inverse text-ink-inverse shadow-xs"
                     : "bg-surface-muted text-ink-muted hover:text-ink"
@@ -111,7 +111,7 @@ export default function HeroChemicalTerminal() {
         </div>
 
         {/* Product List */}
-        <div className="space-y-2.5">
+        <div className="space-y-1.5 sm:space-y-2.5">
           {filtered.length === 0 ? (
             <div className="p-6 text-center text-xs text-ink-subtle">
               No chemical found matching &quot;{search}&quot;.{" "}
@@ -130,33 +130,33 @@ export default function HeroChemicalTerminal() {
               return (
                 <div
                   key={item.slug}
-                  className="p-3 sm:p-3.5 rounded-[18px] bg-surface-muted border border-border-subtle flex items-center justify-between gap-3 hover:border-border transition-all duration-200 group"
+                  className="p-2 sm:p-3.5 rounded-[14px] sm:rounded-[18px] bg-surface-muted border border-border-subtle flex items-center justify-between gap-1.5 sm:gap-3 hover:border-border transition-all duration-200 group"
                 >
-                  <div className="min-w-0 flex-1">
-                    <div className="flex items-center gap-2 mb-1 flex-wrap">
+                  <div className="min-w-0 flex-1 pr-1">
+                    <div className="flex items-center gap-1 sm:gap-2 mb-0.5 flex-wrap">
                       <Link
                         href={`/products/${item.slug}`}
-                        className="text-xs sm:text-sm font-extrabold text-ink truncate hover:text-accent transition-colors"
+                        className="text-xs sm:text-sm font-extrabold text-ink hover:text-accent transition-colors truncate max-w-[140px] xs:max-w-none"
                       >
                         {item.displayName}
                       </Link>
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-surface text-ink-secondary border border-border shrink-0">
+                      <span className="text-[9px] sm:text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-surface text-ink-secondary border border-border shrink-0">
                         {item.purity || "Bulk Spec"}
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 text-[10px] sm:text-[11px] text-ink-subtle">
-                      <span>{item.packaging}</span>
+                    <div className="flex items-center gap-1.5 text-[9.5px] sm:text-[11px] text-ink-subtle">
+                      <span className="truncate">{item.packaging}</span>
                       <span>•</span>
-                      <span className="text-success font-semibold">
-                        Direct Factory Delivery
+                      <span className="text-success font-semibold shrink-0">
+                        Direct Supply
                       </span>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-1.5 shrink-0">
+                  <div className="flex items-center gap-1 sm:gap-1.5 shrink-0">
                     <button
                       onClick={() => handleAdd(item)}
-                      className={`px-3 py-1.5 rounded-full text-[11px] font-bold transition-all duration-200 cursor-pointer ${
+                      className={`px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-[11px] font-bold transition-all duration-200 cursor-pointer ${
                         inQuote
                           ? "bg-success text-ink-inverse"
                           : "bg-surface text-ink border border-border hover:bg-surface-inverse hover:text-ink-inverse"
@@ -169,7 +169,7 @@ export default function HeroChemicalTerminal() {
                       href={waUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-success text-ink-inverse hover:opacity-90 flex items-center justify-center transition-transform hover:scale-105"
+                      className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-success text-ink-inverse hover:opacity-90 flex items-center justify-center transition-transform hover:scale-105 shrink-0"
                       title="WhatsApp Inquiry"
                       aria-label={`Inquire about ${item.displayName} on WhatsApp`}
                     >

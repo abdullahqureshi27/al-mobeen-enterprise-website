@@ -15,12 +15,12 @@ export default function Home() {
       <StatsStrip />
       <AboutSnapshot />
 
-      {/* Sticky Full-Screen Parallax Warehouse Image Showcase */}
+      {/* Sticky Full-Screen Parallax Warehouse Image Showcase (Desktop) / Fluid Section (Mobile) */}
       <div className="relative">
-        <div className="sticky top-0 h-screen w-full z-0 overflow-hidden">
+        <div className="relative lg:sticky lg:top-0 min-h-[560px] sm:min-h-[620px] lg:h-screen w-full z-0 overflow-hidden">
           <WarehouseShowcaseBanner />
         </div>
-        <div className="relative z-10 bg-base border-t border-border shadow-[0_-30px_70px_rgba(0,0,0,0.5)]">
+        <div className="relative z-10 bg-base border-t border-border shadow-[0_-20px_50px_rgba(0,0,0,0.4)]">
           <ProductCategoriesGrid />
         </div>
       </div>

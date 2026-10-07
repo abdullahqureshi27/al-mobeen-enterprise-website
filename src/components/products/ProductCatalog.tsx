@@ -63,9 +63,9 @@ function ProductCatalogContent() {
   return (
     <div>
       {/* Shadcn-Style Filter Control Panel */}
-      <div className="mb-8 p-4 rounded-2xl border border-border bg-surface shadow-sm space-y-4">
+      <div className="mb-6 sm:mb-8 p-3.5 sm:p-4 rounded-2xl border border-border bg-surface shadow-sm space-y-3 sm:space-y-4">
         {/* Top Controls Row: Search + Category Select + Industry Select + View Mode */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3 items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-2.5 sm:gap-3 items-center">
           
           {/* Search Input (4 cols on lg) */}
           <div className="relative lg:col-span-4">
@@ -229,7 +229,7 @@ function ProductCatalogContent() {
         ) : (
           /* Industrial Table View */
           <div className="overflow-x-auto rounded-2xl border border-border bg-surface shadow-sm">
-            <table className="w-full text-left text-xs text-ink">
+            <table className="w-full min-w-[560px] text-left text-xs text-ink">
               <thead className="bg-base border-b border-border uppercase text-[10px] font-extrabold tracking-wider text-ink-muted">
                 <tr>
                   <th className="py-3.5 px-4">{t("products.tableName")}</th>

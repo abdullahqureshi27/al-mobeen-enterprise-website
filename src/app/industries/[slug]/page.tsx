@@ -44,10 +44,10 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
   const industryProducts = getProductsByIndustry(industry.slug);
 
   return (
-    <div className="pt-28 pb-20 bg-base min-h-screen">
+    <div className="pt-20 sm:pt-28 pb-16 sm:pb-20 bg-base min-h-screen">
       <div className="section-container">
         {/* Breadcrumb */}
-        <div className="mb-6 flex items-center gap-2 text-xs font-bold text-ink">
+        <div className="mb-6 flex flex-wrap items-center gap-2 text-xs font-bold text-ink">
           <Link href="/" className="hover:underline">Home</Link>
           <span>/</span>
           <Link href="/industries" className="hover:underline">Industries</Link>
@@ -56,17 +56,17 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
         </div>
 
         {/* Industry Banner */}
-        <div className="bg-surface text-ink rounded-3xl border border-border p-8 md:p-12 mb-12 shadow-sm">
+        <div className="bg-surface text-ink rounded-3xl border border-border p-5 sm:p-8 md:p-12 mb-10 sm:mb-12 shadow-sm">
           <p className="text-xs font-extrabold uppercase tracking-[0.15em] text-accent mb-2">
             Industrial Sector
           </p>
-          <h1 className="text-3xl md:text-5xl font-extrabold mb-4 text-ink">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-4 text-ink">
             Chemicals for {industry.name}
           </h1>
-          <p className="text-base font-medium leading-relaxed max-w-3xl mb-6 text-ink opacity-85">
+          <p className="text-sm sm:text-base font-medium leading-relaxed max-w-3xl mb-6 text-ink opacity-85">
             {industry.description}
           </p>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-base border border-border text-xs font-extrabold text-ink">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-base border border-border text-xs font-extrabold text-ink">
             <span>Available Products: {industryProducts.length}</span>
           </div>
         </div>

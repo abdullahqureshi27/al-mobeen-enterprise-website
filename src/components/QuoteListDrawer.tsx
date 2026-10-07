@@ -29,7 +29,7 @@ export default function QuoteListDrawer() {
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetContent side="right" className="flex flex-col h-full w-full max-w-md p-0">
         {/* Header */}
-        <SheetHeader className="px-6 py-5 border-b border-border text-left">
+        <SheetHeader className="px-4 sm:px-6 py-4 sm:py-5 border-b border-border text-left">
           <SheetTitle className="text-lg font-extrabold text-ink">
             {t("quote.title")} {count > 0 && `(${count})`}
           </SheetTitle>
@@ -39,7 +39,7 @@ export default function QuoteListDrawer() {
         </SheetHeader>
 
         {/* Items */}
-        <div className="flex-1 overflow-y-auto px-6 py-4">
+        <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-4">
           {items.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-center py-16">
               <svg
@@ -63,7 +63,7 @@ export default function QuoteListDrawer() {
               {items.map((item) => (
                 <li
                   key={item.slug}
-                  className="p-4 rounded-xl border border-border bg-base text-ink shadow-2xs"
+                  className="p-3.5 sm:p-4 rounded-xl border border-border bg-base text-ink shadow-2xs"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div>
@@ -92,7 +92,7 @@ export default function QuoteListDrawer() {
                       </svg>
                     </button>
                   </div>
-                  <div className="grid grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <input
                       type="text"
                       placeholder={t("quote.quantity")}
@@ -116,7 +116,7 @@ export default function QuoteListDrawer() {
 
         {/* Footer */}
         {items.length > 0 && (
-          <div className="px-6 py-5 border-t border-border bg-surface">
+          <div className="px-4 sm:px-6 py-4 sm:py-5 border-t border-border bg-surface">
             <Button variant="default" size="lg" className="w-full justify-center text-center font-bold" asChild>
               <Link
                 href={`/contact?products=${items.map((i) => i.slug).join(",")}`}

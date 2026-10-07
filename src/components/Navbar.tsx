@@ -53,34 +53,29 @@ export default function Navbar() {
   return (
     <>
       {/* Top B2B Announcement Strip */}
-      <div className="bg-surface-inverse text-ink-inverse py-1.5 px-4 text-[11px] sm:text-xs font-semibold border-b border-border-inverse">
-        <div className="mx-auto max-w-[1320px] flex items-center justify-between">
-          <div className="flex items-center gap-4 sm:gap-6">
-            <span className="flex items-center gap-1.5 text-ink-inverse-muted">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-ink-inverse">
-                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              <span>
-                <strong className="text-ink-inverse">Trading Desk:</strong> Jodia Bazar, Karachi • <strong className="text-ink-inverse">Supply:</strong> Direct Nationwide Delivery
-              </span>
-            </span>
-            <span className="hidden lg:inline-flex items-center gap-1.5 text-ink-inverse-muted">
-              <span className="w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
-              Daily Spot Rates • Market Availability
+      <div className="bg-surface-inverse text-ink-inverse py-1 px-3 sm:px-4 text-[11px] sm:text-xs font-semibold border-b border-border-inverse">
+        <div className="mx-auto max-w-[1320px] flex items-center justify-between gap-2">
+          <div className="flex items-center gap-1.5 min-w-0">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-accent shrink-0">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span className="truncate text-ink-inverse">
+              <strong className="text-ink-inverse font-bold">Jodia Bazar</strong>, Karachi
+              <span className="hidden sm:inline text-ink-inverse-muted"> • Direct Nationwide Supply</span>
             </span>
           </div>
 
-          <div className="flex items-center gap-4 text-ink-inverse-muted">
-            <span className="hidden sm:inline text-[11px]">Mon - Sat: 9:00 AM - 6:00 PM</span>
+          <div className="flex items-center gap-2 sm:gap-4 text-ink-inverse-muted shrink-0">
+            <span className="hidden md:inline text-[11px]">Mon - Sat: 9:00 AM - 6:00 PM</span>
             <a
               href="tel:+923321134530"
-              className="inline-flex items-center gap-1.5 text-ink-inverse hover:text-accent font-bold transition-colors"
+              className="inline-flex items-center gap-1 text-ink-inverse hover:text-accent font-bold transition-colors text-[11px] sm:text-xs"
             >
-              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" className="shrink-0 text-accent">
                 <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
               </svg>
-              0332-1134530
+              <span>0332-1134530</span>
             </a>
           </div>
         </div>
@@ -90,14 +85,14 @@ export default function Navbar() {
       <header
         className={`sticky top-0 inset-x-0 z-40 transition-all duration-300 ${
           scrolled
-            ? "bg-surface/90 backdrop-blur-md py-2.5 sm:py-3 border-b border-border shadow-xs"
-            : "bg-surface py-3 sm:py-3.5 border-b border-border-subtle"
+            ? "bg-surface/90 backdrop-blur-md py-2 sm:py-3 border-b border-border shadow-xs"
+            : "bg-surface py-2.5 sm:py-3.5 border-b border-border-subtle"
         }`}
       >
-        <div className="mx-auto max-w-[1320px] px-3.5 sm:px-6 md:px-10 flex items-center justify-between">
+        <div className="mx-auto max-w-[1320px] px-3 sm:px-6 md:px-10 flex items-center justify-between gap-2">
           {/* Official AME Logo Badge */}
-          <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
-            <div className="relative w-10 h-10 sm:w-12 sm:h-12 aspect-square rounded-xl bg-surface border border-border shadow-xs p-1.5 flex items-center justify-center shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 group shrink-0">
+            <div className="relative w-9 h-9 sm:w-12 sm:h-12 aspect-square rounded-xl bg-surface border border-border shadow-xs p-1 sm:p-1.5 flex items-center justify-center shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105">
               <Image
                 src="/ame-logo.png"
                 alt="Al Mobeen Enterprise Logo"
@@ -108,10 +103,10 @@ export default function Navbar() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-base sm:text-xl font-extrabold tracking-tight text-ink group-hover:text-accent transition-colors leading-none">
+              <span className="text-sm sm:text-xl font-extrabold tracking-tight text-ink group-hover:text-accent transition-colors leading-none">
                 AL MOBEEN
               </span>
-              <span className="text-[9px] sm:text-[10px] font-bold text-ink-muted tracking-wider uppercase mt-1">
+              <span className="text-[8px] sm:text-[10px] font-bold text-ink-muted tracking-wider uppercase mt-0.5 sm:mt-1">
                 ENTERPRISE
               </span>
             </div>
@@ -142,7 +137,7 @@ export default function Navbar() {
 
           {/* Right Action Controls */}
           <div className="flex items-center gap-2 sm:gap-2.5">
-            {/* Language Switcher */}
+            {/* Language Switcher on Desktop */}
             <div className="hidden sm:flex items-center bg-surface-muted border border-border rounded-full p-0.5 text-[11px] font-bold">
               {(["en", "romanUrdu", "urdu"] as Language[]).map((l) => (
                 <button
@@ -162,17 +157,17 @@ export default function Navbar() {
             {/* Quote List Button */}
             <button
               onClick={openDrawer}
-              className="relative inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 text-[11px] sm:text-xs font-bold text-ink bg-surface-muted hover:bg-surface-hover border border-border rounded-full transition-all cursor-pointer"
+              className="relative inline-flex items-center justify-center w-8 h-8 sm:w-auto sm:h-auto sm:px-3.5 sm:py-2 text-[11px] sm:text-xs font-bold text-ink bg-surface-muted hover:bg-surface-hover border border-border rounded-full transition-all cursor-pointer"
               aria-label="View Quote Cart"
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="shrink-0">
                 <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
                 <path d="M3 6h18" />
                 <path d="M16 10a4 4 0 0 1-8 0" />
               </svg>
-              <span>Quote</span>
+              <span className="hidden sm:inline sm:ml-1.5">Quote</span>
               {count > 0 && (
-                <span className="w-4 h-4 rounded-full bg-accent text-ink-inverse text-[10px] font-black flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 sm:static sm:top-auto sm:right-auto sm:ml-1.5 w-4 h-4 rounded-full bg-accent text-ink-inverse text-[9px] font-black flex items-center justify-center">
                   {count}
                 </span>
               )}
@@ -205,7 +200,7 @@ export default function Navbar() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-ink bg-surface-muted hover:bg-surface-hover border border-border rounded-full transition-colors cursor-pointer"
+              className="lg:hidden w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-ink bg-surface-muted hover:bg-surface-hover border border-border rounded-full transition-colors cursor-pointer"
               aria-label="Open menu"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -222,9 +217,9 @@ export default function Navbar() {
 
       {/* Mobile Drawer Navigation (shadcn Sheet sliding from right) */}
       <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-        <SheetContent side="right" className="w-[300px] sm:w-[350px] p-6 flex flex-col justify-between">
+        <SheetContent side="right" className="w-[88vw] max-w-[340px] p-5 flex flex-col justify-between overflow-y-auto">
           <div>
-            <SheetHeader className="text-left mb-6 pb-4 border-b border-border">
+            <SheetHeader className="text-left mb-4 pb-3 border-b border-border">
               <SheetTitle className="text-base font-extrabold text-ink flex items-center gap-2.5">
                 <div className="w-8 h-8 aspect-square rounded-lg bg-surface border border-border p-1 flex items-center justify-center shrink-0">
                   <Image
@@ -242,7 +237,27 @@ export default function Navbar() {
               </SheetDescription>
             </SheetHeader>
 
-            <nav className="flex flex-col gap-2">
+            {/* Mobile Language Switcher */}
+            <div className="mb-4 p-1.5 rounded-2xl bg-surface-muted border border-border flex items-center justify-between">
+              <span className="text-[11px] font-bold text-ink-muted px-2">Language:</span>
+              <div className="flex items-center gap-1">
+                {(["en", "romanUrdu", "urdu"] as Language[]).map((l) => (
+                  <button
+                    key={l}
+                    onClick={() => setLang(l)}
+                    className={`px-2.5 py-1 rounded-xl text-[11px] font-bold transition-all cursor-pointer ${
+                      lang === l
+                        ? "bg-surface text-ink shadow-xs border border-border"
+                        : "text-ink-muted hover:text-ink"
+                    }`}
+                  >
+                    {languageNames[l]}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <nav className="flex flex-col gap-1.5">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -250,7 +265,7 @@ export default function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`px-4 py-3 rounded-xl text-sm font-bold transition-colors ${
+                    className={`px-4 py-2.5 rounded-xl text-sm font-bold transition-colors ${
                       isActive
                         ? "bg-accent text-ink-inverse"
                         : "text-ink hover:bg-surface-muted"
@@ -261,9 +276,32 @@ export default function Navbar() {
                 );
               })}
             </nav>
+
+            {/* Mobile Quote Quick Link */}
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                openDrawer();
+              }}
+              className="mt-3 w-full flex items-center justify-between px-4 py-2.5 rounded-xl text-xs font-bold bg-surface-muted border border-border text-ink hover:bg-surface-hover transition-colors"
+            >
+              <span className="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                  <path d="M3 6h18" />
+                  <path d="M16 10a4 4 0 0 1-8 0" />
+                </svg>
+                <span>View Selected Quote List</span>
+              </span>
+              {count > 0 && (
+                <span className="px-2 py-0.5 rounded-full bg-accent text-ink-inverse text-[10px] font-black">
+                  {count}
+                </span>
+              )}
+            </button>
           </div>
 
-          <div className="pt-4 border-t border-border space-y-3">
+          <div className="pt-4 border-t border-border space-y-2.5 mt-4">
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
@@ -278,8 +316,17 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-full bg-whatsapp text-ink-inverse text-xs font-bold hover:brightness-110 transition-all shadow-xs"
             >
-              <span>WhatsApp Desk</span>
+              <span>WhatsApp Trading Desk</span>
             </a>
+            <div className="text-center pt-1">
+              <a
+                href="tel:+923321134530"
+                className="text-[11px] font-bold text-ink-muted hover:text-ink inline-flex items-center gap-1.5"
+              >
+                <span>Direct Hotline:</span>
+                <span className="text-ink">0332-1134530</span>
+              </a>
+            </div>
           </div>
         </SheetContent>
       </Sheet>

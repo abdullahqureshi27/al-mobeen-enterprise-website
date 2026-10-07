@@ -81,7 +81,7 @@ function ContactFormContent() {
   };
 
   return (
-    <div className="bg-surface text-ink rounded-3xl border border-border p-6 md:p-10 shadow-sm">
+    <div className="bg-surface text-ink rounded-3xl border border-border p-5 sm:p-7 md:p-10 shadow-sm">
       <h2 className="text-xl md:text-2xl font-bold mb-2 text-ink">Request a Bulk Quote</h2>
       <p className="text-xs md:text-sm font-semibold mb-6 text-ink opacity-85">
         Fill out your requirements below and our sales desk at Jodia Bazar will contact you within 24 hours.
@@ -251,9 +251,9 @@ export default function ContactPage() {
         badgeText="Get In Touch"
       />
 
-      <div className="section-container py-16 md:py-20">
+      <div className="section-container py-12 sm:py-16 md:py-20">
         {/* Two-Column Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
           {/* Form */}
           <div className="lg:col-span-7">
             <Suspense fallback={<div className="p-8 bg-surface rounded-3xl border text-center">Loading Form...</div>}>
@@ -264,7 +264,7 @@ export default function ContactPage() {
           {/* Contact Cards & Map */}
           <div className="lg:col-span-5 space-y-6">
             {/* Info Box */}
-            <div className="bg-surface rounded-3xl border border-border p-6 md:p-8 shadow-sm">
+            <div className="bg-surface rounded-3xl border border-border p-5 sm:p-7 md:p-8 shadow-sm">
               <h3 className="text-lg font-bold mb-4 text-primary">
                 Jodia Bazar Main Office
               </h3>

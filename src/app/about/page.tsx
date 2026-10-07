@@ -41,9 +41,9 @@ export default function AboutPage() {
         badgeText="Heritage & Trust"
       />
 
-      <div className="section-container py-16 md:py-20">
+      <div className="section-container py-12 sm:py-16 md:py-20">
         {/* Narrative Section */}
-        <div className="bg-surface text-ink rounded-3xl border border-border p-8 md:p-12 mb-16 shadow-sm">
+        <div className="bg-surface text-ink rounded-3xl border border-border p-5 sm:p-8 md:p-12 mb-12 sm:mb-16 shadow-sm">
           <div className="max-w-3xl mx-auto space-y-6 text-sm md:text-base leading-relaxed text-ink">
             <h2 className="text-xl md:text-2xl font-bold text-primary mb-4">
               Our Sourcing & Distribution Commitment
@@ -57,11 +57,11 @@ export default function AboutPage() {
               We operate as a dedicated <strong className="text-ink font-extrabold">bulk chemical distributor and wholesale supplier</strong>. With our central commercial trading office at Jodia Bazar, Karachi, we maintain direct sourcing lines with leading global chemical importers and manufacturers to deliver exact specifications, grade requirements, and bulk chemical consignments directly to manufacturing facilities across Pakistan.
             </p>
 
-            <div className="p-6 rounded-2xl bg-base border border-border my-6">
+            <div className="p-4 sm:p-6 rounded-2xl bg-base border border-border my-6">
               <h3 className="text-base font-bold text-primary mb-3">
                 Business Profile Highlights
               </h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-ink">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-ink break-words">
                 <li className="text-ink"><strong className="text-ink font-bold">Trade Names:</strong> Al Mobeen Enterprise / Mobeen Chemicals / Al Mobeen Ent / Mobeen Chm</li>
                 <li className="text-ink"><strong className="text-ink font-bold">Commercial Desk:</strong> G/9, Golden Center, Weaver Lane, Jodia Bazar, Karachi</li>
                 <li className="text-ink"><strong className="text-ink font-bold">Delivery:</strong> Direct Factory Bulk Dispatch Across Pakistan</li>
@@ -81,9 +81,9 @@ export default function AboutPage() {
         </div>
 
         {/* Horizontal Timeline */}
-        <div className="mb-16">
-          <h2 className="text-2xl font-bold text-center mb-10 text-ink">Our 30-Year Journey</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div className="mb-12 sm:mb-16">
+          <h2 className="text-2xl font-bold text-center mb-8 sm:mb-10 text-ink">Our 30-Year Journey</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 relative">
             {timelineEvents.map((evt, i) => (
               <ScrollReveal key={evt.year} delay={i * 100}>
                 <div className="bg-surface p-6 rounded-2xl border border-border relative flex flex-col justify-between h-full">
@@ -103,14 +103,14 @@ export default function AboutPage() {
         </div>
 
         {/* Reliability CTA */}
-        <div className="text-center bg-surface border border-border rounded-3xl p-8 md:p-12 shadow-sm">
+        <div className="text-center bg-surface border border-border rounded-3xl p-6 sm:p-8 md:p-12 shadow-sm">
           <h2 className="text-ink text-2xl md:text-3xl font-bold mb-4">
             Partner With a 30-Year Trusted Supplier
           </h2>
           <p className="text-ink opacity-85 max-w-md mx-auto text-sm md:text-base font-semibold mb-8">
             Need bulk industrial chemicals for your manufacturing facility? Get in touch with our Jodia Bazar team today.
           </p>
-          <Button variant="primary" size="lg" asChild>
+          <Button variant="primary" size="lg" className="w-full sm:w-auto" asChild>
             <Link href="/contact">
               Contact Our Office
             </Link>

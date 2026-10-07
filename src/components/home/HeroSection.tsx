@@ -20,26 +20,25 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
-              className="mb-4 sm:mb-5"
+              className="mb-3.5 sm:mb-5"
             >
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-muted border border-border text-ink text-xs sm:text-[13px] font-semibold tracking-tight shadow-xs">
-                <span className="w-2 h-2 rounded-full bg-success animate-pulse"></span>
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-surface-muted border border-border text-ink text-[11px] sm:text-[13px] font-semibold tracking-tight shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-success animate-pulse shrink-0"></span>
                 <span>
-                  Commercial Trading Desk: <strong className="text-ink font-extrabold">Jodia Bazar, Karachi</strong> •{" "}
-                  <strong className="text-ink font-extrabold">Direct Factory Supply</strong>
+                  <strong className="text-ink font-extrabold">Jodia Bazar</strong>, Karachi • <span className="text-ink-secondary font-medium">Direct Bulk Supply</span>
                 </span>
               </div>
             </motion.div>
 
-            {/* Headline */}
+            {/* Headline with guaranteed non-clipping responsive sizing */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.08 }}
-              className="text-[clamp(2.1rem,4.2vw,3.75rem)] font-extrabold leading-[1.08] tracking-[-0.03em] text-ink mb-4 sm:mb-5"
+              className="text-[25px] xs:text-[29px] sm:text-4xl md:text-5xl lg:text-[56px] font-extrabold leading-[1.14] tracking-tight text-ink mb-3 sm:mb-5 break-words"
             >
-              Bulk Industrial Chemicals For{" "}
-              <span className="text-ink-muted">Modern Industry.</span>
+              Bulk Industrial Chemicals <br className="hidden xs:inline sm:hidden lg:inline" />
+              <span className="text-ink-muted">For Modern Industry.</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -47,9 +46,9 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.16 }}
-              className="text-sm sm:text-base text-ink-muted leading-relaxed mb-6 sm:mb-8 max-w-[500px]"
+              className="text-xs sm:text-base text-ink-secondary leading-relaxed mb-5 sm:mb-8 max-w-[520px]"
             >
-              Direct wholesale supply of bulk industrial chemicals, solvents, resins, and raw materials. Transparent grade purity — we sell exactly what we claim — with daily spot rates and bulk consignments delivered directly to manufacturing facilities across Pakistan.
+              Direct wholesale supply of bulk industrial chemicals, solvents, resins, and raw materials across Pakistan. Honest grade purity with daily spot market rates.
             </motion.p>
 
             {/* Dual Pill CTA Buttons */}
@@ -57,11 +56,11 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.24 }}
-              className="flex flex-wrap items-center gap-3 sm:gap-4 mb-8 sm:mb-10"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-6 sm:mb-10 w-full sm:w-auto"
             >
               <Link
                 href="/products"
-                className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-bold text-ink-inverse bg-accent hover:bg-accent-hover rounded-full shadow-md hover:shadow-lg transition-all duration-300 group"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-bold text-ink-inverse bg-accent hover:bg-accent-hover rounded-full shadow-md hover:shadow-lg transition-all duration-300 group"
               >
                 <span>Explore &amp; Order Chemicals</span>
                 <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-surface text-accent flex items-center justify-center text-xs shadow-xs transition-transform group-hover:translate-x-0.5">
@@ -86,7 +85,7 @@ export default function HeroSection() {
                 href={waLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-bold text-ink bg-surface-muted hover:bg-surface-hover border border-border rounded-full transition-all duration-300 group"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-bold text-ink bg-surface-muted hover:bg-surface-hover border border-border rounded-full transition-all duration-300 group"
               >
                 <span>WhatsApp Trading Desk</span>
                 <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-success text-ink-inverse flex items-center justify-center text-xs shadow-xs transition-transform group-hover:translate-x-0.5">
@@ -102,10 +101,10 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.32 }}
-              className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3"
+              className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3"
             >
-              <div className="bg-surface-muted p-3 sm:p-4 rounded-[16px] sm:rounded-[20px] text-center border border-border flex flex-col justify-center min-h-[86px] sm:min-h-[96px]">
-                <div className="text-xl sm:text-2xl font-extrabold text-ink tracking-tight leading-none mb-1">
+              <div className="bg-surface-muted/70 p-2 sm:p-4 rounded-xl sm:rounded-[20px] text-center border border-border flex flex-col justify-center min-h-[66px] sm:min-h-[96px]">
+                <div className="text-base sm:text-2xl font-extrabold text-ink tracking-tight leading-none mb-1">
                   30 <span className="text-accent">+</span>
                 </div>
                 <p className="text-[10px] sm:text-xs font-semibold text-ink-muted leading-tight">
@@ -113,8 +112,8 @@ export default function HeroSection() {
                 </p>
               </div>
 
-              <div className="bg-surface-muted p-3 sm:p-4 rounded-[16px] sm:rounded-[20px] text-center border border-border flex flex-col justify-center min-h-[86px] sm:min-h-[96px]">
-                <div className="text-xl sm:text-2xl font-extrabold text-ink tracking-tight leading-none mb-1">
+              <div className="bg-surface-muted/70 p-2 sm:p-4 rounded-xl sm:rounded-[20px] text-center border border-border flex flex-col justify-center min-h-[66px] sm:min-h-[96px]">
+                <div className="text-base sm:text-2xl font-extrabold text-ink tracking-tight leading-none mb-1">
                   80 <span className="text-accent">+</span>
                 </div>
                 <p className="text-[10px] sm:text-xs font-semibold text-ink-muted leading-tight">
@@ -122,8 +121,8 @@ export default function HeroSection() {
                 </p>
               </div>
 
-              <div className="bg-surface-muted p-3 sm:p-4 rounded-[16px] sm:rounded-[20px] text-center border border-border flex flex-col justify-center min-h-[86px] sm:min-h-[96px]">
-                <div className="text-xl sm:text-2xl font-extrabold text-ink tracking-tight leading-none mb-1">
+              <div className="bg-surface-muted/70 p-2 sm:p-4 rounded-xl sm:rounded-[20px] text-center border border-border flex flex-col justify-center min-h-[66px] sm:min-h-[96px]">
+                <div className="text-base sm:text-2xl font-extrabold text-ink tracking-tight leading-none mb-1">
                   100 <span className="text-accent">%</span>
                 </div>
                 <p className="text-[10px] sm:text-xs font-semibold text-ink-muted leading-tight">
@@ -131,8 +130,8 @@ export default function HeroSection() {
                 </p>
               </div>
 
-              <div className="bg-surface-muted p-3 sm:p-4 rounded-[16px] sm:rounded-[20px] text-center border border-border flex flex-col justify-center min-h-[86px] sm:min-h-[96px]">
-                <div className="text-xl sm:text-2xl font-extrabold text-ink tracking-tight leading-none mb-1">
+              <div className="bg-surface-muted/70 p-2 sm:p-4 rounded-xl sm:rounded-[20px] text-center border border-border flex flex-col justify-center min-h-[66px] sm:min-h-[96px]">
+                <div className="text-base sm:text-2xl font-extrabold text-ink tracking-tight leading-none mb-1">
                   500 <span className="text-accent">+</span>
                 </div>
                 <p className="text-[10px] sm:text-xs font-semibold text-ink-muted leading-tight">

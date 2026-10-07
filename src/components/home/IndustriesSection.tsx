@@ -68,37 +68,37 @@ export default function IndustriesSection() {
               <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
               MANUFACTURING SECTORS
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-extrabold leading-[1.08] tracking-[-0.03em] text-ink">
+            <h2 className="text-2xl sm:text-4xl lg:text-[50px] font-extrabold leading-[1.08] tracking-[-0.03em] text-ink">
               Industries We Power
             </h2>
           </div>
-          <p className="text-sm sm:text-base text-ink-muted leading-relaxed max-w-[420px]">
+          <p className="text-xs sm:text-base text-ink-muted leading-relaxed max-w-[420px]">
             Tailored chemical formulation raw materials supplied to industrial manufacturers in Karachi, Punjab, and KPK.
           </p>
         </div>
 
         {/* Nested Cards Grid - Equal 4x2 Symmetrical Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
           {industries.map((ind) => (
             <Link
               key={ind.slug}
               href={`/industries/${ind.slug}`}
-              className="bg-surface-muted p-2.5 sm:p-3 rounded-[24px] sm:rounded-[28px] flex flex-col justify-between border border-border-subtle hover:border-border hover:shadow-lg transition-all duration-300 group cursor-pointer"
+              className="bg-surface-muted p-2 sm:p-3 rounded-[20px] sm:rounded-[28px] flex flex-col justify-between border border-border-subtle hover:border-border hover:shadow-lg transition-all duration-300 group cursor-pointer"
             >
-              <div className="bg-surface rounded-[20px] sm:rounded-[24px] p-5 sm:p-6 h-full min-h-[250px] flex flex-col justify-between border border-border shadow-xs">
+              <div className="bg-surface rounded-[16px] sm:rounded-[24px] p-4 sm:p-6 h-full min-h-[210px] sm:min-h-[250px] flex flex-col justify-between border border-border shadow-xs">
                 <div>
-                  <div className="w-11 h-11 rounded-2xl bg-accent text-ink-inverse flex items-center justify-center mb-4 group-hover:bg-accent-hover group-hover:scale-105 transition-all duration-300 shadow-xs">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-accent text-ink-inverse flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-accent-hover group-hover:scale-105 transition-all duration-300 shadow-xs">
                     {industryIcons[ind.slug] || industryIcons["general-industrial"]}
                   </div>
-                  <h3 className="text-base sm:text-lg font-extrabold text-ink tracking-tight mb-2 min-h-[50px] sm:min-h-[54px] flex items-center group-hover:text-accent transition-colors">
+                  <h3 className="text-base sm:text-lg font-extrabold text-ink tracking-tight mb-1.5 sm:mb-2 min-h-[36px] sm:min-h-[54px] flex items-center group-hover:text-accent transition-colors">
                     {ind.name}
                   </h3>
-                  <p className="text-xs text-ink-muted leading-relaxed line-clamp-3 min-h-[52px]">
+                  <p className="text-xs text-ink-muted leading-relaxed line-clamp-3 min-h-[44px] sm:min-h-[52px]">
                     {ind.description}
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-border flex items-center justify-between text-[11px] font-bold text-ink">
+                <div className="pt-2.5 sm:pt-3 border-t border-border flex items-center justify-between text-[11px] font-bold text-ink">
                   <span>View Chemicals</span>
                   <span className="w-5 h-5 rounded-full bg-accent text-ink-inverse flex items-center justify-center text-xs group-hover:translate-x-1 group-hover:bg-accent-hover transition-all shadow-xs">
                     <FaArrowRight className="w-2.5 h-2.5" />

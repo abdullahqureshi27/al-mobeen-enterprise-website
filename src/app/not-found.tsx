@@ -12,13 +12,13 @@ export default function NotFound() {
         <p className="text-sm text-ink-muted leading-relaxed mb-8">
           The page or product you are looking for does not exist or has been moved.
         </p>
-        <div className="flex items-center justify-center gap-4">
-          <Button variant="primary" size="default" asChild>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+          <Button variant="primary" size="default" className="w-full sm:w-auto justify-center" asChild>
             <Link href="/">
               Return Home
             </Link>
           </Button>
-          <Button variant="outline" size="default" asChild>
+          <Button variant="outline" size="default" className="w-full sm:w-auto justify-center" asChild>
             <Link href="/products">
               Browse Products
             </Link>

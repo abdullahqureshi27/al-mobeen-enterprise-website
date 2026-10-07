@@ -122,11 +122,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright & Verification */}
-        <div className="pt-8 sm:pt-10 border-t border-border-inverse flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ink-inverse-muted">
+        <div className="pt-8 sm:pt-10 border-t border-border-inverse flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ink-inverse-muted text-center sm:text-left">
           <p>© {new Date().getFullYear()} Al Mobeen Enterprise (Mobeen Chemicals). All rights reserved.</p>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 sm:gap-4">
             <span>Karachi Industrial Chemical Hub</span>
-            <span>•</span>
+            <span className="hidden sm:inline">•</span>
             <span>We Sell What We Claim</span>
           </div>
         </div>

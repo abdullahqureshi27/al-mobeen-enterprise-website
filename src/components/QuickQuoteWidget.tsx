@@ -39,7 +39,7 @@ export default function QuickQuoteWidget() {
   return (
     <>
       {/* Floating Modern B2B Quick Desk Pill */}
-      <div className="fixed bottom-6 left-6 z-50 flex flex-col items-start gap-2.5 pointer-events-auto">
+      <div className="fixed bottom-4 left-3 sm:bottom-6 sm:left-6 z-50 flex flex-col items-start gap-2.5 pointer-events-auto">
         {/* Expanded Quick Sourcing Panel */}
         <AnimatePresence>
           {isOpen && (
@@ -48,7 +48,7 @@ export default function QuickQuoteWidget() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: 15, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className="w-[340px] sm:w-[380px] rounded-2xl bg-surface border border-border shadow-2xl p-4 mb-2 text-ink overflow-hidden"
+              className="w-[calc(100vw-24px)] max-w-[360px] sm:w-[380px] rounded-2xl bg-surface border border-border shadow-2xl p-4 mb-2 text-ink overflow-hidden max-h-[80vh] flex flex-col"
             >
               <div className="flex items-center justify-between pb-3 border-b border-border mb-3">
                 <div className="flex items-center gap-2">
@@ -162,13 +162,13 @@ export default function QuickQuoteWidget() {
           {/* Quick Quote Pill Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-surface-inverse text-ink-inverse border border-border-inverse shadow-xl hover:bg-surface-inverse-hover transition-all duration-200 hover:scale-105 group"
+            className="flex items-center gap-2 sm:gap-2.5 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-full bg-surface-inverse text-ink-inverse border border-border-inverse shadow-xl hover:bg-surface-inverse-hover transition-all duration-200 hover:scale-105 group"
             aria-label="Toggle Quick Chemical RFQ Desk"
           >
             <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
-            <span className="text-xs font-bold tracking-wide">Quick Order Desk</span>
+            <span className="text-[11px] sm:text-xs font-bold tracking-wide">Quick Order Desk</span>
             {count > 0 && (
-              <span className="px-2 py-0.5 rounded-full bg-accent text-ink-inverse text-[10px] font-black">
+              <span className="px-1.5 py-0.5 rounded-full bg-accent text-ink-inverse text-[9px] sm:text-[10px] font-black">
                 {count}
               </span>
             )}

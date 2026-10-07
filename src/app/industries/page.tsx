@@ -49,13 +49,13 @@ export default function IndustriesPage() {
             return (
               <div
                 key={industry.slug}
-                className="bg-surface text-ink rounded-3xl border border-border p-6 md:p-10 shadow-sm flex flex-col md:flex-row gap-8 items-center"
+                className="bg-surface text-ink rounded-3xl border border-border p-5 sm:p-7 md:p-10 shadow-sm flex flex-col md:flex-row gap-6 md:gap-8 items-center"
               >
-                <div className={`flex-1 ${isEven ? "md:order-1" : "md:order-2"}`}>
+                <div className={`w-full flex-1 ${isEven ? "md:order-1" : "md:order-2"}`}>
                   <span className="inline-block text-xs font-black uppercase tracking-wider text-accent mb-2">
                     Sector {index + 1}
                   </span>
-                  <h2 className="text-xl md:text-3xl font-bold mb-4 text-ink">
+                  <h2 className="text-xl md:text-3xl font-bold mb-3 sm:mb-4 text-ink">
                     {industry.name}
                   </h2>
                   <p className="text-sm md:text-base font-medium leading-relaxed mb-6 text-ink opacity-85">
@@ -82,7 +82,7 @@ export default function IndustriesPage() {
                     </div>
                   )}
 
-                  <Button variant="outline" size="sm" asChild>
+                  <Button variant="outline" size="sm" className="w-full sm:w-auto justify-center" asChild>
                     <Link href={`/industries/${industry.slug}`}>
                       <span>View Sector Products</span>
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -92,9 +92,9 @@ export default function IndustriesPage() {
                   </Button>
                 </div>
 
-                <div className={`w-full md:w-72 h-48 rounded-2xl bg-base border border-border flex items-center justify-center ${isEven ? "md:order-2" : "md:order-1"}`}>
+                <div className={`w-full md:w-72 h-36 sm:h-48 rounded-2xl bg-base border border-border flex items-center justify-center shrink-0 ${isEven ? "md:order-2" : "md:order-1"}`}>
                   <div className="text-center p-4">
-                    <div className="w-14 h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mx-auto mb-2 font-bold text-xl">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mx-auto mb-2 font-bold text-xl">
                       {industry.name.charAt(0)}
                     </div>
                     <span className="text-xs font-bold text-ink">

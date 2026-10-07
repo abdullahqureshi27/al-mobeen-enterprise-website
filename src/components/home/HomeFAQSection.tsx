@@ -43,22 +43,22 @@ export default function HomeFAQSection() {
               <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
               FAQ&apos;S
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-extrabold leading-[1.08] tracking-[-0.03em] text-ink mb-3 sm:mb-5">
+            <h2 className="text-2xl sm:text-4xl lg:text-[50px] font-extrabold leading-[1.08] tracking-[-0.03em] text-ink mb-3 sm:mb-5">
               You Ask, <br className="hidden sm:inline" />We Answer
             </h2>
-            <p className="text-sm sm:text-base text-ink-muted leading-relaxed max-w-[360px]">
+            <p className="text-xs sm:text-base text-ink-muted leading-relaxed max-w-[360px]">
               Everything you need to know about purchasing bulk industrial chemicals, delivery terms, and purity verification in Karachi.
             </p>
           </div>
 
           {/* Right Column: Accordion Items */}
-          <div className="lg:col-span-7 space-y-3 sm:space-y-4">
+          <div className="lg:col-span-7 space-y-2.5 sm:space-y-4">
             {faqs.map((faq, i) => {
               const isOpen = openIndex === i;
               return (
                 <div
                   key={i}
-                  className={`group p-4 sm:p-6 rounded-[18px] sm:rounded-[22px] cursor-pointer transition-all duration-300 border ${
+                  className={`group p-3.5 sm:p-6 rounded-[16px] sm:rounded-[22px] cursor-pointer transition-all duration-300 border ${
                     isOpen
                       ? "bg-surface border-border shadow-xs"
                       : "bg-surface-subtle border-border-subtle hover:bg-surface-muted hover:border-border"
@@ -66,7 +66,7 @@ export default function HomeFAQSection() {
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                 >
                   <div className="flex items-center justify-between gap-3 sm:gap-4">
-                    <h3 className="text-base sm:text-lg font-bold text-ink tracking-tight leading-snug group-hover:text-accent transition-colors">
+                    <h3 className="text-sm sm:text-lg font-bold text-ink tracking-tight leading-snug group-hover:text-accent transition-colors">
                       {faq.q}
                     </h3>
                     <div

@@ -32,12 +32,12 @@ export default function ProductDetailActions({ product }: ProductDetailActionsPr
   const waLink = `https://wa.me/923321134530?text=${waMessage}`;
 
   return (
-    <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-border">
+    <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 pt-4 border-t border-border">
       <Button
         onClick={handleQuoteToggle}
         variant={isAdded ? "success" : "default"}
         size="lg"
-        className="px-6 py-3 font-semibold"
+        className="w-full sm:w-auto justify-center px-6 py-3 font-semibold"
       >
         {isAdded ? (
           <>
@@ -57,7 +57,7 @@ export default function ProductDetailActions({ product }: ProductDetailActionsPr
         )}
       </Button>
 
-      <Button variant="outline" size="lg" className="px-6 py-3" asChild>
+      <Button variant="outline" size="lg" className="w-full sm:w-auto justify-center px-6 py-3" asChild>
         <a
           href={waLink}
           target="_blank"

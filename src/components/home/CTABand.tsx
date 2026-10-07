@@ -40,15 +40,15 @@ export default function CTABand() {
               <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
               B2B TRADING DESK
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-extrabold leading-[1.08] tracking-[-0.03em] text-ink mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-4xl lg:text-[50px] font-extrabold leading-[1.08] tracking-[-0.03em] text-ink mb-3 sm:mb-4">
               Order Your <span className="text-accent">Chemicals.</span>
             </h2>
-            <p className="text-sm sm:text-base text-ink-muted leading-relaxed mb-6 sm:mb-8 max-w-[380px]">
+            <p className="text-xs sm:text-base text-ink-muted leading-relaxed mb-6 sm:mb-8 max-w-[380px]">
               Need today&apos;s spot rates, technical data sheets, or bulk chemical consignments delivered directly to your plant? Order directly with our desk.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
-              <div className="bg-surface-muted p-4 sm:p-5 rounded-[20px] flex flex-col justify-between border border-border min-h-[120px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              <div className="bg-surface-muted p-4 sm:p-5 rounded-[18px] sm:rounded-[20px] flex flex-col justify-between border border-border min-h-[110px] sm:min-h-[120px]">
                 <div className="flex items-center justify-between mb-2">
                   <div className="w-8 h-8 rounded-full bg-surface flex items-center justify-center text-accent shadow-xs border border-border">
                     <svg className="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -73,7 +73,7 @@ export default function CTABand() {
                 </div>
               </div>
 
-              <div className="bg-surface-muted p-4 sm:p-5 rounded-[20px] flex flex-col justify-between border border-border min-h-[120px]">
+              <div className="bg-surface-muted p-4 sm:p-5 rounded-[18px] sm:rounded-[20px] flex flex-col justify-between border border-border min-h-[110px] sm:min-h-[120px]">
                 <div className="flex items-center justify-between mb-2">
                   <div className="w-8 h-8 rounded-full bg-surface flex items-center justify-center text-accent shadow-xs border border-border">
                     <svg className="w-4 h-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -101,11 +101,11 @@ export default function CTABand() {
           </div>
 
           {/* Right Column: High-Contrast Dark Form */}
-          <div className="lg:col-span-7 bg-surface-inverse text-ink-inverse p-6 sm:p-8 md:p-10 rounded-[24px] sm:rounded-[32px] shadow-2xl border border-border-inverse">
-            <h3 className="text-xl sm:text-2xl md:text-[26px] font-extrabold tracking-tight mb-2 leading-snug text-ink-inverse">
+          <div className="lg:col-span-7 bg-surface-inverse text-ink-inverse p-4 sm:p-8 md:p-10 rounded-[20px] sm:rounded-[32px] shadow-2xl border border-border-inverse">
+            <h3 className="text-lg sm:text-2xl md:text-[26px] font-extrabold tracking-tight mb-2 leading-snug text-ink-inverse">
               Place Your Bulk Chemical Order
             </h3>
-            <p className="text-xs sm:text-sm text-ink-inverse-muted mb-6 sm:mb-8">
+            <p className="text-xs sm:text-sm text-ink-inverse-muted mb-5 sm:mb-8">
               Specify your volume requirement and get immediate spot pricing and dispatch confirmation from our Jodia Bazar desk.
             </p>
 
