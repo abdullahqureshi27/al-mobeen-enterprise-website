@@ -38,8 +38,8 @@ export default function QuickQuoteWidget() {
 
   return (
     <>
-      {/* Floating Modern B2B Quick Desk Pill */}
-      <div className="fixed bottom-4 left-3 sm:bottom-6 sm:left-6 z-50 flex flex-col items-start gap-2.5 pointer-events-auto">
+      {/* Floating Modern B2B Quick Desk Pill (Desktop) */}
+      <div className="hidden sm:flex fixed bottom-6 left-6 z-50 flex-col items-start gap-2.5 pointer-events-auto">
         {/* Expanded Quick Sourcing Panel */}
         <AnimatePresence>
           {isOpen && (

@@ -35,10 +35,10 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.08 }}
-              className="text-[25px] xs:text-[29px] sm:text-4xl md:text-5xl lg:text-[56px] font-extrabold leading-[1.14] tracking-tight text-ink mb-3 sm:mb-5 break-words"
+              className="text-[22px] sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold leading-[1.18] tracking-tight text-ink mb-3 sm:mb-5"
             >
-              Bulk Industrial Chemicals <br className="hidden xs:inline sm:hidden lg:inline" />
-              <span className="text-ink-muted">For Modern Industry.</span>
+              <span className="block text-ink">Bulk Industrial Chemicals</span>
+              <span className="block text-ink-muted">For Modern Industry.</span>
             </motion.h1>
 
             {/* Subtitle */}
